@@ -1,0 +1,23 @@
+﻿azure endpoint
+https://skillboxtelegrambot-a6b0.azurewebsites.net/api/messages
+
+endpoint with ngrok
+https://4285-94-231-135-18.eu.ngrok.io/telegram/messages
+
+reg ru endpoint
+https://u0901873.plsk.regruhosting.ru/telegram/messages
+
+--- ngrok ---
+
+url help
+https://dashboard.ngrok.com/get-started/setup
+
+cd D:\programm\ngrok-v3-stable-windows-amd64
+
+start ngrok
+ngrok http 5141 --host-header="localhost:5141"
+
+kill ngrok
+taskkill /f /im ngrok.exe
+
+
