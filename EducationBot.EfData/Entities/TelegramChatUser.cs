@@ -26,6 +26,8 @@ namespace EducationBot.EfData.Entities
 
     public enum ChatAction
     {
-        None
+        None,
+        AddReminderDate,
+        AddReminderDesc
     };
 }

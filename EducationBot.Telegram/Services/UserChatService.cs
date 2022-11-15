@@ -79,7 +79,7 @@ namespace EducationBot.Telegram.Services
 
             dialogEnt.LastAction = dialog.LastAction;
 
-            _context.Update(dialogEnt);
+            _context.TelegramChatUser.Update(dialogEnt);
             await _context.SaveChangesAsync(ct);
         }
 
@@ -165,6 +165,29 @@ namespace EducationBot.Telegram.Services
             else
                 return 0;
 
+        }
+
+        public async Task AddUserSheduller(TelegramChatUser dialog, DateTime date, CancellationToken ct)
+        {
+            TelegramUserShedullers newItem = new()
+            {
+                DateTimeUtc = date,
+                Title = "без опсания",
+                TelegramUser = dialog.TelegramUser
+            };
+            await _context.TelegramUserShedullers.AddAsync(newItem);
+            await _context.SaveChangesAsync(ct);
+        }
+
+        public async Task FeetUserSheduller(TelegramChatUser dialog, string description, CancellationToken ct)
+        {
+            var sh = await _context.TelegramUserShedullers
+                .FirstOrDefaultAsync(x => x.TelegramUser.Id == dialog.TelegramUserId && x.Title == "без опсания", ct);
+
+            sh.Title = description;
+
+            _context.TelegramUserShedullers.Update(sh);
+            await _context.SaveChangesAsync(ct);
         }
     }
 }

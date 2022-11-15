@@ -47,6 +47,7 @@ namespace EducationBot.Telegram.Services
             Chat chat;
             From from;
             string messageText;
+            TelegramChatUser dialog;
 
             if (message.CallbackQuery != null)
             {
@@ -56,7 +57,7 @@ namespace EducationBot.Telegram.Services
 
                 await _userChatService.SetChatUser(chat, from, ct);
 
-                var dialog = await _userChatService.GetUserDialog(chat, from, ct);
+                dialog = await _userChatService.GetUserDialog(chat, from, ct);
 
                 try
                 {
@@ -130,45 +131,47 @@ namespace EducationBot.Telegram.Services
                         case "напоминания":
                             {
                                 var buttons = new InlineKeyboardMarkup();
-                                buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("создать новое", "создать_новое_напоминание") });
-                                buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("архив", "архив_напоминаний"), new InlineKeyboardButton("удалть", "удалить_все_напоминания") });
+                                buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("%F0%9F%93%9D создать новое", "создать_новое_напоминание") });
+                                buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("%F0%9F%93%A6 архив", "архив_напоминаний"), new InlineKeyboardButton("%E2%9D%8C удалить все", "удалить_все_напоминания") });
                                 await SendMessageToUser(chat.Id, "раздел - напоминания", ct, null, buttons);
                                 break;
                             }
                         case "создать_новое_напоминание":
                             {
                                 StringBuilder sb = new();
-                                sb.AppendLine("введине дату(UTC) - описание");
-                                sb.AppendLine("пример:");
-                                sb.AppendLine($"{DateTime.Now:dd.MM.yy HH:mm} - тестовое description");
+                                sb.AppendLine("введине дату(UTC)");
+                                sb.AppendLine($"пример: {DateTime.Now.ToUniversalTime():dd.MM.yy HH:mm} - сейчас в UTC");
                                 await SendMessageToUser(chat.Id, sb.ToString(), ct);
+
+                                dialog.LastAction = ChatAction.AddReminderDate;
+                                await _userChatService.UpdateUserDialog(dialog, ct);
                                 break;
                             }
                         case "архив_напоминаний":
                             {
                                 var shedullers = await _userChatService.GetAllUserShedullers(message.CallbackQuery.From.Id, ct);
                                 StringBuilder sb = new();
+                                sb.AppendLine($"архив напоминаний {Environment.NewLine}");
                                 if (!shedullers.Any())
                                     sb.AppendLine("у вас нет напоминаний");
                                 else
                                 {
                                     foreach (var shedulle in shedullers.OrderByDescending(x => x.DateTimeUtc))
                                     {
+                                        var logo = shedulle.IsOld ? "%E2%9D%84" : "%F0%9F%94%A5";
                                         sb.Append($"{shedulle.Title} {Environment.NewLine}");
-                                        sb.Append($"\uD83D\uDD51 {shedulle.DateTimeUtc} {shedulle.IsOld} {Environment.NewLine}");
+                                        sb.Append($"\uD83D\uDD51 {shedulle.DateTimeUtc} {logo} {Environment.NewLine}");
                                         sb.Append($"{Environment.NewLine}");
                                     }
                                 }
-                                await SendMessageToUser(chat.Id, "напоминания:", ct);
+                                await SendMessageToUser(chat.Id, sb.ToString(), ct);
                                 break;
                             }
                         case "удалить_все_напоминания":
                             {
                                 var count = await _userChatService.DeleteAllUserShedullers(message.CallbackQuery.From.Id, ct);
                                 StringBuilder sb = new();
-                                sb.AppendLine("готово");
-                                sb.AppendLine($"удалено {count} напоминаний");
-                                await SendMessageToUser(chat.Id, "раздел - напоминания", ct);
+                                await SendMessageToUser(chat.Id, "%E2%9C%85 готово", ct);
                                 break;
                             }
 
@@ -259,15 +262,45 @@ namespace EducationBot.Telegram.Services
 
                     await _userChatService.SetChatUser(chat, from, ct);
 
-                    var dialog = await _userChatService.GetUserDialog(chat, from, ct);
-
-                    if (dialog.LastAction == ChatAction.None)
-                    {
-
-                    }
+                    dialog = await _userChatService.GetUserDialog(chat, from, ct);
 
                     if (messageText.StartsWith('/') && messageText.Contains("@") && messageText.Contains(_configuration["TelegramSettings:BotUserName"]))
                         messageText = messageText.Split('@').First();
+
+                    if (dialog.LastAction == ChatAction.AddReminderDate)
+                    {
+                        try
+                        {
+                            var date = Convert.ToDateTime(messageText.Trim());
+                            await _userChatService.AddUserSheduller(dialog, date, ct);
+                        }
+                        catch (Exception e)
+                        {
+                            StringBuilder sb = new();
+                            sb.AppendLine("некорректный формат - попробуйте снова");
+                            sb.AppendLine($"пример: {DateTime.Now.ToUniversalTime():dd.MM.yy HH:mm} - сейчас в UTC");
+                            await SendMessageToUser(chat.Id, sb.ToString(), ct);
+                            return;
+                        }
+
+                        await SendMessageToUser(chat.Id, "введине описание", ct);
+
+                        dialog.LastAction = ChatAction.AddReminderDesc;
+                        await _userChatService.UpdateUserDialog(dialog, ct);
+                        return;
+                    }
+
+                    if (dialog.LastAction == ChatAction.AddReminderDesc)
+                    {
+                        var description = messageText;
+                        await _userChatService.FeetUserSheduller(dialog, description, ct);
+
+                        await SendMessageToUser(chat.Id, "%E2%9C%85 готово", ct);
+
+                        dialog.LastAction = ChatAction.None;
+                        await _userChatService.UpdateUserDialog(dialog, ct);
+                        return;
+                    }
 
                     try
                     {

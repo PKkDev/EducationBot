@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace EducationBot.EfData.Entities
 {
-    public class WeekDay
+    public class LessonWeekDay
     {
         [Column("id")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -17,7 +17,7 @@ namespace EducationBot.EfData.Entities
         public int LessonId { get; set; }
         public Lesson Lesson { get; set; }
 
-        public WeekDay(DateTime day, string dayOfWeek)
+        public LessonWeekDay(DateTime day, string dayOfWeek)
         {
             Day = day;
             DayOfWeek = dayOfWeek;

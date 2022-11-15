@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace EducationBot.EfData.Entities
 {
-    public class Teacher
+    public class LessonTeacher
     {
         [Column("id")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -17,7 +17,7 @@ namespace EducationBot.EfData.Entities
         public int LessonId { get; set; }
         public Lesson Lesson { get; set; }
 
-        public Teacher()
+        public LessonTeacher()
         {
             Name = "none";
             Link = null;

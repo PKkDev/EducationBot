@@ -1,8 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
 namespace EducationBot.EfData.Entities
 {
+    [Index(nameof(TelegramUserId), nameof(DateTimeUtc), IsUnique = true)]
     public class TelegramUserShedullers
     {
         [Column("id")]
@@ -12,11 +14,13 @@ namespace EducationBot.EfData.Entities
 
         public DateTime DateTimeUtc { get; set; }
 
-        public string Title { get; set; }
+        public string? Title { get; set; }
 
+        [NotMapped]
         public bool IsOld => DateTimeUtc < DateTime.UtcNow;
 
         public int TelegramUserId { get; set; }
         public TelegramUser TelegramUser { get; set; }
+
     }
 }

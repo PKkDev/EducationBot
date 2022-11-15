@@ -10,13 +10,13 @@ namespace EducationBot.EfData.Entities
         [Key]
         public int Id { get; set; }
 
-        public Teacher Teacher { get; set; }
+        public LessonTeacher Teacher { get; set; }
 
         public DateTime DateTimeStartUtc { get; set; }
 
         public DateTime DateTimeEndUtc { get; set; }
 
-        public WeekDay Day { get; set; }
+        public LessonWeekDay Day { get; set; }
 
         public LessonTime Time { get; set; }
 
@@ -24,7 +24,7 @@ namespace EducationBot.EfData.Entities
 
         public string Discipline { get; set; }
 
-        public TypeLesson TypeLesson { get; set; }
+        public LessonType TypeLesson { get; set; }
 
         public string? Groups { get; set; }
 

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace EducationBot.EfData.Entities
 {
-    public class TypeLesson
+    public class LessonType
     {
         [Column("id")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -19,14 +19,14 @@ namespace EducationBot.EfData.Entities
         public int LessonId { get; set; }
         public Lesson Lesson { get; set; }
 
-        public TypeLesson()
+        public LessonType()
         {
             Title = "none";
             Color = null;
             TypeStr = null;
         }
 
-        public TypeLesson(string title, string color, string typeStr)
+        public LessonType(string title, string color, string typeStr)
         {
             Title = title;
             Color = color;

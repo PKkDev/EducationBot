@@ -234,7 +234,7 @@ try
     var needDo = true;
     while (needDo)
     {
-        List<TypeLesson> typeLessons = new();
+        List<LessonType> typeLessons = new();
 
         var timeTableLegendItems = driver.FindElements(By.ClassName("timetable__legend-item"));
         foreach (var timeTableLegendItem in timeTableLegendItems)
@@ -245,7 +245,7 @@ try
 
             var typeTxt = timeTableLegendItem.Text;
             var color = timeTableLegendItem.GetCssValue("background-color");
-            typeLessons.Add(new TypeLesson(typeTxt, color, type));
+            typeLessons.Add(new LessonType(typeTxt, color, type));
         }
 
         var weekNow = driver.FindElement(By.ClassName("week-nav-current")).Text;
@@ -256,7 +256,7 @@ try
 
         var parsedList = ParseList(scheduleItemList.ToList(), 7);
 
-        List<WeekDay> dayesModel = ParseListDayesFromPublic(parsedList.First());
+        List<LessonWeekDay> dayesModel = ParseListDayesFromPublic(parsedList.First());
 
         foreach (var items in parsedList.Skip(1))
         {
@@ -276,7 +276,7 @@ try
                 var lessonElements = items[i].FindElements(By.ClassName("schedule__lesson"));
                 foreach (IWebElement lessonElement in lessonElements)
                 {
-                    TypeLesson typeLesson = new();
+                    LessonType typeLesson = new();
                     var classAtr = lessonElement.GetAttribute("class");
                     if (classAtr.Contains("lesson-border-type-"))
                     {
@@ -294,7 +294,7 @@ try
                     var schedulePlace = lessonElement.FindElements(By.ClassName("schedule__place"));
                     var place = schedulePlace.Any() ? schedulePlace.First().Text : null;
 
-                    Teacher teacher = new();
+                    LessonTeacher teacher = new();
                     var teacherL = lessonElement.FindElements(By.ClassName("schedule__teacher"));
                     if (teacherL.Any())
                     {
@@ -402,9 +402,9 @@ static LessonTime ParseListTimeCellsFromPublic(IWebElement entities)
     };
 }
 
-static List<WeekDay> ParseListDayesFromPrivOff(List<IWebElement> entities)
+static List<LessonWeekDay> ParseListDayesFromPrivOff(List<IWebElement> entities)
 {
-    List<WeekDay> result = new();
+    List<LessonWeekDay> result = new();
 
     foreach (var entity in entities)
     {
@@ -419,16 +419,16 @@ static List<WeekDay> ParseListDayesFromPrivOff(List<IWebElement> entities)
             var dayOfWeek = dayName;
             var dateParse = Convert.ToDateTime(date);
 
-            result.Add(new WeekDay(dateParse.Date, dayOfWeek));
+            result.Add(new LessonWeekDay(dateParse.Date, dayOfWeek));
         }
     }
 
     return result;
 }
 
-static List<WeekDay> ParseListDayesFromPublic(List<IWebElement> entities)
+static List<LessonWeekDay> ParseListDayesFromPublic(List<IWebElement> entities)
 {
-    List<WeekDay> result = new();
+    List<LessonWeekDay> result = new();
 
     foreach (var header in entities)
     {
@@ -443,7 +443,7 @@ static List<WeekDay> ParseListDayesFromPublic(List<IWebElement> entities)
             var dayOfWeek = weekdayTxt;
             var date = Convert.ToDateTime(dateTxt);
 
-            result.Add(new WeekDay(date.Date, dayOfWeek));
+            result.Add(new LessonWeekDay(date.Date, dayOfWeek));
         }
     }
 
