@@ -9,6 +9,8 @@ namespace EducationBot.EfData
         public DbSet<TelegramChatUser> TelegramChatUser { get; set; }
         public DbSet<TelegramChat> TelegramChat { get; set; }
 
+        public DbSet<TelegramUserShedullers> TelegramUserShedullers { get; set; }
+
         public DbSet<Lesson> Lesson { get; set; }
         public DbSet<Teacher> Teacher { get; set; }
         public DbSet<TypeLesson> TypeLesson { get; set; }
@@ -18,7 +20,7 @@ namespace EducationBot.EfData
         public DataBaseContext(DbContextOptions<DataBaseContext> options)
             : base(options)
         {
-            //  Database.EnsureDeleted();
+            //Database.EnsureDeleted();
             Database.EnsureCreated();
         }
 

@@ -50,6 +50,30 @@ namespace EducationBot.Telegram.Controllers
             var newLessons = await _context.Lesson.ToListAsync(ct);
         }
 
+        [HttpGet("lessons")]
+        public async Task<IActionResult> GetLessons(CancellationToken ct = default)
+        {
+            var lessons = await _context.Lesson
+                .Select(x => new { x.Discipline, x.TypeLesson.Title })
+                .ToListAsync(ct);
+            return Ok(lessons.Distinct().OrderBy(x => x.Title));
+        }
+
+        [HttpGet("feet-link")]
+        public async Task SetLinkToLesson([FromQuery] string discipline, [FromQuery] string typeLesson, [FromQuery] string link, CancellationToken ct = default)
+        {
+            var lessons = await _context.Lesson
+                .Where(x => x.Discipline.Trim().ToLower().Equals(discipline.Trim().ToLower())
+                    && x.TypeLesson.Title.Trim().ToLower().Equals(typeLesson.Trim().ToLower()))
+                .ToListAsync(ct);
+
+            foreach (var lesson in lessons)
+                lesson.LinkToRoom = link;
+
+            _context.Lesson.UpdateRange(lessons);
+            await _context.SaveChangesAsync(ct);
+        }
+
         [HttpGet("chats")]
         public async Task<IActionResult> GetAllChats(CancellationToken ct = default) => Ok(await _userChatService.GetAllChats(ct));
 

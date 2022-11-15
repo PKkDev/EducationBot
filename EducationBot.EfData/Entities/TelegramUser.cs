@@ -23,11 +23,15 @@ namespace EducationBot.EfData.Entities
         public List<TelegramChatUser> ChatUsers { get; set; }
         public List<TelegramChat> Chats { get; set; }
 
+        public List<TelegramUserShedullers> Shedullers { get; set; }
+
         public TelegramUser()
         {
             IsGetLessonShedulle = true;
             ChatUsers = new();
             Chats = new();
+
+            Shedullers = new();
         }
     }
 }

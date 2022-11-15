@@ -1,7 +1,9 @@
 using EducationBot.EfData;
 using EducationBot.Telegram.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using NLog.Web;
 
@@ -20,7 +22,11 @@ builder.Services.AddTransient<UserChatService>();
 //var path = Path.Combine(AppContext.BaseDirectory, builder.Configuration["Connections:SqLiteDbName"]);
 //builder.Services.AddDbContext<DataBaseContext>(option => option.UseSqlite($"Filename={path}"));
 
-builder.Services.AddDbContext<DataBaseContext>(option => option.UseSqlServer(builder.Configuration["Connections:MsSqlConnect"]));
+//builder.Services.AddDbContext<DataBaseContext>(option => option.UseSqlServer(builder.Configuration["Connections:MsSqlConnect"]));
+
+builder.Services.AddDbContext<DataBaseContext>(option
+    => option.UseMySql(builder.Configuration["Connections:MySqlConnect"], new MySqlServerVersion(new Version(7, 4, 28))));
+
 
 builder.Services.AddControllers();
 

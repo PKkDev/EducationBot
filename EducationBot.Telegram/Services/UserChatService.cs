@@ -26,17 +26,17 @@ namespace EducationBot.Telegram.Services
             await _context.SaveChangesAsync(ct);
         }
 
-        public async Task<TelegramUser> GetUserByChatId(long chatId, CancellationToken ct)
+        public async Task<TelegramUser> GetUserByChatId(long FromId, CancellationToken ct)
         {
             var user = await _context.TelegramUser
-                .Where(x => x.UserIdent == chatId)
+                .Where(x => x.UserIdent == FromId)
                 .FirstOrDefaultAsync(ct);
             return user;
         }
 
         public async Task<dynamic> GetAllUser(CancellationToken ct)
         {
-            var usesrs = await _context.TelegramUser
+            return await _context.TelegramUser
                 .Select(x => new
                 {
                     x.Id,
@@ -47,12 +47,11 @@ namespace EducationBot.Telegram.Services
                     x.Chats
                 })
                 .ToListAsync(ct);
-            return usesrs;
         }
 
         public async Task<dynamic> GetAllChats(CancellationToken ct)
         {
-            var chats = await _context.TelegramChat
+            return await _context.TelegramChat
                 .Select(x => new
                 {
                     x.Id,
@@ -62,7 +61,26 @@ namespace EducationBot.Telegram.Services
                     x.Users
                 })
                 .ToListAsync(ct);
-            return chats;
+        }
+
+        public async Task<TelegramChatUser> GetUserDialog(Chat chat, From from, CancellationToken ct)
+        {
+            var dialogEnt = await _context.TelegramChatUser
+                .Where(x => x.TelegramChat.ChatIdent == chat.Id && x.TelegramUser.UserIdent == from.Id)
+                .FirstOrDefaultAsync(ct);
+            return dialogEnt;
+        }
+
+        public async Task UpdateUserDialog(TelegramChatUser dialog, CancellationToken ct)
+        {
+            var dialogEnt = await _context.TelegramChatUser
+                .Where(x => x.Id == dialog.Id)
+                .FirstOrDefaultAsync(ct);
+
+            dialogEnt.LastAction = dialog.LastAction;
+
+            _context.Update(dialogEnt);
+            await _context.SaveChangesAsync(ct);
         }
 
         public async Task SetChatUser(Chat chat, From from, CancellationToken ct)
@@ -80,7 +98,7 @@ namespace EducationBot.Telegram.Services
                 {
                     var newChat = new TelegramChat
                     {
-                        Title = chat.Type == "group" ? chat.Title : null,
+                        Title = chat.Title,
                         ChatIdent = chat.Id,
                         ChatType = chat.Type,
                         Users = new List<TelegramUser> { userCheck }
@@ -93,7 +111,7 @@ namespace EducationBot.Telegram.Services
                 {
                     var newChat = new TelegramChat
                     {
-                        Title = chat.Type == "group" ? chat.Title : null,
+                        Title = chat.Title,
                         ChatIdent = chat.Id,
                         ChatType = chat.Type,
                         Users = new List<TelegramUser>()
@@ -118,6 +136,35 @@ namespace EducationBot.Telegram.Services
                 .Select(x => x.UserIdent)
                 .ToListAsync(ct);
             return result;
+        }
+
+        public async Task<List<TelegramUserShedullers>> GetAllUserShedullers(long chatId, CancellationToken ct)
+        {
+            var user = await _context.TelegramUser
+                .Include(x => x.Shedullers)
+                .Where(x => x.UserIdent == chatId)
+                .FirstOrDefaultAsync(ct);
+            return user.Shedullers;
+        }
+
+        public async Task<int> DeleteAllUserShedullers(long chatId, CancellationToken ct)
+        {
+            var user = await _context.TelegramUser
+                .Include(x => x.Shedullers)
+                .Where(x => x.UserIdent == chatId)
+                .FirstOrDefaultAsync(ct);
+
+            var sh = user.Shedullers;
+
+            if (sh.Any())
+            {
+                _context.TelegramUserShedullers.RemoveRange(sh);
+                await _context.SaveChangesAsync(ct);
+                return sh.Count;
+            }
+            else
+                return 0;
+
         }
     }
 }

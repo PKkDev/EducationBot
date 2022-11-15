@@ -152,7 +152,7 @@ namespace EducationBot.Telegram.Model.Telegram
         public string FirstName { get; set; }
 
         [JsonProperty("last_name")]
-        public string LastName { get; set; }
+        public string? LastName { get; set; }
     }
 
     public class Chat

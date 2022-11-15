@@ -1,11 +1,7 @@
-﻿using EducationBot.EfData;
-using EducationBot.EfData.Entities;
+﻿using EducationBot.EfData.Entities;
 using EducationBot.Telegram.Helpers;
 using EducationBot.Telegram.Model.Telegram;
-using Microsoft.OpenApi.Any;
 using Newtonsoft.Json;
-using System.Buffers.Text;
-using System.Net.Http.Headers;
 using System.Text;
 
 namespace EducationBot.Telegram.Services
@@ -36,30 +32,31 @@ namespace EducationBot.Telegram.Services
 
         public async Task ParseTelegramMessageAsync(TelegramUpdateMessage message, CancellationToken ct)
         {
-            if (message.MyChatMember != null)
-                return;
+            if (message.MyChatMember != null) return;
 
             // бота добавили в группу при создании
-            if (message.Message != null && message.Message.GroupChatCreated)
-            {
-                //await SendMessageToUser(message.Message.Chat.Id, "Спасибо за добавление в группу", ct);
-                return;
-            }
+            //await SendMessageToUser(message.Message.Chat.Id, "Спасибо за добавление в группу", ct);
+            if (message.Message != null && message.Message.GroupChatCreated) return;
 
             // is_anonymous = false
-            if (message.PollAnswer != null)
-                return;
+            if (message.PollAnswer != null) return;
 
             // is_anonymous = true
-            if (message.Poll != null)
-                return;
+            if (message.Poll != null) return;
+
+            Chat chat;
+            From from;
+            string messageText;
 
             if (message.CallbackQuery != null)
             {
-                await _userChatService.SetChatUser(message.CallbackQuery.Message.Chat, message.CallbackQuery.From, ct);
+                chat = message.CallbackQuery.Message.Chat;
+                from = message.CallbackQuery.From;
+                messageText = message.CallbackQuery.Data;
 
-                var chatId = message.CallbackQuery.Message.Chat.Id;
-                var messageText = message.CallbackQuery.Data;
+                await _userChatService.SetChatUser(chat, from, ct);
+
+                var dialog = await _userChatService.GetUserDialog(chat, from, ct);
 
                 try
                 {
@@ -80,7 +77,7 @@ namespace EducationBot.Telegram.Services
                                 else
                                     buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("%E2%AD%90 включить", "включить") });
 
-                                await SendMessageToUser(chatId, sb.ToString(), ct, null, buttons);
+                                await SendMessageToUser(chat.Id, sb.ToString(), ct, null, buttons);
                                 #endregion dub 2
 
                                 break;
@@ -102,7 +99,7 @@ namespace EducationBot.Telegram.Services
                                 else
                                     buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("%E2%AD%90 включить", "включить") });
 
-                                await SendMessageToUser(chatId, sb.ToString(), ct, null, buttons);
+                                await SendMessageToUser(chat.Id, sb.ToString(), ct, null, buttons);
                                 #endregion dub 2
 
                                 break;
@@ -124,40 +121,88 @@ namespace EducationBot.Telegram.Services
                                 else
                                     buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("%E2%AD%90 включить", "включить") });
 
-                                await SendMessageToUser(chatId, sb.ToString(), ct, null, buttons);
+                                await SendMessageToUser(chat.Id, sb.ToString(), ct, null, buttons);
                                 #endregion dub 2
 
                                 break;
                             }
+
+                        case "напоминания":
+                            {
+                                var buttons = new InlineKeyboardMarkup();
+                                buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("создать новое", "создать_новое_напоминание") });
+                                buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("архив", "архив_напоминаний"), new InlineKeyboardButton("удалть", "удалить_все_напоминания") });
+                                await SendMessageToUser(chat.Id, "раздел - напоминания", ct, null, buttons);
+                                break;
+                            }
+                        case "создать_новое_напоминание":
+                            {
+                                StringBuilder sb = new();
+                                sb.AppendLine("введине дату(UTC) - описание");
+                                sb.AppendLine("пример:");
+                                sb.AppendLine($"{DateTime.Now:dd.MM.yy HH:mm} - тестовое description");
+                                await SendMessageToUser(chat.Id, sb.ToString(), ct);
+                                break;
+                            }
+                        case "архив_напоминаний":
+                            {
+                                var shedullers = await _userChatService.GetAllUserShedullers(message.CallbackQuery.From.Id, ct);
+                                StringBuilder sb = new();
+                                if (!shedullers.Any())
+                                    sb.AppendLine("у вас нет напоминаний");
+                                else
+                                {
+                                    foreach (var shedulle in shedullers.OrderByDescending(x => x.DateTimeUtc))
+                                    {
+                                        sb.Append($"{shedulle.Title} {Environment.NewLine}");
+                                        sb.Append($"\uD83D\uDD51 {shedulle.DateTimeUtc} {shedulle.IsOld} {Environment.NewLine}");
+                                        sb.Append($"{Environment.NewLine}");
+                                    }
+                                }
+                                await SendMessageToUser(chat.Id, "напоминания:", ct);
+                                break;
+                            }
+                        case "удалить_все_напоминания":
+                            {
+                                var count = await _userChatService.DeleteAllUserShedullers(message.CallbackQuery.From.Id, ct);
+                                StringBuilder sb = new();
+                                sb.AppendLine("готово");
+                                sb.AppendLine($"удалено {count} напоминаний");
+                                await SendMessageToUser(chat.Id, "раздел - напоминания", ct);
+                                break;
+                            }
+
+
                         case "расписание":
                             {
                                 var buttons = new InlineKeyboardMarkup();
                                 buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("%F0%9F%93%8C сегодня", "сегодня") });
                                 buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("%F0%9F%94%BD вчера", "вчера"), new InlineKeyboardButton("%F0%9F%94%BC завтра", "завтра") });
-                                await SendMessageToUser(chatId, "на какой день", ct, null, buttons);
+                                await SendMessageToUser(chat.Id, "раздел - расписание", ct, null, buttons);
                                 break;
                             }
                         case "вчера":
                             {
                                 var day = DateTime.Today.AddDays(-1);
                                 var lessons = await _lessonHelperService.GetLessonByDay(day, ct);
-                                await SendLessons(chatId, lessons, day, ct);
+                                await SendLessons(chat.Id, lessons, day, ct);
                                 break;
                             }
                         case "завтра":
                             {
                                 var day = DateTime.Today.AddDays(1);
                                 var lessons = await _lessonHelperService.GetLessonByDay(day, ct);
-                                await SendLessons(chatId, lessons, day, ct);
+                                await SendLessons(chat.Id, lessons, day, ct);
                                 break;
                             }
                         case "сегодня":
                             {
                                 var day = DateTime.Today;
                                 var lessons = await _lessonHelperService.GetLessonByDay(day, ct);
-                                await SendLessons(chatId, lessons, day, ct);
+                                await SendLessons(chat.Id, lessons, day, ct);
                                 break;
                             }
+
                         default:
                             {
                                 break;
@@ -167,19 +212,18 @@ namespace EducationBot.Telegram.Services
                 }
                 catch (Exception e)
                 {
-                    await SendMessageToUser(chatId, e.Message, ct);
+                    await SendMessageToUser(chat.Id, e.Message, ct);
                     throw;
                 }
             }
 
+            // single: Chat.Id = From.Id
             if (message.Message != null)
             {
-                await _userChatService.SetChatUser(message.Message.Chat, message.Message.From, ct);
-
                 // добавление в чат
                 if (message.Message.NewChatMember != null)
                 {
-                    if (message.Message.NewChatMember.Username == "rurobotestbot")
+                    if (message.Message.NewChatMember.Username == _configuration["TelegramSettings:BotUserName"])
                     {
                         // бота добавили в чат
                     }
@@ -194,7 +238,7 @@ namespace EducationBot.Telegram.Services
                 // исключение из чата
                 if (message.Message.LeftChatMember != null)
                 {
-                    if (message.Message.LeftChatMember.Username == "rurobotestbot")
+                    if (message.Message.LeftChatMember.Username == _configuration["TelegramSettings:BotUserName"])
                     {
                         // бота исключли из чата
                     }
@@ -209,11 +253,20 @@ namespace EducationBot.Telegram.Services
                 // private - group
                 if (message.Message.Text != null)
                 {
-                    // single: Chat.Id = From.Id
-                    var chatId = message.Message.Chat.Id;
-                    var messageText = message.Message.Text;
+                    chat = message.Message.Chat;
+                    from = message.Message.From;
+                    messageText = message.Message.Text;
 
-                    if (messageText.StartsWith('/') && messageText.Contains("@") && messageText.Contains("ssaueducbot"))
+                    await _userChatService.SetChatUser(chat, from, ct);
+
+                    var dialog = await _userChatService.GetUserDialog(chat, from, ct);
+
+                    if (dialog.LastAction == ChatAction.None)
+                    {
+
+                    }
+
+                    if (messageText.StartsWith('/') && messageText.Contains("@") && messageText.Contains(_configuration["TelegramSettings:BotUserName"]))
                         messageText = messageText.Split('@').First();
 
                     try
@@ -227,7 +280,7 @@ namespace EducationBot.Telegram.Services
                                     sb.Append($"Вас приветствует {_configuration["TelegramSettings:BotFirstName"]} {Environment.NewLine}");
                                     sb.Append($"бот создан для помощи с расписанием в институте для группы 6132-020402D {Environment.NewLine}"); ;
                                     sb.Append($"<a href='https://ssau.ru/rasp?groupId=755932538'>источник расписания</a> {Environment.NewLine}");
-                                    await SendMessageToUser(chatId, sb.ToString(), ct, "HTML");
+                                    await SendMessageToUser(chat.Id, sb.ToString(), ct, "HTML");
                                     #endregion dub start
 
                                     #region dub menu
@@ -236,7 +289,8 @@ namespace EducationBot.Telegram.Services
                                     var buttons = new InlineKeyboardMarkup();
                                     buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("подписка", "подписка") });
                                     buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("расписание", "расписание") });
-                                    await SendMessageToUser(chatId, sb1.ToString(), ct, null, buttons);
+                                    buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("напоминания", "напоминания") });
+                                    await SendMessageToUser(chat.Id, sb1.ToString(), ct, null, buttons);
                                     #endregion dub menu
 
                                     break;
@@ -248,7 +302,7 @@ namespace EducationBot.Telegram.Services
                                     sb.Append($"Вас приветствует {_configuration["TelegramSettings:BotFirstName"]} {Environment.NewLine}");
                                     sb.Append($"бот создан для помощи с расписанием в институте для группы 6132-020402D {Environment.NewLine}"); ;
                                     sb.Append($"<a href='https://ssau.ru/rasp?groupId=755932538'>источник расписания</a> {Environment.NewLine}");
-                                    await SendMessageToUser(chatId, sb.ToString(), ct, "HTML");
+                                    await SendMessageToUser(chat.Id, sb.ToString(), ct, "HTML");
                                     #endregion dub start
 
                                     #region dub menu
@@ -257,7 +311,8 @@ namespace EducationBot.Telegram.Services
                                     var buttons = new InlineKeyboardMarkup();
                                     buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("подписка", "подписка") });
                                     buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("расписание", "расписание") });
-                                    await SendMessageToUser(chatId, sb1.ToString(), ct, null, buttons);
+                                    buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("напоминания", "напоминания") });
+                                    await SendMessageToUser(chat.Id, sb1.ToString(), ct, null, buttons);
                                     #endregion dub menu
 
                                     break;
@@ -270,7 +325,8 @@ namespace EducationBot.Telegram.Services
                                     var buttons = new InlineKeyboardMarkup();
                                     buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("подписка", "подписка") });
                                     buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("расписание", "расписание") });
-                                    await SendMessageToUser(chatId, sb.ToString(), ct, null, buttons);
+                                    buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("напоминания", "напоминания") });
+                                    await SendMessageToUser(chat.Id, sb.ToString(), ct, null, buttons);
                                     #endregion dub menu
 
                                     break;
@@ -285,14 +341,14 @@ namespace EducationBot.Telegram.Services
                                         sb.Append($"First Name: {message.Message.From.FirstName} {Environment.NewLine}");
                                     sb.Append($"Chat Type: {message.Message.Chat.Type} {Environment.NewLine}");
                                     sb.Append($"Chat Id: {message.Message.Chat.Id} {Environment.NewLine}");
-                                    await SendMessageToUser(chatId, sb.ToString(), ct);
+                                    await SendMessageToUser(chat.Id, sb.ToString(), ct);
                                     break;
                                 }
                             case "/todaylessons":
                                 {
                                     var day = DateTime.Today;
                                     var lessons = await _lessonHelperService.GetLessonByDay(day, ct);
-                                    await SendLessons(chatId, lessons, day, ct);
+                                    await SendLessons(chat.Id, lessons, day, ct);
                                     break;
                                 }
                             case "подписка":
@@ -310,40 +366,42 @@ namespace EducationBot.Telegram.Services
                                     else
                                         buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("%E2%AD%90 включить", "включить") });
 
-                                    await SendMessageToUser(chatId, sb.ToString(), ct, null, buttons);
+                                    await SendMessageToUser(chat.Id, sb.ToString(), ct, null, buttons);
                                     #endregion dub 2
 
                                     break;
                                 }
+
                             case "расписание":
                                 {
                                     var buttons = new InlineKeyboardMarkup();
                                     buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("%F0%9F%93%8C сегодня", "сегодня") });
                                     buttons.InlineKeyboard.Add(new() { new InlineKeyboardButton("%F0%9F%94%BD вчера", "вчера"), new InlineKeyboardButton("%F0%9F%94%BC завтра", "завтра") });
-                                    await SendMessageToUser(chatId, "на какой день", ct, null, buttons);
+                                    await SendMessageToUser(chat.Id, "раздел - расписание", ct, null, buttons);
                                     break;
                                 }
                             case "вчера":
                                 {
                                     var day = DateTime.Today.AddDays(-1);
                                     var lessons = await _lessonHelperService.GetLessonByDay(day, ct);
-                                    await SendLessons(chatId, lessons, day, ct);
+                                    await SendLessons(chat.Id, lessons, day, ct);
                                     break;
                                 }
                             case "завтра":
                                 {
                                     var day = DateTime.Today.AddDays(1);
                                     var lessons = await _lessonHelperService.GetLessonByDay(day, ct);
-                                    await SendLessons(chatId, lessons, day, ct);
+                                    await SendLessons(chat.Id, lessons, day, ct);
                                     break;
                                 }
                             case "сегодня":
                                 {
                                     var day = DateTime.Today;
                                     var lessons = await _lessonHelperService.GetLessonByDay(day, ct);
-                                    await SendLessons(chatId, lessons, day, ct);
+                                    await SendLessons(chat.Id, lessons, day, ct);
                                     break;
                                 }
+
                             default:
                                 {
                                     break;
@@ -352,7 +410,7 @@ namespace EducationBot.Telegram.Services
                     }
                     catch (Exception e)
                     {
-                        await SendMessageToUser(chatId, e.Message, ct);
+                        await SendMessageToUser(chat.Id, e.Message, ct);
                         throw;
                     }
                     return;
