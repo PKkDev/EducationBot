@@ -5697,6 +5697,45 @@
     "Id": 0,
     "Teacher": {
       "Id": 0,
+      "Name": "Альмурзин П.П.",
+      "Link": "https://ssau.ru/rasp?staffId=65964001",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "DateTimeStartUtc": "2022-11-26T05:45:00Z",
+    "DateTimeEndUtc": "2022-11-26T07:20:00Z",
+    "Day": {
+      "Id": 0,
+      "Day": "2022-11-26T00:00:00",
+      "DayOfWeek": "суббота",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "Time": {
+      "Id": 0,
+      "Start": "09:45:00",
+      "End": "11:20:00",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "WeekNunmber": "13 неделя",
+    "Discipline": "Иностранный язык в профессиональной сфере",
+    "TypeLesson": {
+      "Id": 0,
+      "Title": "Лабораторная",
+      "Color": "rgba(68, 63, 162, 1)",
+      "TypeStr": "2",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "Groups": "Подгруппы: 2\r\n",
+    "Room": "ON-LINE - 14",
+    "LinkToRoom": null
+  },
+  {
+    "Id": 0,
+    "Teacher": {
+      "Id": 0,
       "Name": "Додонов М.В.",
       "Link": "https://ssau.ru/rasp?staffId=200007570",
       "LessonId": 0,
@@ -5768,6 +5807,45 @@
       "Lesson": null
     },
     "Groups": "Подгруппы: 1\r\n",
+    "Room": "ON-LINE - 14",
+    "LinkToRoom": null
+  },
+  {
+    "Id": 0,
+    "Teacher": {
+      "Id": 0,
+      "Name": "Альмурзин П.П.",
+      "Link": "https://ssau.ru/rasp?staffId=65964001",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "DateTimeStartUtc": "2022-11-26T07:30:00Z",
+    "DateTimeEndUtc": "2022-11-26T09:05:00Z",
+    "Day": {
+      "Id": 0,
+      "Day": "2022-11-26T00:00:00",
+      "DayOfWeek": "суббота",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "Time": {
+      "Id": 0,
+      "Start": "11:30:00",
+      "End": "13:05:00",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "WeekNunmber": "13 неделя",
+    "Discipline": "Иностранный язык в профессиональной сфере",
+    "TypeLesson": {
+      "Id": 0,
+      "Title": "Лабораторная",
+      "Color": "rgba(68, 63, 162, 1)",
+      "TypeStr": "2",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "Groups": "Подгруппы: 2\r\n",
     "Room": "ON-LINE - 14",
     "LinkToRoom": null
   },
@@ -6399,45 +6477,6 @@
     "Id": 0,
     "Teacher": {
       "Id": 0,
-      "Name": "Агуреева А.В.",
-      "Link": "https://ssau.ru/rasp?staffId=453788457",
-      "LessonId": 0,
-      "Lesson": null
-    },
-    "DateTimeStartUtc": "2022-12-02T09:30:00Z",
-    "DateTimeEndUtc": "2022-12-02T11:05:00Z",
-    "Day": {
-      "Id": 0,
-      "Day": "2022-12-02T00:00:00",
-      "DayOfWeek": "пятница",
-      "LessonId": 0,
-      "Lesson": null
-    },
-    "Time": {
-      "Id": 0,
-      "Start": "13:30:00",
-      "End": "15:05:00",
-      "LessonId": 0,
-      "Lesson": null
-    },
-    "WeekNunmber": "14 неделя",
-    "Discipline": "Иностранный язык в профессиональной сфере",
-    "TypeLesson": {
-      "Id": 0,
-      "Title": "Лабораторная",
-      "Color": "rgba(68, 63, 162, 1)",
-      "TypeStr": "2",
-      "LessonId": 0,
-      "Lesson": null
-    },
-    "Groups": "Подгруппы: 2\r\n",
-    "Room": "219 - 14",
-    "LinkToRoom": null
-  },
-  {
-    "Id": 0,
-    "Teacher": {
-      "Id": 0,
       "Name": "Царёва А.В.",
       "Link": "https://ssau.ru/rasp?staffId=449411001",
       "LessonId": 0,
@@ -6555,6 +6594,45 @@
     "Id": 0,
     "Teacher": {
       "Id": 0,
+      "Name": "Альмурзин П.П.",
+      "Link": "https://ssau.ru/rasp?staffId=65964001",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "DateTimeStartUtc": "2022-12-10T05:45:00Z",
+    "DateTimeEndUtc": "2022-12-10T07:20:00Z",
+    "Day": {
+      "Id": 0,
+      "Day": "2022-12-10T00:00:00",
+      "DayOfWeek": "суббота",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "Time": {
+      "Id": 0,
+      "Start": "09:45:00",
+      "End": "11:20:00",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "WeekNunmber": "15 неделя",
+    "Discipline": "Иностранный язык в профессиональной сфере",
+    "TypeLesson": {
+      "Id": 0,
+      "Title": "Лабораторная",
+      "Color": "rgba(68, 63, 162, 1)",
+      "TypeStr": "2",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "Groups": "Подгруппы: 2\r\n",
+    "Room": "ON-LINE - 14",
+    "LinkToRoom": null
+  },
+  {
+    "Id": 0,
+    "Teacher": {
+      "Id": 0,
       "Name": "Додонов М.В.",
       "Link": "https://ssau.ru/rasp?staffId=200007570",
       "LessonId": 0,
@@ -6665,6 +6743,45 @@
       "Lesson": null
     },
     "Groups": "Подгруппы: 1\r\n",
+    "Room": "ON-LINE - 14",
+    "LinkToRoom": null
+  },
+  {
+    "Id": 0,
+    "Teacher": {
+      "Id": 0,
+      "Name": "Альмурзин П.П.",
+      "Link": "https://ssau.ru/rasp?staffId=65964001",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "DateTimeStartUtc": "2022-12-10T07:30:00Z",
+    "DateTimeEndUtc": "2022-12-10T09:05:00Z",
+    "Day": {
+      "Id": 0,
+      "Day": "2022-12-10T00:00:00",
+      "DayOfWeek": "суббота",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "Time": {
+      "Id": 0,
+      "Start": "11:30:00",
+      "End": "13:05:00",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "WeekNunmber": "15 неделя",
+    "Discipline": "Иностранный язык в профессиональной сфере",
+    "TypeLesson": {
+      "Id": 0,
+      "Title": "Лабораторная",
+      "Color": "rgba(68, 63, 162, 1)",
+      "TypeStr": "2",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "Groups": "Подгруппы: 2\r\n",
     "Room": "ON-LINE - 14",
     "LinkToRoom": null
   },
@@ -7140,6 +7257,45 @@
     "Id": 0,
     "Teacher": {
       "Id": 0,
+      "Name": "Альмурзин П.П.",
+      "Link": "https://ssau.ru/rasp?staffId=65964001",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "DateTimeStartUtc": "2022-12-17T05:45:00Z",
+    "DateTimeEndUtc": "2022-12-17T07:20:00Z",
+    "Day": {
+      "Id": 0,
+      "Day": "2022-12-17T00:00:00",
+      "DayOfWeek": "суббота",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "Time": {
+      "Id": 0,
+      "Start": "09:45:00",
+      "End": "11:20:00",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "WeekNunmber": "16 неделя",
+    "Discipline": "Иностранный язык в профессиональной сфере",
+    "TypeLesson": {
+      "Id": 0,
+      "Title": "Лабораторная",
+      "Color": "rgba(68, 63, 162, 1)",
+      "TypeStr": "2",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "Groups": "Подгруппы: 2\r\n",
+    "Room": "ON-LINE - 14",
+    "LinkToRoom": null
+  },
+  {
+    "Id": 0,
+    "Teacher": {
+      "Id": 0,
       "Name": "Зеленко Л.С.",
       "Link": "https://ssau.ru/rasp?staffId=60372001",
       "LessonId": 0,
@@ -7257,6 +7413,45 @@
     "Id": 0,
     "Teacher": {
       "Id": 0,
+      "Name": "Альмурзин П.П.",
+      "Link": "https://ssau.ru/rasp?staffId=65964001",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "DateTimeStartUtc": "2022-12-17T07:30:00Z",
+    "DateTimeEndUtc": "2022-12-17T09:05:00Z",
+    "Day": {
+      "Id": 0,
+      "Day": "2022-12-17T00:00:00",
+      "DayOfWeek": "суббота",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "Time": {
+      "Id": 0,
+      "Start": "11:30:00",
+      "End": "13:05:00",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "WeekNunmber": "16 неделя",
+    "Discipline": "Иностранный язык в профессиональной сфере",
+    "TypeLesson": {
+      "Id": 0,
+      "Title": "Лабораторная",
+      "Color": "rgba(68, 63, 162, 1)",
+      "TypeStr": "2",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "Groups": "Подгруппы: 2\r\n",
+    "Room": "ON-LINE - 14",
+    "LinkToRoom": null
+  },
+  {
+    "Id": 0,
+    "Teacher": {
+      "Id": 0,
       "Name": "Попов С.Б.",
       "Link": "https://ssau.ru/rasp?staffId=62063001",
       "LessonId": 0,
@@ -7329,45 +7524,6 @@
     },
     "Groups": "",
     "Room": "ON-LINE - 14",
-    "LinkToRoom": null
-  },
-  {
-    "Id": 0,
-    "Teacher": {
-      "Id": 0,
-      "Name": "Агуреева А.В.",
-      "Link": "https://ssau.ru/rasp?staffId=453788457",
-      "LessonId": 0,
-      "Lesson": null
-    },
-    "DateTimeStartUtc": "2022-12-16T09:30:00Z",
-    "DateTimeEndUtc": "2022-12-16T11:05:00Z",
-    "Day": {
-      "Id": 0,
-      "Day": "2022-12-16T00:00:00",
-      "DayOfWeek": "пятница",
-      "LessonId": 0,
-      "Lesson": null
-    },
-    "Time": {
-      "Id": 0,
-      "Start": "13:30:00",
-      "End": "15:05:00",
-      "LessonId": 0,
-      "Lesson": null
-    },
-    "WeekNunmber": "16 неделя",
-    "Discipline": "Иностранный язык в профессиональной сфере",
-    "TypeLesson": {
-      "Id": 0,
-      "Title": "Лабораторная",
-      "Color": "rgba(68, 63, 162, 1)",
-      "TypeStr": "2",
-      "LessonId": 0,
-      "Lesson": null
-    },
-    "Groups": "Подгруппы: 2\r\n",
-    "Room": "219 - 14",
     "LinkToRoom": null
   },
   {
@@ -7491,6 +7647,45 @@
     "Id": 0,
     "Teacher": {
       "Id": 0,
+      "Name": "Альмурзин П.П.",
+      "Link": "https://ssau.ru/rasp?staffId=65964001",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "DateTimeStartUtc": "2022-12-24T05:45:00Z",
+    "DateTimeEndUtc": "2022-12-24T07:20:00Z",
+    "Day": {
+      "Id": 0,
+      "Day": "2022-12-24T00:00:00",
+      "DayOfWeek": "суббота",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "Time": {
+      "Id": 0,
+      "Start": "09:45:00",
+      "End": "11:20:00",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "WeekNunmber": "17 неделя",
+    "Discipline": "Иностранный язык в профессиональной сфере",
+    "TypeLesson": {
+      "Id": 0,
+      "Title": "Лабораторная",
+      "Color": "rgba(68, 63, 162, 1)",
+      "TypeStr": "2",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "Groups": "Подгруппы: 2\r\n",
+    "Room": "ON-LINE - 14",
+    "LinkToRoom": null
+  },
+  {
+    "Id": 0,
+    "Teacher": {
+      "Id": 0,
       "Name": "Попов С.Б.",
       "Link": "https://ssau.ru/rasp?staffId=62063001",
       "LessonId": 0,
@@ -7523,6 +7718,45 @@
       "Lesson": null
     },
     "Groups": "Подгруппы: 1\r\n",
+    "Room": "ON-LINE - 14",
+    "LinkToRoom": null
+  },
+  {
+    "Id": 0,
+    "Teacher": {
+      "Id": 0,
+      "Name": "Альмурзин П.П.",
+      "Link": "https://ssau.ru/rasp?staffId=65964001",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "DateTimeStartUtc": "2022-12-24T07:30:00Z",
+    "DateTimeEndUtc": "2022-12-24T09:05:00Z",
+    "Day": {
+      "Id": 0,
+      "Day": "2022-12-24T00:00:00",
+      "DayOfWeek": "суббота",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "Time": {
+      "Id": 0,
+      "Start": "11:30:00",
+      "End": "13:05:00",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "WeekNunmber": "17 неделя",
+    "Discipline": "Иностранный язык в профессиональной сфере",
+    "TypeLesson": {
+      "Id": 0,
+      "Title": "Лабораторная",
+      "Color": "rgba(68, 63, 162, 1)",
+      "TypeStr": "2",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "Groups": "Подгруппы: 2\r\n",
     "Room": "ON-LINE - 14",
     "LinkToRoom": null
   },
@@ -7881,6 +8115,45 @@
     "Id": 0,
     "Teacher": {
       "Id": 0,
+      "Name": "Альмурзин П.П.",
+      "Link": "https://ssau.ru/rasp?staffId=65964001",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "DateTimeStartUtc": "2022-12-31T05:45:00Z",
+    "DateTimeEndUtc": "2022-12-31T07:20:00Z",
+    "Day": {
+      "Id": 0,
+      "Day": "2022-12-31T00:00:00",
+      "DayOfWeek": "суббота",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "Time": {
+      "Id": 0,
+      "Start": "09:45:00",
+      "End": "11:20:00",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "WeekNunmber": "18 неделя",
+    "Discipline": "Иностранный язык в профессиональной сфере",
+    "TypeLesson": {
+      "Id": 0,
+      "Title": "Лабораторная",
+      "Color": "rgba(68, 63, 162, 1)",
+      "TypeStr": "2",
+      "LessonId": 0,
+      "Lesson": null
+    },
+    "Groups": "Подгруппы: 2\r\n",
+    "Room": "ON-LINE - 14",
+    "LinkToRoom": null
+  },
+  {
+    "Id": 0,
+    "Teacher": {
+      "Id": 0,
       "Name": "Зеленко Л.С.",
       "Link": "https://ssau.ru/rasp?staffId=60372001",
       "LessonId": 0,
@@ -7920,24 +8193,24 @@
     "Id": 0,
     "Teacher": {
       "Id": 0,
-      "Name": "Агуреева А.В.",
-      "Link": "https://ssau.ru/rasp?staffId=453788457",
+      "Name": "Альмурзин П.П.",
+      "Link": "https://ssau.ru/rasp?staffId=65964001",
       "LessonId": 0,
       "Lesson": null
     },
-    "DateTimeStartUtc": "2022-12-30T09:30:00Z",
-    "DateTimeEndUtc": "2022-12-30T11:05:00Z",
+    "DateTimeStartUtc": "2022-12-31T07:30:00Z",
+    "DateTimeEndUtc": "2022-12-31T09:05:00Z",
     "Day": {
       "Id": 0,
-      "Day": "2022-12-30T00:00:00",
-      "DayOfWeek": "пятница",
+      "Day": "2022-12-31T00:00:00",
+      "DayOfWeek": "суббота",
       "LessonId": 0,
       "Lesson": null
     },
     "Time": {
       "Id": 0,
-      "Start": "13:30:00",
-      "End": "15:05:00",
+      "Start": "11:30:00",
+      "End": "13:05:00",
       "LessonId": 0,
       "Lesson": null
     },
@@ -7952,7 +8225,7 @@
       "Lesson": null
     },
     "Groups": "Подгруппы: 2\r\n",
-    "Room": "219 - 14",
+    "Room": "ON-LINE - 14",
     "LinkToRoom": null
   }
 ]
