@@ -38,17 +38,27 @@ namespace EducationBot.Telegram.Controllers
 
             if (modelList == null || !modelList.Any()) throw new Exception("Lesson is Empty");
 
-            var oldLessons = await _context.Lesson.ToListAsync(ct);
-            if (oldLessons.Any())
-            {
-                _context.Lesson.RemoveRange(_context.Lesson);
-                await _context.SaveChangesAsync(ct);
-            }
+            var gr = modelList.GroupBy(x => x.Teacher.Name);
 
-            await _context.Lesson.AddRangeAsync(modelList);
-            await _context.SaveChangesAsync(ct);
+            var gr2 = modelList.GroupBy(x => x.Discipline);
+            var gr2L = gr2.Select(x => x.Key).Distinct().ToList();
 
-            var newLessons = await _context.Lesson.ToListAsync(ct);
+            var gr3 = modelList.GroupBy(x => x.TypeLesson.Title);
+            var gr3L = gr3.Select(x => x.Key).Distinct().ToList();
+
+            var groups = modelList.GroupBy(x => new { x.Discipline, x.TypeLesson.Title });
+
+            //var oldLessons = await _context.Lesson.ToListAsync(ct);
+            //if (oldLessons.Any())
+            //{
+            //    _context.Lesson.RemoveRange(_context.Lesson);
+            //    await _context.SaveChangesAsync(ct);
+            //}
+
+            //await _context.Lesson.AddRangeAsync(modelList);
+            //await _context.SaveChangesAsync(ct);
+
+            //var newLessons = await _context.Lesson.ToListAsync(ct);
         }
 
         [HttpGet("lessons")]
