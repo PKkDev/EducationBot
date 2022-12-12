@@ -27,6 +27,9 @@ builder.Services.AddTransient<UserChatService>();
 builder.Services.AddDbContext<DataBaseContext>(option
     => option.UseMySql(builder.Configuration["Connections:MySqlConnect"], new MySqlServerVersion(new Version(7, 4, 28))));
 
+//using ServiceProvider serviceProvider = builder.Services.BuildServiceProvider();
+//var context = serviceProvider.GetRequiredService<DataBaseContext>();
+//DataBaseContext.SeedInitilData(context);
 
 builder.Services.AddControllers();
 

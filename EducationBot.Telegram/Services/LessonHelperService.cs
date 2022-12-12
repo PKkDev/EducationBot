@@ -1,5 +1,5 @@
 ﻿using EducationBot.EfData;
-using EducationBot.EfData.Entities;
+using EducationBot.EfData.Entities.Education;
 using Microsoft.EntityFrameworkCore;
 
 namespace EducationBot.Telegram.Services
@@ -13,38 +13,42 @@ namespace EducationBot.Telegram.Services
             _context = context;
         }
 
-        public async Task<List<Lesson>> GetLessonShedulled(CancellationToken ct)
+        public async Task<List<LessonShedulle>> GetLessonShedulled(CancellationToken ct)
         {
             var nowUTC = DateTime.Now.ToUniversalTime();
-            // nowUTC = new DateTime(2022, 12, 20, 8, 5, 0, DateTimeKind.Local).ToUniversalTime();
+            // nowUTC = new DateTime(2022, 12, 13, 13, 25, 0, DateTimeKind.Local).ToUniversalTime();
             var today = nowUTC.Date;
 
             var filterEnd = nowUTC.AddMinutes(10);
             var filterStart = nowUTC.AddMinutes(-10);
 
-            var leasons = await _context.Lesson
-                .Include(x => x.Teacher)
-                .Include(x => x.Day)
-                .Include(x => x.Time)
-                .Include(x => x.TypeLesson)
-                .Where(x => (x.DateTimeStartUtc >= filterStart && x.DateTimeStartUtc <= filterEnd) && x.Day.Day == today)
+            var shedullers = await _context.LessonShedulle
+                .Include(x => x.Lesson)
+                .ThenInclude(x => x.Discipline)
+                .Include(x => x.Lesson)
+                .ThenInclude(x => x.Teacher)
+                .Include(x => x.Lesson)
+                .ThenInclude(x => x.DisciplineType)
+                .Where(x => (x.StartDateTimeUTC >= filterStart && x.StartDateTimeUTC <= filterEnd) && x.Date == today)
                 .ToListAsync(ct);
 
-            return leasons;
+            return shedullers;
         }
 
 
-        public async Task<List<Lesson>> GetLessonByDay(DateTime date, CancellationToken ct)
+        public async Task<List<LessonShedulle>> GetLessonByDay(DateTime date, CancellationToken ct)
         {
-            var leasons = await _context.Lesson
-                .Include(x => x.Teacher)
-                .Include(x => x.Day)
-                .Include(x => x.Time)
-                .Include(x => x.TypeLesson)
-                .Where(x => x.Day.Day == date)
+            var shedullers = await _context.LessonShedulle
+                .Include(x => x.Lesson)
+                .ThenInclude(x => x.Discipline)
+                .Include(x => x.Lesson)
+                .ThenInclude(x => x.Teacher)
+                .Include(x => x.Lesson)
+                .ThenInclude(x => x.DisciplineType)
+                .Where(x => x.Date == date)
                 .ToListAsync(ct);
 
-            return leasons;
+            return shedullers;
         }
     }
 }

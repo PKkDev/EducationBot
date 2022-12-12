@@ -1,5 +1,5 @@
-﻿using EducationBot.EfData.Entities;
-using EducationBot.EfData.EntitiesNew;
+﻿using EducationBot.EfData.Entities.Cient;
+using EducationBot.EfData.Entities.Education;
 using Microsoft.EntityFrameworkCore;
 
 namespace EducationBot.EfData
@@ -16,13 +16,7 @@ namespace EducationBot.EfData
         public DbSet<Discipline> Discipline { get; set; }
         public DbSet<Teacher> Teacher { get; set; }
         public DbSet<DisciplineType> DisciplineType { get; set; }
-        public DbSet<StudyLesson> StudyLesson { get; set; }
-
         public DbSet<Lesson> Lesson { get; set; }
-        public DbSet<LessonTeacher> LessonTeacher { get; set; }
-        public DbSet<LessonType> LessonType { get; set; }
-        public DbSet<LessonWeekDay> LessonWeekDay { get; set; }
-        public DbSet<LessonTime> LessonTime { get; set; }
 
         public DataBaseContext(DbContextOptions<DataBaseContext> options)
             : base(options)
@@ -55,5 +49,92 @@ namespace EducationBot.EfData
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         { }
+
+        public static void SeedInitilData(DataBaseContext context)
+        {
+            #region TelegramChat
+
+            TelegramChat vhtc = new()
+            {
+                Title = null,
+                ChatType = "private",
+                ChatIdent = 1338551358,
+                Users = new List<TelegramUser>()
+                {
+                    new()
+                    {
+                        FirstName = "Виктория",
+                        LastName = "Хорина",
+                        UserIdent = 1338551358,
+                        IsGetLessonShedulle = true
+                    }
+                }
+            };
+
+            TelegramChat kptc = new()
+            {
+                Title = null,
+                ChatType = "private",
+                ChatIdent = 1077072257,
+                Users = new List<TelegramUser>()
+                {
+                    new()
+                    {
+                        FirstName = "Kirill",
+                        LastName = "Portnov",
+                        UserIdent = 1077072257,
+                        IsGetLessonShedulle = true
+                    }
+                }
+            };
+
+            TelegramChat aatc = new()
+            {
+                Title = null,
+                ChatType = "private",
+                ChatIdent = 347455790,
+                Users = new List<TelegramUser>()
+                {
+                     new()
+                     {
+                         FirstName = "Alena",
+                         LastName = "Alekseevna",
+                         UserIdent = 347455790,
+                         IsGetLessonShedulle = true
+                     }
+                }
+            };
+
+            TelegramChat gltc = new()
+            {
+                Title = null,
+                ChatType = "private",
+                ChatIdent = 572877873,
+                Users = new List<TelegramUser>()
+                {
+                    new()
+                    {
+                        FirstName = "Grisha",
+                        LastName = "Lisianskii",
+                        UserIdent = 572877873,
+                        IsGetLessonShedulle = true
+                    }
+                }
+            };
+
+            //context.TelegramChat.Add(vhtc);
+            //context.SaveChanges();
+
+            //context.TelegramChat.Add(kptc);
+            //context.SaveChanges();
+
+            //context.TelegramChat.Add(aatc);
+            //context.SaveChanges();
+
+            //context.TelegramChat.Add(gltc);
+            //context.SaveChanges();
+
+            #endregion TelegramChat
+        }
     }
 }

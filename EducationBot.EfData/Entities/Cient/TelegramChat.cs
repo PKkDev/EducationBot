@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
 
-namespace EducationBot.EfData.Entities
+namespace EducationBot.EfData.Entities.Cient
 {
     [Index((nameof(ChatIdent)), IsUnique = true)]
     public class TelegramChat

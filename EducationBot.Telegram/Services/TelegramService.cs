@@ -1,4 +1,7 @@
 ﻿using EducationBot.EfData.Entities;
+using EducationBot.EfData.Entities.Cient;
+using EducationBot.EfData.Entities.Education;
+using EducationBot.EfData.Model;
 using EducationBot.Telegram.Helpers;
 using EducationBot.Telegram.Model.Telegram;
 using Newtonsoft.Json;
@@ -451,7 +454,7 @@ namespace EducationBot.Telegram.Services
             }
         }
 
-        private async Task SendLessons(long chatId, List<Lesson> lessons, DateTime date, CancellationToken ct)
+        private async Task SendLessons(long chatId, List<LessonShedulle> lessons, DateTime date, CancellationToken ct)
         {
             StringBuilder sb = new();
             sb.AppendLine($"%F0%9F%93%86 {date:dddd, dd MMMM}");
@@ -460,20 +463,20 @@ namespace EducationBot.Telegram.Services
             {
                 foreach (var lesson in lessons)
                 {
-                    sb.Append($"\uD83C\uDF93 {lesson.Discipline} {Environment.NewLine}");
-                    sb.Append($"%F0%9F%92%BB {lesson.TypeLesson.Title} {Environment.NewLine}");
-                    sb.Append($"\uD83D\uDD51 {lesson.Time.GetStartStr()} - {lesson.Time.GetEndStr()} {Environment.NewLine}");
-                    if (lesson.LinkToRoom != null)
-                        sb.Append($"%F0%9F%9A%AA  <a href='{lesson.LinkToRoom}'>Перейти в конференцию</a> {Environment.NewLine}");
-                    if (lesson.Teacher.Link != null)
-                        sb.Append($"%F0%9F%91%A4  <a href='{lesson.Teacher.Link}'>{lesson.Teacher.Name}</a> {Environment.NewLine}");
+                    sb.Append($"\uD83C\uDF93 {lesson.Lesson.Discipline} {Environment.NewLine}");
+                    sb.Append($"%F0%9F%92%BB {lesson.Lesson.DisciplineType.Name} {Environment.NewLine}");
+                    sb.Append($"\uD83D\uDD51 {lesson.GetStartStr()} - {lesson.GetEndStr()} {Environment.NewLine}");
+                    if (lesson.Lesson.LinkToRoom != null)
+                        sb.Append($"%F0%9F%9A%AA  <a href='{lesson.Lesson.LinkToRoom}'>Перейти в конференцию</a> {Environment.NewLine}");
+                    if (lesson.Lesson.Teacher.Link != null)
+                        sb.Append($"%F0%9F%91%A4  <a href='{lesson.Lesson.Teacher.Link}'>{lesson.Lesson.Teacher.Name}</a> {Environment.NewLine}");
                     else
-                        sb.Append($"%F0%9F%91%A4 {lesson.Teacher.Name} {Environment.NewLine}");
+                        sb.Append($"%F0%9F%91%A4 {lesson.Lesson.Teacher.Name} {Environment.NewLine}");
 
-                    if (!string.IsNullOrEmpty(lesson.Groups))
+                    if (!string.IsNullOrEmpty(lesson.Lesson.Groups))
                     {
                         sb.Append($"%F0%9F%93%A6 группы: {Environment.NewLine}");
-                        sb.Append(lesson.Groups);
+                        sb.Append(lesson.Lesson.Groups);
                     }
 
                     sb.Append($"{Environment.NewLine}");

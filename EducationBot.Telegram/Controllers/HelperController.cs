@@ -1,8 +1,6 @@
 ﻿using EducationBot.EfData;
-using EducationBot.EfData.Entities;
-using EducationBot.EfData.EntitiesNew;
+using EducationBot.EfData.Entities.Education;
 using EducationBot.EfData.Model;
-using EducationBot.Telegram.Model.Telegram;
 using EducationBot.Telegram.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -33,6 +31,8 @@ namespace EducationBot.Telegram.Controllers
         [HttpGet("feet")]
         public async Task FeetSavedEducationData(CancellationToken ct = default)
         {
+            TimeZoneInfo samaraTZI = TimeZoneInfo.CreateCustomTimeZone("Samara Time", new(4, 0, 0), "(GMT+04:00) Samara Time", "Samara Time");
+
             var path = Path.Combine(AppContext.BaseDirectory, "Saved.json");
 
             var text = System.IO.File.ReadAllText(path);
@@ -78,9 +78,8 @@ namespace EducationBot.Telegram.Controllers
                 }
             }
 
-            _context.StudyLesson.RemoveRange(_context.StudyLesson);
+            _context.Lesson.RemoveRange(_context.Lesson);
             await _context.SaveChangesAsync(ct);
-
 
             var groupedModel = modelList.GroupBy(x => new { x.Discipline, x.LessonType.TypeName, x.LessonTeacher.Name });
             foreach (var model in groupedModel)
@@ -88,53 +87,51 @@ namespace EducationBot.Telegram.Controllers
                 List<LessonShedulle> lessonShedulle = new();
                 foreach (var modelItem in model)
                 {
+                    var dateTimeEnd = modelItem.LessonWeekDay.Day.Add(modelItem.LessonTime.End);
+                    var dateTimeStrt = modelItem.LessonWeekDay.Day.Add(modelItem.LessonTime.Start);
                     lessonShedulle.Add(new LessonShedulle()
                     {
-                        End = modelItem.LessonWeekDay.Day.Add(modelItem.LessonTime.End),
-                        Start = modelItem.LessonWeekDay.Day.Add(modelItem.LessonTime.Start),
+                        Date = modelItem.LessonWeekDay.Day,
+                        End = modelItem.LessonTime.End,
+                        EndDateTimeUTC = TimeZoneInfo.ConvertTimeToUtc(dateTimeEnd, samaraTZI),
+                        Start = modelItem.LessonTime.Start,
+                        StartDateTimeUTC = TimeZoneInfo.ConvertTimeToUtc(dateTimeStrt, samaraTZI)
                     });
                 }
 
-                StudyLesson studyLesson = new()
+                var teacher = await _context.Teacher.FirstOrDefaultAsync(x => x.Name.Equals(model.Key.Name), ct);
+                var discipline = await _context.Discipline.FirstOrDefaultAsync(x => x.Name.Equals(model.Key.Discipline), ct);
+                var disciplineType = await _context.DisciplineType.FirstOrDefaultAsync(x => x.Name.Equals(model.Key.TypeName), ct);
+                Lesson studyLesson = new()
                 {
-                    Teacher = await _context.Teacher.FirstOrDefaultAsync(x => x.Name.Equals(model.Key.Name), ct),
-                    Discipline = await _context.Discipline.FirstOrDefaultAsync(x => x.Name.Equals(model.Key.Discipline), ct),
-                    DisciplineType = await _context.DisciplineType.FirstOrDefaultAsync(x => x.Name.Equals(model.Key.TypeName), ct),
-                    Shedulles = lessonShedulle
+                    Teacher = teacher,
+                    Discipline = discipline,
+                    DisciplineType = disciplineType,
+                    Shedulles = lessonShedulle,
+                    LinkToRoom = null,
+                    Place = model.First().Place,
+                    Groups = model.First().Groups,
                 };
-                await _context.StudyLesson.AddAsync(studyLesson, ct);
+                await _context.Lesson.AddAsync(studyLesson, ct);
                 await _context.SaveChangesAsync(ct);
             }
-
-
-            //var oldLessons = await _context.Lesson.ToListAsync(ct);
-            //if (oldLessons.Any())
-            //{
-            //    _context.Lesson.RemoveRange(_context.Lesson);
-            //    await _context.SaveChangesAsync(ct);
-            //}
-
-            //await _context.Lesson.AddRangeAsync(modelList);
-            //await _context.SaveChangesAsync(ct);
-
-            //var newLessons = await _context.Lesson.ToListAsync(ct);
         }
 
         [HttpGet("lessons")]
         public async Task<IActionResult> GetLessons(CancellationToken ct = default)
         {
             var lessons = await _context.Lesson
-                .Select(x => new { x.Discipline, x.TypeLesson.Title })
+                .Select(x => new { Discipline = x.Discipline.Name, DisciplineType = x.DisciplineType.Name, Teacher = x.Teacher.Name })
                 .ToListAsync(ct);
-            return Ok(lessons.Distinct().OrderBy(x => x.Title));
+            return Ok(lessons.OrderBy(x => x.Discipline));
         }
 
         [HttpGet("feet-link")]
         public async Task SetLinkToLesson([FromQuery] string discipline, [FromQuery] string typeLesson, [FromQuery] string link, CancellationToken ct = default)
         {
             var lessons = await _context.Lesson
-                .Where(x => x.Discipline.Trim().ToLower().Equals(discipline.Trim().ToLower())
-                    && x.TypeLesson.Title.Trim().ToLower().Equals(typeLesson.Trim().ToLower()))
+                .Where(x => x.Discipline.Name.Trim().ToLower().Equals(discipline.Trim().ToLower())
+                    && x.DisciplineType.Name.Trim().ToLower().Equals(typeLesson.Trim().ToLower()))
                 .ToListAsync(ct);
 
             foreach (var lesson in lessons)
@@ -157,11 +154,15 @@ namespace EducationBot.Telegram.Controllers
             var nowUTC = DateTime.Now.ToUniversalTime();
 
             #region lessons
+
             await CheckLessons(nowUTC, ct);
+
             #endregion lessons
 
             #region user shedullers
+
             await CheckUSerSHedulle(nowUTC, ct);
+
             #endregion user shedullers
         }
 
@@ -172,15 +173,15 @@ namespace EducationBot.Telegram.Controllers
 
             foreach (var lesson in leasons)
             {
-                var time = lesson.DateTimeStartUtc - nowUTC;
+                var time = lesson.StartDateTimeUTC - nowUTC;
                 var timeDiff = (int)time.TotalMinutes;
                 if (timeDiff >= 0)
                 {
                     StringBuilder sb = new();
-                    sb.Append($"\uD83C\uDF93 {lesson.Discipline} {Environment.NewLine}");
+                    sb.Append($"\uD83C\uDF93 {lesson.Lesson.Discipline.Name} {Environment.NewLine}");
 
-                    if (lesson.LinkToRoom != null)
-                        sb.Append($"%F0%9F%9A%AA  <a href='{lesson.LinkToRoom}'>Перейти в конференцию</a> {Environment.NewLine}");
+                    if (lesson.Lesson.LinkToRoom != null)
+                        sb.Append($"%F0%9F%9A%AA  <a href='{lesson.Lesson.LinkToRoom}'>Перейти в конференцию</a> {Environment.NewLine}");
 
                     if (timeDiff > 0)
                         sb.Append($"\uD83D\uDD51 через {timeDiff} мин {Environment.NewLine}");
@@ -188,12 +189,12 @@ namespace EducationBot.Telegram.Controllers
                     if (timeDiff == 0)
                         sb.Append($"\uD83D\uDD51 сейчас {Environment.NewLine}");
 
-                    if (lesson.Teacher.Link != null)
-                        sb.Append($"%F0%9F%91%A4  <a href='{lesson.Teacher.Link}'>{lesson.Teacher.Name}</a> {Environment.NewLine}");
+                    if (lesson.Lesson.Teacher.Link != null)
+                        sb.Append($"%F0%9F%91%A4  <a href='{lesson.Lesson.Teacher.Link}'>{lesson.Lesson.Teacher.Name}</a> {Environment.NewLine}");
                     else
-                        sb.Append($"%F0%9F%91%A4 {lesson.Teacher.Name} {Environment.NewLine}");
+                        sb.Append($"%F0%9F%91%A4 {lesson.Lesson.Teacher.Name} {Environment.NewLine}");
 
-                    sb.Append($"%F0%9F%92%BB {lesson.TypeLesson.Title} {Environment.NewLine}");
+                    sb.Append($"%F0%9F%92%BB {lesson.Lesson.DisciplineType.Name} {Environment.NewLine}");
 
                     foreach (var chat in sendTo)
                         await _telegramService.SendMessageToUser(chat, sb.ToString(), ct, "HTML");

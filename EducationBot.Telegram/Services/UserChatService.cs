@@ -1,5 +1,5 @@
 ﻿using EducationBot.EfData;
-using EducationBot.EfData.Entities;
+using EducationBot.EfData.Entities.Cient;
 using EducationBot.Telegram.Model.Telegram;
 using Microsoft.EntityFrameworkCore;
 

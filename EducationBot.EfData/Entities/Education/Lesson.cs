@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace EducationBot.EfData.EntitiesNew
+namespace EducationBot.EfData.Entities.Education
 {
-    public class StudyLesson
+    public class Lesson
     {
         [Column("id")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -27,7 +27,7 @@ namespace EducationBot.EfData.EntitiesNew
 
         public List<LessonShedulle> Shedulles { get; set; }
 
-        public StudyLesson()
+        public Lesson()
         {
             Shedulles = new();
         }

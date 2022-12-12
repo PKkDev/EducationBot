@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace EducationBot.EfData.EntitiesNew
+namespace EducationBot.EfData.Entities.Education
 {
     [Index(nameof(Name), IsUnique = true)]
     public class Discipline
@@ -14,11 +14,11 @@ namespace EducationBot.EfData.EntitiesNew
 
         public string Name { get; set; }
 
-        public List<Lesson> Lessons { get; set; }
+        public List<Lesson> StudyLesson { get; set; }
 
         public Discipline()
         {
-            Lessons = new();
+            StudyLesson = new();
         }
     }
 }

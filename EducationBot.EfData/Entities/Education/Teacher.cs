@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
 
-namespace EducationBot.EfData.EntitiesNew
+namespace EducationBot.EfData.Entities.Education
 {
     [Index(nameof(Name), IsUnique = true)]
     public class Teacher
@@ -16,11 +16,11 @@ namespace EducationBot.EfData.EntitiesNew
 
         public string? Link { get; set; }
 
-        public List<Lesson> Lessons { get; set; }
+        public List<Lesson> StudyLesson { get; set; }
 
         public Teacher()
         {
-            Lessons = new();
+            StudyLesson = new();
         }
     }
 }
