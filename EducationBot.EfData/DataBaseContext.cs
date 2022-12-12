@@ -1,4 +1,5 @@
 ﻿using EducationBot.EfData.Entities;
+using EducationBot.EfData.EntitiesNew;
 using Microsoft.EntityFrameworkCore;
 
 namespace EducationBot.EfData
@@ -10,6 +11,12 @@ namespace EducationBot.EfData
         public DbSet<TelegramChat> TelegramChat { get; set; }
 
         public DbSet<TelegramUserShedullers> TelegramUserShedullers { get; set; }
+
+        public DbSet<LessonShedulle> LessonShedulle { get; set; }
+        public DbSet<Discipline> Discipline { get; set; }
+        public DbSet<Teacher> Teacher { get; set; }
+        public DbSet<DisciplineType> DisciplineType { get; set; }
+        public DbSet<StudyLesson> StudyLesson { get; set; }
 
         public DbSet<Lesson> Lesson { get; set; }
         public DbSet<LessonTeacher> LessonTeacher { get; set; }

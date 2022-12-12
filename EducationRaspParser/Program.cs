@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Text;
-using EducationBot.EfData.Entities;
+using EducationBot.EfData.Model;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -20,7 +20,7 @@ stopWatch.Start();
 using ChromeDriver driver = new(pathToDriver, chromeOptions, TimeSpan.FromSeconds(60));
 
 TimeZoneInfo samaraTZI = TimeZoneInfo.CreateCustomTimeZone("Samara Time", new(4, 0, 0), "(GMT+04:00) Samara Time", "Samara Time");
-List<Lesson> lessonModel = new();
+List<ParsedLesson> lessonModel = new();
 
 #region from private office
 
@@ -234,18 +234,18 @@ try
     var needDo = true;
     while (needDo)
     {
-        List<LessonType> typeLessons = new();
+        List<ParsedLessonType> typeLessons = new();
 
         var timeTableLegendItems = driver.FindElements(By.ClassName("timetable__legend-item"));
         foreach (var timeTableLegendItem in timeTableLegendItems)
         {
             var classAtr = timeTableLegendItem.GetAttribute("class");
             var arr = classAtr.Split("lesson-type-");
-            var type = arr.Last().Split("__").First();
+            var typeInDoc = arr.Last().Split("__").First();
 
-            var typeTxt = timeTableLegendItem.Text;
-            var color = timeTableLegendItem.GetCssValue("background-color");
-            typeLessons.Add(new LessonType(typeTxt, color, type));
+            var typeName = timeTableLegendItem.Text;
+            var typeColor = timeTableLegendItem.GetCssValue("background-color");
+            typeLessons.Add(new ParsedLessonType(typeName, typeColor, typeInDoc));
         }
 
         var weekNow = driver.FindElement(By.ClassName("week-nav-current")).Text;
@@ -256,35 +256,37 @@ try
 
         var parsedList = ParseList(scheduleItemList.ToList(), 7);
 
-        List<LessonWeekDay> dayesModel = ParseListDayesFromPublic(parsedList.First());
+        List<ParsedLessonWeekDay> dayesModel = ParseListDayesFromPublic(parsedList.First());
 
         foreach (var items in parsedList.Skip(1))
         {
             IWebElement timeIntervalElement = items[0];
-            LessonTime timeModel = ParseListTimeCellsFromPublic(timeIntervalElement);
+            ParsedLessonTime lessonTime = ParseListTimeCellsFromPublic(timeIntervalElement);
 
             for (var i = 1; i < items.Count; i++)
             {
-                var date = dayesModel[i - 1];
+                var lessonWeekDay = dayesModel[i - 1];
 
-                var dateTimeStart = date.Day.Add(timeModel.Start);
-                var dateTimeStartUtc = TimeZoneInfo.ConvertTimeToUtc(dateTimeStart, samaraTZI);
+                lessonWeekDay.WeekNunmber = weekNow;
 
-                var dateTimeEnd = date.Day.Add(timeModel.End);
-                var dateTimeEndUtc = TimeZoneInfo.ConvertTimeToUtc(dateTimeEnd, samaraTZI);
+                //var dateTimeStart = lessonWeekDay.Day.Add(lessonTime.Start);
+                //var dateTimeStartUtc = TimeZoneInfo.ConvertTimeToUtc(dateTimeStart, samaraTZI);
+
+                //var dateTimeEnd = lessonWeekDay.Day.Add(lessonTime.End);
+                //var dateTimeEndUtc = TimeZoneInfo.ConvertTimeToUtc(dateTimeEnd, samaraTZI);
 
                 var lessonElements = items[i].FindElements(By.ClassName("schedule__lesson"));
                 foreach (IWebElement lessonElement in lessonElements)
                 {
-                    LessonType typeLesson = new();
+                    ParsedLessonType lessonType = new();
                     var classAtr = lessonElement.GetAttribute("class");
                     if (classAtr.Contains("lesson-border-type-"))
                     {
                         var arr = classAtr.Split("lesson-border-type-");
                         var type = arr.Last();
-                        var tempo = typeLessons.FirstOrDefault(x => x.TypeStr == type);
+                        var tempo = typeLessons.FirstOrDefault(x => x.TypeInDoc == type);
                         if (tempo != null)
-                            typeLesson = tempo;
+                            lessonType = tempo;
                     }
 
                     var disciplineE = lessonElement.FindElement(By.ClassName("schedule__discipline"));
@@ -294,13 +296,13 @@ try
                     var schedulePlace = lessonElement.FindElements(By.ClassName("schedule__place"));
                     var place = schedulePlace.Any() ? schedulePlace.First().Text : null;
 
-                    LessonTeacher teacher = new();
+                    ParsedLessonTeacher lessonTeacher = new();
                     var teacherL = lessonElement.FindElements(By.ClassName("schedule__teacher"));
                     if (teacherL.Any())
                     {
-                        teacher.Name = teacherL.First().Text;
+                        lessonTeacher.Name = teacherL.First().Text;
                         var teacherLinkL = teacherL.First().FindElements(By.TagName("a"));
-                        teacher.Link = teacherLinkL.Any() ? teacherLinkL.First().GetAttribute("href") : null;
+                        lessonTeacher.Link = teacherLinkL.Any() ? teacherLinkL.First().GetAttribute("href") : null;
                     }
 
                     StringBuilder groups = new();
@@ -315,19 +317,15 @@ try
                             groups.AppendLine($"{gr}");
                     }
 
-                    Lesson newLesson = new()
+                    ParsedLesson newLesson = new()
                     {
-                        Teacher = teacher,
-                        Day = date,
-                        WeekNunmber = weekNow,
                         Discipline = discipline,
-                        Room = place,
-                        Time = timeModel,
-                        Groups = groups.ToString(),
-                        DateTimeStartUtc = dateTimeStartUtc,
-                        DateTimeEndUtc = dateTimeEndUtc,
-                        TypeLesson = typeLesson,
-                        LinkToRoom = null
+                        LessonTeacher = lessonTeacher,
+                        LessonTime = lessonTime,
+                        LessonType = lessonType,
+                        LessonWeekDay = lessonWeekDay,
+                        Place = place,
+                        Groups = groups.ToString()
                     };
                     lessonModel.Add(newLesson);
                 }
@@ -355,16 +353,16 @@ finally
 
 #endregion from public
 
-var totalDiscipline = lessonModel.GroupBy(x => new { x.Discipline, x.TypeLesson.Title }).Select(x => x.Key).Distinct();
-foreach (var dis in totalDiscipline)
-    Console.WriteLine($"{dis.Discipline} - {dis.Title}");
+//var totalDiscipline = lessonModel.GroupBy(x => new { x.Discipline, x.TypeLesson.Title }).Select(x => x.Key).Distinct();
+//foreach (var dis in totalDiscipline)
+//    Console.WriteLine($"{dis.Discipline} - {dis.Title}");
 
 var lessionStr = JsonConvert.SerializeObject(lessonModel);
 Console.ReadKey();
 
-static List<LessonTime> ParseListTimeCells(List<IWebElement> entities)
+static List<ParsedLessonTime> ParseListTimeCells(List<IWebElement> entities)
 {
-    List<LessonTime> result = new();
+    List<ParsedLessonTime> result = new();
     foreach (var entity in entities)
     {
         var startL = entity.FindElements(By.ClassName("start"));
@@ -375,7 +373,7 @@ static List<LessonTime> ParseListTimeCells(List<IWebElement> entities)
 
         if (startS != null && finishS != null)
         {
-            result.Add(new LessonTime()
+            result.Add(new ParsedLessonTime()
             {
                 Start = TimeSpan.Parse(startS),
                 End = TimeSpan.Parse(finishS)
@@ -384,7 +382,7 @@ static List<LessonTime> ParseListTimeCells(List<IWebElement> entities)
     }
     return result;
 }
-static LessonTime ParseListTimeCellsFromPublic(IWebElement entities)
+static ParsedLessonTime ParseListTimeCellsFromPublic(IWebElement entities)
 {
     var timeInterval = entities.Text;
     var split = timeInterval.Split("\r\n");
@@ -395,16 +393,16 @@ static LessonTime ParseListTimeCellsFromPublic(IWebElement entities)
     var intervalEnd = split[1];
     var finishS = TimeSpan.Parse(intervalEnd);
 
-    return new LessonTime()
+    return new ParsedLessonTime()
     {
         Start = startS,
         End = finishS
     };
 }
 
-static List<LessonWeekDay> ParseListDayesFromPrivOff(List<IWebElement> entities)
+static List<ParsedLessonWeekDay> ParseListDayesFromPrivOff(List<IWebElement> entities)
 {
-    List<LessonWeekDay> result = new();
+    List<ParsedLessonWeekDay> result = new();
 
     foreach (var entity in entities)
     {
@@ -419,16 +417,16 @@ static List<LessonWeekDay> ParseListDayesFromPrivOff(List<IWebElement> entities)
             var dayOfWeek = dayName;
             var dateParse = Convert.ToDateTime(date);
 
-            result.Add(new LessonWeekDay(dateParse.Date, dayOfWeek));
+            result.Add(new ParsedLessonWeekDay(dateParse.Date, dayOfWeek));
         }
     }
 
     return result;
 }
 
-static List<LessonWeekDay> ParseListDayesFromPublic(List<IWebElement> entities)
+static List<ParsedLessonWeekDay> ParseListDayesFromPublic(List<IWebElement> entities)
 {
-    List<LessonWeekDay> result = new();
+    List<ParsedLessonWeekDay> result = new();
 
     foreach (var header in entities)
     {
@@ -443,7 +441,7 @@ static List<LessonWeekDay> ParseListDayesFromPublic(List<IWebElement> entities)
             var dayOfWeek = weekdayTxt;
             var date = Convert.ToDateTime(dateTxt);
 
-            result.Add(new LessonWeekDay(date.Date, dayOfWeek));
+            result.Add(new ParsedLessonWeekDay(date.Date, dayOfWeek));
         }
     }
 

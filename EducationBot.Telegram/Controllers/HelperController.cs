@@ -1,5 +1,7 @@
 ﻿using EducationBot.EfData;
 using EducationBot.EfData.Entities;
+using EducationBot.EfData.EntitiesNew;
+using EducationBot.EfData.Model;
 using EducationBot.Telegram.Model.Telegram;
 using EducationBot.Telegram.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -34,19 +36,76 @@ namespace EducationBot.Telegram.Controllers
             var path = Path.Combine(AppContext.BaseDirectory, "Saved.json");
 
             var text = System.IO.File.ReadAllText(path);
-            List<Lesson>? modelList = JsonConvert.DeserializeObject<List<Lesson>>(text);
+            List<ParsedLesson>? modelList = JsonConvert.DeserializeObject<List<ParsedLesson>>(text);
 
             if (modelList == null || !modelList.Any()) throw new Exception("Lesson is Empty");
 
-            var gr = modelList.GroupBy(x => x.Teacher.Name);
+            var teachers = modelList.Select(x => x.LessonTeacher);
+            var teachersDist = teachers.GroupBy(x => x.Name).Select(x => x.First()).ToList();
+            var teacherToIns = teachersDist.Select(x => new Teacher() { Link = x.Link, Name = x.Name });
+            foreach (var teacher in teacherToIns)
+            {
+                var check = await _context.Teacher.FirstOrDefaultAsync(x => x.Name.Equals(teacher.Name), ct);
+                if (check == null)
+                {
+                    await _context.Teacher.AddAsync(teacher, ct);
+                    await _context.SaveChangesAsync(ct);
+                }
+            }
 
-            var gr2 = modelList.GroupBy(x => x.Discipline);
-            var gr2L = gr2.Select(x => x.Key).Distinct().ToList();
+            var lessonTypes = modelList.Select(x => x.LessonType);
+            var lessonTypesDist = lessonTypes.GroupBy(x => x.TypeName).Select(x => x.First()).ToList();
+            var disciplineTypeToIns = lessonTypesDist.Select(x => new DisciplineType() { Name = x.TypeName, Color = x.TypeColor }).ToList();
+            foreach (var disciplineType in disciplineTypeToIns)
+            {
+                var check = await _context.DisciplineType.FirstOrDefaultAsync(x => x.Name.Equals(disciplineType.Name), ct);
+                if (check == null)
+                {
+                    await _context.DisciplineType.AddAsync(disciplineType, ct);
+                    await _context.SaveChangesAsync(ct);
+                }
+            }
 
-            var gr3 = modelList.GroupBy(x => x.TypeLesson.Title);
-            var gr3L = gr3.Select(x => x.Key).Distinct().ToList();
+            var disciplines = modelList.Select(x => x.Discipline).Distinct();
+            var disciplinesToIns = disciplines.Select(x => new Discipline() { Name = x }).ToList();
+            foreach (var discipline in disciplinesToIns)
+            {
+                var check = await _context.Discipline.FirstOrDefaultAsync(x => x.Name.Equals(discipline.Name), ct);
+                if (check == null)
+                {
+                    await _context.Discipline.AddAsync(discipline, ct);
+                    await _context.SaveChangesAsync(ct);
+                }
+            }
 
-            var groups = modelList.GroupBy(x => new { x.Discipline, x.TypeLesson.Title });
+            _context.StudyLesson.RemoveRange(_context.StudyLesson);
+            await _context.SaveChangesAsync(ct);
+
+
+            var groupedModel = modelList.GroupBy(x => new { x.Discipline, x.LessonType.TypeName, x.LessonTeacher.Name });
+            foreach (var model in groupedModel)
+            {
+                List<LessonShedulle> lessonShedulle = new();
+                foreach (var modelItem in model)
+                {
+                    lessonShedulle.Add(new LessonShedulle()
+                    {
+                        End = modelItem.LessonWeekDay.Day.Add(modelItem.LessonTime.End),
+                        Start = modelItem.LessonWeekDay.Day.Add(modelItem.LessonTime.Start),
+                    });
+                }
+
+                StudyLesson studyLesson = new()
+                {
+                    Teacher = await _context.Teacher.FirstOrDefaultAsync(x => x.Name.Equals(model.Key.Name), ct),
+                    Discipline = await _context.Discipline.FirstOrDefaultAsync(x => x.Name.Equals(model.Key.Discipline), ct),
+                    DisciplineType = await _context.DisciplineType.FirstOrDefaultAsync(x => x.Name.Equals(model.Key.TypeName), ct),
+                    Shedulles = lessonShedulle
+                };
+                await _context.StudyLesson.AddAsync(studyLesson, ct);
+                await _context.SaveChangesAsync(ct);
+            }
+
 
             //var oldLessons = await _context.Lesson.ToListAsync(ct);
             //if (oldLessons.Any())
