@@ -30,6 +30,7 @@ namespace EducationBot.Telegram.Services
                 .Include(x => x.Lesson)
                 .ThenInclude(x => x.DisciplineType)
                 .Where(x => (x.StartDateTimeUTC >= filterStart && x.StartDateTimeUTC <= filterEnd) && x.Date == today)
+                .OrderBy(x => x.StartDateTimeUTC)
                 .ToListAsync(ct);
 
             return shedullers;
@@ -46,6 +47,7 @@ namespace EducationBot.Telegram.Services
                 .Include(x => x.Lesson)
                 .ThenInclude(x => x.DisciplineType)
                 .Where(x => x.Date == date)
+                .OrderBy(x => x.StartDateTimeUTC)
                 .ToListAsync(ct);
 
             return shedullers;

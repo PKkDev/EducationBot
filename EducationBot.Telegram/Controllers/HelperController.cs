@@ -81,7 +81,7 @@ namespace EducationBot.Telegram.Controllers
             _context.Lesson.RemoveRange(_context.Lesson);
             await _context.SaveChangesAsync(ct);
 
-            var groupedModel = modelList.GroupBy(x => new { x.Discipline, x.LessonType.TypeName, x.LessonTeacher.Name });
+            var groupedModel = modelList.GroupBy(x => new { x.Discipline, x.LessonType.TypeName, x.LessonTeacher.Name, x.Groups });
             foreach (var model in groupedModel)
             {
                 List<LessonShedulle> lessonShedulle = new();
@@ -110,7 +110,7 @@ namespace EducationBot.Telegram.Controllers
                     Shedulles = lessonShedulle,
                     LinkToRoom = null,
                     Place = model.First().Place,
-                    Groups = model.First().Groups,
+                    Groups = model.Key.Groups,
                 };
                 await _context.Lesson.AddAsync(studyLesson, ct);
                 await _context.SaveChangesAsync(ct);

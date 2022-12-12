@@ -463,7 +463,7 @@ namespace EducationBot.Telegram.Services
             {
                 foreach (var lesson in lessons)
                 {
-                    sb.Append($"\uD83C\uDF93 {lesson.Lesson.Discipline} {Environment.NewLine}");
+                    sb.Append($"\uD83C\uDF93 {lesson.Lesson.Discipline.Name} {Environment.NewLine}");
                     sb.Append($"%F0%9F%92%BB {lesson.Lesson.DisciplineType.Name} {Environment.NewLine}");
                     sb.Append($"\uD83D\uDD51 {lesson.GetStartStr()} - {lesson.GetEndStr()} {Environment.NewLine}");
                     if (lesson.Lesson.LinkToRoom != null)
