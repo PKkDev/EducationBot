@@ -3,10 +3,8 @@ using System.Text;
 using EducationBot.EfData.Model;
 
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
 
 var pathToDriver = AppContext.BaseDirectory;
 
