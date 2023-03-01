@@ -7,7 +7,7 @@ namespace EducationBot.Telegram.Helpers
         public static string GetUriWithQueryString(string requestUri, Dictionary<string, string> queryStringParams)
         {
             bool startingQuestionMarkAdded = false;
-            var sb = new StringBuilder();
+            StringBuilder sb = new();
             sb.Append(requestUri);
             foreach (var parameter in queryStringParams)
             {

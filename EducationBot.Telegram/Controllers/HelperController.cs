@@ -18,9 +18,16 @@ namespace EducationBot.Telegram.Controllers
         private readonly TelegramService _telegramService;
         private readonly LessonHelperService _lessonHelperService;
 
+        /// <summary>
+        /// constructor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <param name="userChatService"></param>
+        /// <param name="telegramService"></param>
+        /// <param name="lessonHelperService"></param>
         public HelperController(
-            DataBaseContext context,
-            UserChatService userChatService, TelegramService telegramService, LessonHelperService lessonHelperService)
+            DataBaseContext context, UserChatService userChatService,
+            TelegramService telegramService, LessonHelperService lessonHelperService)
         {
             _context = context;
             _userChatService = userChatService;
@@ -142,11 +149,13 @@ namespace EducationBot.Telegram.Controllers
         }
 
         [HttpGet("chats")]
-        public async Task<IActionResult> GetAllChats(CancellationToken ct = default) => Ok(await _userChatService.GetAllChats(ct));
+        public async Task<IActionResult> GetAllChats(CancellationToken ct = default)
+            => Ok(await _userChatService.GetAllChatsAsync(ct));
 
 
         [HttpGet("users")]
-        public async Task<IActionResult> GetAllUsers(CancellationToken ct = default) => Ok(await _userChatService.GetAllUser(ct));
+        public async Task<IActionResult> GetAllUsers(CancellationToken ct = default)
+            => Ok(await _userChatService.GetAllUserAsync(ct));
 
         [HttpGet("check-lesson")]
         public async Task CheckLesson(CancellationToken ct = default)
@@ -161,7 +170,7 @@ namespace EducationBot.Telegram.Controllers
 
             #region user shedullers
 
-            await CheckUSerSHedulle(nowUTC, ct);
+            await CheckUserShedulle(nowUTC, ct);
 
             #endregion user shedullers
         }
@@ -202,7 +211,7 @@ namespace EducationBot.Telegram.Controllers
             }
         }
 
-        private async Task CheckUSerSHedulle(DateTime nowUTC, CancellationToken ct)
+        private async Task CheckUserShedulle(DateTime nowUTC, CancellationToken ct)
         {
             var filterEnd = nowUTC.AddMinutes(10);
             var filterStart = nowUTC.AddMinutes(-10);

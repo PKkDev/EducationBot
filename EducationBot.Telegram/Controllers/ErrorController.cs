@@ -38,7 +38,7 @@ namespace EducationBot.Telegram.Controllers
             _logger.LogError(message);
 
             Response.StatusCode = 500;
-            var response = new HttpErrorMessage(message);
+            HttpErrorMessage response = new(message);
             return response;
         }
     }

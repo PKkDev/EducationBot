@@ -34,7 +34,7 @@ namespace EducationBot.Telegram.Services
             return user;
         }
 
-        public async Task<dynamic> GetAllUser(CancellationToken ct)
+        public async Task<dynamic> GetAllUserAsync(CancellationToken ct)
         {
             return await _context.TelegramUser
                 .Select(x => new
@@ -49,7 +49,7 @@ namespace EducationBot.Telegram.Services
                 .ToListAsync(ct);
         }
 
-        public async Task<dynamic> GetAllChats(CancellationToken ct)
+        public async Task<dynamic> GetAllChatsAsync(CancellationToken ct)
         {
             return await _context.TelegramChat
                 .Select(x => new

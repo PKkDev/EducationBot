@@ -2,7 +2,7 @@
 using EducationBot.EfData.Entities.Education;
 using Microsoft.EntityFrameworkCore;
 
-namespace EducationBot.EfData
+namespace EducationBot.EfData.Context
 {
     public class DataBaseContext : DbContext
     {
@@ -70,6 +70,8 @@ namespace EducationBot.EfData
                     }
                 }
             };
+            context.TelegramChat.Add(vhtc);
+            context.SaveChanges();
 
             TelegramChat kptc = new()
             {
@@ -87,6 +89,8 @@ namespace EducationBot.EfData
                     }
                 }
             };
+            context.TelegramChat.Add(kptc);
+            context.SaveChanges();
 
             TelegramChat aatc = new()
             {
@@ -104,6 +108,8 @@ namespace EducationBot.EfData
                      }
                 }
             };
+            context.TelegramChat.Add(aatc);
+            context.SaveChanges();
 
             TelegramChat gltc = new()
             {
@@ -121,18 +127,8 @@ namespace EducationBot.EfData
                     }
                 }
             };
-
-            //context.TelegramChat.Add(vhtc);
-            //context.SaveChanges();
-
-            //context.TelegramChat.Add(kptc);
-            //context.SaveChanges();
-
-            //context.TelegramChat.Add(aatc);
-            //context.SaveChanges();
-
-            //context.TelegramChat.Add(gltc);
-            //context.SaveChanges();
+            context.TelegramChat.Add(gltc);
+            context.SaveChanges();
 
             #endregion TelegramChat
         }
