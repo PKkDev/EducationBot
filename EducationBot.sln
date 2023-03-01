@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationBot.Telegram", "EducationBot.Telegram\EducationBot.Telegram.csproj", "{CF0706B0-14AC-4521-9F82-15197C1C57AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EducationBot.Telegram", "EducationBot.Telegram\EducationBot.Telegram.csproj", "{CF0706B0-14AC-4521-9F82-15197C1C57AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationBot.EfData", "EducationBot.EfData\EducationBot.EfData.csproj", "{86D106C7-FCD9-46BE-BF51-0ACB261704B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EducationBot.EfData", "EducationBot.EfData\EducationBot.EfData.csproj", "{86D106C7-FCD9-46BE-BF51-0ACB261704B2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EducationRaspParser", "EducationRaspParser\EducationRaspParser.csproj", "{B7096BD9-1E40-4514-BEFB-09F912F8826F}"
 EndProject
