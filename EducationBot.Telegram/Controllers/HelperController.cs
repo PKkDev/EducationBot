@@ -109,6 +109,12 @@ namespace EducationBot.Telegram.Controllers
                 var teacher = await _context.Teacher.FirstOrDefaultAsync(x => x.Name.Equals(model.Key.Name), ct);
                 var discipline = await _context.Discipline.FirstOrDefaultAsync(x => x.Name.Equals(model.Key.Discipline), ct);
                 var disciplineType = await _context.DisciplineType.FirstOrDefaultAsync(x => x.Name.Equals(model.Key.TypeName), ct);
+
+                if (teacher == null || discipline == null || disciplineType == null)
+                {
+                    continue;
+                }
+
                 Lesson studyLesson = new()
                 {
                     Teacher = teacher,
