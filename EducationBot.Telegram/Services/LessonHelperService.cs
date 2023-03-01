@@ -1,4 +1,4 @@
-﻿using EducationBot.EfData;
+﻿using EducationBot.EfData.Context;
 using EducationBot.EfData.Entities.Education;
 using Microsoft.EntityFrameworkCore;
 

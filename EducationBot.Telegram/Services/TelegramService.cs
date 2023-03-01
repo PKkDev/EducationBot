@@ -1,7 +1,5 @@
-﻿using EducationBot.EfData.Entities;
-using EducationBot.EfData.Entities.Cient;
+﻿using EducationBot.EfData.Entities.Cient;
 using EducationBot.EfData.Entities.Education;
-using EducationBot.EfData.Model;
 using EducationBot.Telegram.Helpers;
 using EducationBot.Telegram.Model.Telegram;
 using Newtonsoft.Json;

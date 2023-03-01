@@ -5,17 +5,23 @@ using EducationBot.EfData.Model;
 using Newtonsoft.Json;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Edge;
 
-var pathToDriver = AppContext.BaseDirectory;
-
-var chromeOptions = new ChromeOptions();
-//chromeOptions.AddArgument("--headless");
-//chromeOptions.PageLoadStrategy = PageLoadStrategy.Default;
+var pathToDrivers = Path.Combine(AppContext.BaseDirectory, "drivers");
+var pathToDriver = Path.Combine(pathToDrivers, "msedgedriver.exe");
+//var pathToDriver = Path.Combine(pathToDrivers, "chromedriver.exe");
 
 Stopwatch stopWatch = new();
 stopWatch.Start();
 
-using ChromeDriver driver = new(pathToDriver, chromeOptions, TimeSpan.FromSeconds(60));
+EdgeOptions options = new();
+//options.AddArgument("headless");
+using EdgeDriver driver = new(pathToDriver, options, TimeSpan.FromSeconds(60));
+
+//var options = new ChromeOptions();
+////options.AddArgument("--headless");
+////options.PageLoadStrategy = PageLoadStrategy.Default;
+//using ChromeDriver driver = new(pathToDriver, options, TimeSpan.FromSeconds(60));
 
 TimeZoneInfo samaraTZI = TimeZoneInfo.CreateCustomTimeZone("Samara Time", new(4, 0, 0), "(GMT+04:00) Samara Time", "Samara Time");
 List<ParsedLesson> lessonModel = new();
@@ -221,7 +227,7 @@ List<ParsedLesson> lessonModel = new();
 
 #region from public
 
-var url = "https://ssau.ru/rasp?groupId=755932538&selectedWeek=1&selectedWeekday=1";
+var url = "https://ssau.ru/rasp?groupId=755932538&selectedWeek=1";
 
 try
 {

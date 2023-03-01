@@ -1,4 +1,4 @@
-using EducationBot.EfData;
+using EducationBot.EfData.Context;
 using EducationBot.Telegram.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
