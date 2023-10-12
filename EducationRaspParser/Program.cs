@@ -1,10 +1,10 @@
 ﻿using System.Diagnostics;
 using System.Text;
+using Education.Parser.Client;
 using EducationBot.EfData.Model;
 
 using Newtonsoft.Json;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium; 
 using OpenQA.Selenium.Edge;
 
 var pathToDrivers = Path.Combine(AppContext.BaseDirectory, "drivers");
@@ -15,13 +15,19 @@ Stopwatch stopWatch = new();
 stopWatch.Start();
 
 EdgeOptions options = new();
-//options.AddArgument("headless");
-using EdgeDriver driver = new(pathToDriver, options, TimeSpan.FromSeconds(60));
+////options.AddArgument("headless");
+//using EdgeDriver driver = new(pathToDriver, options, TimeSpan.FromSeconds(60));
 
 //var options = new ChromeOptions();
 ////options.AddArgument("--headless");
 ////options.PageLoadStrategy = PageLoadStrategy.Default;
 //using ChromeDriver driver = new(pathToDriver, options, TimeSpan.FromSeconds(60));
+
+
+
+using BaseClient client = new EdgeClient(options);
+client.Create(pathToDrivers);
+var driver = client.Driver;
 
 TimeZoneInfo samaraTZI = TimeZoneInfo.CreateCustomTimeZone("Samara Time", new(4, 0, 0), "(GMT+04:00) Samara Time", "Samara Time");
 List<ParsedLesson> lessonModel = new();
