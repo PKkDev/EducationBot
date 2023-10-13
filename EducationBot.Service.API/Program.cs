@@ -1,4 +1,5 @@
 using EducationBot.EfData.Context;
+using EducationBot.Service.API.Middleware;
 using EducationBot.Telegram.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
@@ -47,9 +48,8 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddHttpClient();
 
 var app = builder.Build();
-
-app.UseExceptionHandler("/error");
-// app.UseDeveloperExceptionPage();
+ 
+app.UseMiddleware<ErrorHandler>();
 
 app.UseSwagger();
 app.UseSwaggerUI(c =>
