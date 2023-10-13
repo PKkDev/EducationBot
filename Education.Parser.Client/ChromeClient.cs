@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Education.Parser.Client.Base;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
 namespace Education.Parser.Client;
@@ -10,12 +11,14 @@ public class ChromeClient : BaseClient
     public ChromeClient(ChromeOptions? options = null, string driverFileName = "chromedriver.exe")
     {
         _options = options ?? new();
+
         DriverFileName = driverFileName;
+        DriverDirecory = Path.Combine(AppContext.BaseDirectory, "drivers");
     }
 
-    public override WebDriver Create(string driverFolder)
+    public override WebDriver Create()
     {
-        var pathToDriver = Path.Combine(driverFolder, DriverFileName);
+        var pathToDriver = Path.Combine(DriverDirecory, DriverFileName);
 
         Driver = new ChromeDriver(pathToDriver, _options, TimeSpan.FromSeconds(60));
 

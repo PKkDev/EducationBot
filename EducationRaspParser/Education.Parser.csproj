@@ -9,13 +9,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\Education.Parser.Client\Education.Parser.Client.csproj" />
-		<ProjectReference Include="..\EducationBot.EfData\EducationBot.EfData.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<None Update="drivers\**">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
+		<ProjectReference Include="..\EducationBot.Data.Model\EducationBot.Data.Model.csproj" />
 	</ItemGroup>
 
 </Project>

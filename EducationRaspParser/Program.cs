@@ -1,32 +1,25 @@
 ﻿using System.Diagnostics;
 using System.Text;
 using Education.Parser.Client;
-using EducationBot.EfData.Model;
-
+using Education.Parser.Client.Base;
+using EducationBot.Data.Model;
 using Newtonsoft.Json;
 using OpenQA.Selenium; 
 using OpenQA.Selenium.Edge;
-
-var pathToDrivers = Path.Combine(AppContext.BaseDirectory, "drivers");
-var pathToDriver = Path.Combine(pathToDrivers, "msedgedriver.exe");
-//var pathToDriver = Path.Combine(pathToDrivers, "chromedriver.exe");
 
 Stopwatch stopWatch = new();
 stopWatch.Start();
 
 EdgeOptions options = new();
-////options.AddArgument("headless");
-//using EdgeDriver driver = new(pathToDriver, options, TimeSpan.FromSeconds(60));
+//options.AddArgument("headless");
 
-//var options = new ChromeOptions();
-////options.AddArgument("--headless");
-////options.PageLoadStrategy = PageLoadStrategy.Default;
-//using ChromeDriver driver = new(pathToDriver, options, TimeSpan.FromSeconds(60));
-
+//ChromeOptions options = new();
+//options.AddArgument("--headless");
+//options.PageLoadStrategy = PageLoadStrategy.Default;
 
 
 using BaseClient client = new EdgeClient(options);
-client.Create(pathToDrivers);
+client.Create();
 var driver = client.Driver;
 
 TimeZoneInfo samaraTZI = TimeZoneInfo.CreateCustomTimeZone("Samara Time", new(4, 0, 0), "(GMT+04:00) Samara Time", "Samara Time");
@@ -233,7 +226,7 @@ List<ParsedLesson> lessonModel = new();
 
 #region from public
 
-var url = "https://ssau.ru/rasp?groupId=755932538&selectedWeek=1";
+var url = "https://ssau.ru/rasp?groupId=799360768&selectedWeek=1";
 
 try
 {

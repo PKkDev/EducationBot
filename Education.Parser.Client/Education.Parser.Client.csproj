@@ -12,4 +12,13 @@
 		<PackageReference Include="Selenium.WebDriver.MicrosoftDriver" Version="17.17134.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+		<None Update="Drivers\chromedriver.exe">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Drivers\msedgedriver.exe">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
 </Project>

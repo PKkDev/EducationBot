@@ -1,5 +1,5 @@
-﻿using EducationBot.EfData.Entities.Cient;
-using EducationBot.EfData.Entities.Education;
+﻿using EducationBot.Data.Ef.Entities.Telegram;
+using EducationBot.Data.Ef.Entities.Education; 
 using Microsoft.EntityFrameworkCore;
 
 namespace EducationBot.EfData.Context
@@ -47,8 +47,7 @@ namespace EducationBot.EfData.Context
                 });
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-        { }
+        protected override void OnConfiguring(DbContextOptionsBuilder options) { }
 
         public static void SeedInitilData(DataBaseContext context)
         {
