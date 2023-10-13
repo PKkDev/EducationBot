@@ -1,6 +1,6 @@
-﻿using EducationBot.EfData.Context;
-using EducationBot.EfData.Entities.Education;
-using EducationBot.EfData.Model;
+﻿using EducationBot.Data.Ef.Entities.Education;
+using EducationBot.Data.Model;
+using EducationBot.EfData.Context; 
 using EducationBot.Telegram.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
