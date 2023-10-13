@@ -37,7 +37,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "EducationBot.Telegram", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "EducationBot.Telegram",
+        Version = "v1"
+    });
 });
 
 builder.Services.AddHttpClient();
@@ -54,7 +58,6 @@ app.UseSwaggerUI(c =>
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "EducationBot.Telegram v1");
     else
         c.SwaggerEndpoint("/EducationBot/swagger/v1/swagger.json", "EducationBot.Telegram v1");
-
 });
 
 app.UseHttpsRedirection();
