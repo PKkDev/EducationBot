@@ -9,6 +9,7 @@ public class UrlHelper
         bool startingQuestionMarkAdded = false;
         StringBuilder sb = new();
         sb.Append(requestUri);
+
         foreach (var parameter in queryStringParams)
         {
             if (parameter.Value == null)
@@ -20,6 +21,7 @@ public class UrlHelper
             sb.Append(parameter.Value);
             startingQuestionMarkAdded = true;
         }
+
         return sb.ToString();
     }
 }

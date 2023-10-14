@@ -5,15 +5,13 @@ using EducationBot.Service.API.Model;
 using EducationBot.Service.API.Model.Telegram;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
-using System.Linq;
 using System.Text;
 
 namespace EducationBot.Service.API.Services;
 
 public class TelegramService
 {
-    private readonly IHttpClientFactory _httpCLientFacory;
-    //private readonly IConfiguration _configuration;
+    private readonly IHttpClientFactory _httpCLientFacory; 
 
     private readonly IHttpContextAccessor _httpContextAccessor;
 

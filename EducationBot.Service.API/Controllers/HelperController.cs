@@ -1,11 +1,11 @@
 ﻿using EducationBot.Data.Ef.Entities.Education;
 using EducationBot.Data.Model;
 using EducationBot.EfData.Context;
-using EducationBot.Service.API.Services; 
+using EducationBot.Service.API.BackJobs;
+using EducationBot.Service.API.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using System.Text;
 
 namespace EducationBot.Service.API.Controllers;
 
@@ -18,6 +18,8 @@ public class HelperController : ControllerBase
     private readonly TelegramService _telegramService;
     private readonly LessonHelperService _lessonHelperService;
 
+    private readonly CheckLessonWorker _checkLessonWorker;
+
     /// <summary>
     /// constructor
     /// </summary>
@@ -27,12 +29,15 @@ public class HelperController : ControllerBase
     /// <param name="lessonHelperService"></param>
     public HelperController(
         DataBaseContext context, UserChatService userChatService,
-        TelegramService telegramService, LessonHelperService lessonHelperService)
+        TelegramService telegramService, LessonHelperService lessonHelperService,
+        CheckLessonWorker checkLessonWorker)
     {
         _context = context;
         _userChatService = userChatService;
         _telegramService = telegramService;
         _lessonHelperService = lessonHelperService;
+
+        _checkLessonWorker = checkLessonWorker;
     }
 
     [HttpGet("feet")]
@@ -131,8 +136,8 @@ public class HelperController : ControllerBase
             foreach (var modelItem in model)
             {
                 var dateTimeEnd = modelItem.LessonWeekDay.Day.Add(modelItem.LessonTime.End);
-                var dateTimeStrt = modelItem.LessonWeekDay.Day.Add(modelItem.LessonTime.Start);    
-                
+                var dateTimeStrt = modelItem.LessonWeekDay.Day.Add(modelItem.LessonTime.Start);
+
                 var dateTimeEndUtc = TimeZoneInfo.ConvertTimeToUtc(dateTimeEnd, samaraTZI);
                 var dateTimeStrtUtc = TimeZoneInfo.ConvertTimeToUtc(dateTimeStrt, samaraTZI);
 
@@ -211,85 +216,6 @@ public class HelperController : ControllerBase
     [HttpGet("check-lesson")]
     public async Task CheckLesson(CancellationToken ct = default)
     {
-        var nowUTC = DateTime.Now.ToUniversalTime();
-
-        #region lessons
-
-        await CheckLessons(nowUTC, ct);
-
-        #endregion lessons
-
-        #region user shedullers
-
-        await CheckUserShedulle(nowUTC, ct);
-
-        #endregion user shedullers
-    }
-
-    private async Task CheckLessons(DateTime nowUTC, CancellationToken ct)
-    {
-        List<long> sendTo = await _userChatService.GetUserChatToLessonShedule(ct);
-        var leasons = await _lessonHelperService.GetLessonShedulled(ct);
-
-        foreach (var lesson in leasons)
-        {
-            var time = lesson.StartDateTimeUTC - nowUTC;
-            var timeDiff = (int)time.TotalMinutes;
-            if (timeDiff >= 0)
-            {
-                StringBuilder sb = new();
-                sb.Append($"\uD83C\uDF93 {lesson.Lesson.Discipline.Name} {Environment.NewLine}");
-
-                if (lesson.Lesson.LinkToRoom != null)
-                    sb.Append($"%F0%9F%9A%AA  <a href='{lesson.Lesson.LinkToRoom}'>Перейти в конференцию</a> {Environment.NewLine}");
-
-                if (timeDiff > 0)
-                    sb.Append($"\uD83D\uDD51 через {timeDiff} мин {Environment.NewLine}");
-                else
-                if (timeDiff == 0)
-                    sb.Append($"\uD83D\uDD51 сейчас {Environment.NewLine}");
-
-                if (lesson.Lesson.Teacher.Link != null)
-                    sb.Append($"%F0%9F%91%A4  <a href='{lesson.Lesson.Teacher.Link}'>{lesson.Lesson.Teacher.Name}</a> {Environment.NewLine}");
-                else
-                    sb.Append($"%F0%9F%91%A4 {lesson.Lesson.Teacher.Name} {Environment.NewLine}");
-
-                sb.Append($"%F0%9F%92%BB {lesson.Lesson.DisciplineType.Name} {Environment.NewLine}");
-
-                foreach (var chat in sendTo)
-                    await _telegramService.SendMessageToUser(chat, sb.ToString(), ct, "HTML");
-            }
-        }
-    }
-
-    private async Task CheckUserShedulle(DateTime nowUTC, CancellationToken ct)
-    {
-        var filterEnd = nowUTC.AddMinutes(10);
-        var filterStart = nowUTC.AddMinutes(-10);
-
-        var shedullers = await _context.TelegramUserShedullers
-            .Include(x => x.TelegramUser)
-            .Where(x => x.DateTimeUtc >= filterStart && x.DateTimeUtc <= filterEnd)
-            .ToListAsync(ct);
-
-        foreach (var shedulle in shedullers)
-        {
-            var time = shedulle.DateTimeUtc - nowUTC;
-            var timeDiff = (int)time.TotalMinutes;
-            if (timeDiff >= 0)
-            {
-                StringBuilder sb = new();
-
-                sb.Append($"{shedulle.Title} {Environment.NewLine}");
-
-                if (timeDiff > 0)
-                    sb.Append($"\uD83D\uDD51 через {timeDiff} мин {Environment.NewLine}");
-                else
-                if (timeDiff == 0)
-                    sb.Append($"\uD83D\uDD51 сейчас {Environment.NewLine}");
-
-                await _telegramService.SendMessageToUser(shedulle.TelegramUser.UserIdent, sb.ToString(), ct, "HTML");
-            }
-        }
+        await _checkLessonWorker.DoWork(ct);
     }
 }

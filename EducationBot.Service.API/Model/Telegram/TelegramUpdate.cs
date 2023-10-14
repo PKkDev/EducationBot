@@ -1,202 +1,202 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace EducationBot.Service.API.Model.Telegram;
 
 public class TelegramUpdateMessage
 {
-    [JsonProperty("update_id")]
+    [JsonPropertyName("update_id")]
     public long UpdateId { get; set; }
 
-    [JsonProperty("my_chat_member")]
+    [JsonPropertyName("my_chat_member")]
     public MyChatMember MyChatMember { get; set; }
 
-    [JsonProperty("message")]
+    [JsonPropertyName("message")]
     public Message? Message { get; set; }
 
-    [JsonProperty("poll")]
+    [JsonPropertyName("poll")]
     public Poll? Poll { get; set; }
 
-    [JsonProperty("poll_answer")]
+    [JsonPropertyName("poll_answer")]
     public PollAnswer? PollAnswer { get; set; }
 
-    [JsonProperty("callback_query")]
+    [JsonPropertyName("callback_query")]
     public CallbackQuery? CallbackQuery { get; set; }
 }
 
 public class MyChatMember
 {
-    [JsonProperty("chat")]
+    [JsonPropertyName("chat")]
     public Chat Chat { get; set; }
 
-    [JsonProperty("from")]
+    [JsonPropertyName("from")]
     public From From { get; set; }
 
-    [JsonProperty("old_chat_member")]
+    [JsonPropertyName("old_chat_member")]
     public ChatMember OldChatMember { get; set; }
 
-    [JsonProperty("new_chat_member")]
+    [JsonPropertyName("new_chat_member")]
     public ChatMember NewChatMember { get; set; }
 }
 public class ChatMember
 {
-    [JsonProperty("user")]
+    [JsonPropertyName("user")]
     public User User { get; set; }
 
-    [JsonProperty("status")]
+    [JsonPropertyName("status")]
     public string Status { get; set; }
 }
 public class User
 {
-    [JsonProperty("id")]
+    [JsonPropertyName("id")]
     public long Id { get; set; }
 
-    [JsonProperty("is_bot")]
+    [JsonPropertyName("is_bot")]
     public bool IsBot { get; set; }
 
-    [JsonProperty("first_name")]
+    [JsonPropertyName("first_name")]
     public string FirstName { get; set; }
 
-    [JsonProperty("username")]
+    [JsonPropertyName("username")]
     public string Username { get; set; }
 }
 
 public class Poll
 {
-    [JsonProperty("id")]
+    [JsonPropertyName("id")]
     public string Id { get; set; }
 
-    [JsonProperty("question")]
+    [JsonPropertyName("question")]
     public string Question { get; set; }
 
-    [JsonProperty("options")]
+    [JsonPropertyName("options")]
     public List<PollOptions> Options { get; set; }
 
-    [JsonProperty("total_voter_count")]
+    [JsonPropertyName("total_voter_count")]
     public int TotalVoterCount { get; set; }
 
-    [JsonProperty("is_closed")]
+    [JsonPropertyName("is_closed")]
     public bool IsClosed { get; set; }
 
-    [JsonProperty("is_anonymous")]
+    [JsonPropertyName("is_anonymous")]
     public bool IsAnonymous { get; set; }
 
-    [JsonProperty("type")]
+    [JsonPropertyName("type")]
     public string Type { get; set; }
 
 }
 public class PollOptions
 {
-    [JsonProperty("text")]
+    [JsonPropertyName("text")]
     public string Text { get; set; }
 
-    [JsonProperty("voter_count")]
+    [JsonPropertyName("voter_count")]
     public int VoterCount { get; set; }
 
 }
 
 public class PollAnswer
 {
-    [JsonProperty("poll_id")]
+    [JsonPropertyName("poll_id")]
     public string PollId { get; set; }
 
-    [JsonProperty("user")]
+    [JsonPropertyName("user")]
     public From User { get; set; }
 
-    [JsonProperty("option_ids")]
+    [JsonPropertyName("option_ids")]
     public List<long> OptionIds { get; set; }
 
 }
 
 public class Message
 {
-    [JsonProperty("message_id")]
+    [JsonPropertyName("message_id")]
     public long MessageId { get; set; }
 
-    [JsonProperty("from")]
+    [JsonPropertyName("from")]
     public From From { get; set; }
 
-    [JsonProperty("chat")]
+    [JsonPropertyName("chat")]
     public Chat Chat { get; set; }
 
-    [JsonProperty("text")]
+    [JsonPropertyName("text")]
     public string Text { get; set; }
 
-    [JsonProperty("group_chat_created")]
+    [JsonPropertyName("group_chat_created")]
     public bool GroupChatCreated { get; set; }
 
-    [JsonProperty("new_chat_participant")]
+    [JsonPropertyName("new_chat_participant")]
     public ChatParticipant NewChatParticipant { get; set; }
 
-    [JsonProperty("new_chat_member")]
+    [JsonPropertyName("new_chat_member")]
     public ChatParticipant NewChatMember { get; set; }
 
-    [JsonProperty("new_chat_members")]
+    [JsonPropertyName("new_chat_members")]
     public List<ChatParticipant> NewChatMembers { get; set; }
 
-    [JsonProperty("left_chat_participant")]
+    [JsonPropertyName("left_chat_participant")]
     public ChatParticipant LeftChatParticipant { get; set; }
 
-    [JsonProperty("left_chat_member")]
+    [JsonPropertyName("left_chat_member")]
     public ChatParticipant LeftChatMember { get; set; }
 }
 
 public class From
 {
-    [JsonProperty("id")]
+    [JsonPropertyName("id")]
     public long Id { get; set; }
 
-    [JsonProperty("is_bot")]
+    [JsonPropertyName("is_bot")]
     public bool IsBot { get; set; }
 
-    [JsonProperty("first_name")]
+    [JsonPropertyName("first_name")]
     public string FirstName { get; set; }
 
-    [JsonProperty("last_name")]
+    [JsonPropertyName("last_name")]
     public string? LastName { get; set; }
 }
 
 public class Chat
 {
-    [JsonProperty("id")]
+    [JsonPropertyName("id")]
     public long Id { get; set; }
 
-    [JsonProperty("title")]
+    [JsonPropertyName("title")]
     public string Title { get; set; }
 
-    [JsonProperty("type")]
+    [JsonPropertyName("type")]
     public string Type { get; set; }
 }
 
 public class ChatParticipant
 {
-    [JsonProperty("id")]
+    [JsonPropertyName("id")]
     public long Id { get; set; }
 
-    [JsonProperty("is_bot")]
+    [JsonPropertyName("is_bot")]
     public bool IsBot { get; set; }
 
-    [JsonProperty("first_name")]
+    [JsonPropertyName("first_name")]
     public string FirstName { get; set; }
 
-    [JsonProperty("username")]
+    [JsonPropertyName("username")]
     public string Username { get; set; }
 }
 
 public class CallbackQuery
 {
-    [JsonProperty("id")]
+    [JsonPropertyName("id")]
     public string Id { get; set; }
 
-    [JsonProperty("from")]
+    [JsonPropertyName("from")]
     public From From { get; set; }
 
-    [JsonProperty("message")]
+    [JsonPropertyName("message")]
     public Message Message { get; set; }
 
-    [JsonProperty("chat_instance")]
+    [JsonPropertyName("chat_instance")]
     public string ChatInstance { get; set; }
 
-    [JsonProperty("data")]
+    [JsonPropertyName("data")]
     public string Data { get; set; }
 
 }
