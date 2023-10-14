@@ -1,34 +1,33 @@
 ﻿using Newtonsoft.Json;
 
-namespace EducationBot.Telegram.Model.Telegram
+namespace EducationBot.Service.API.Model.Telegram;
+
+public class InlineKeyboardMarkup
 {
-    public class InlineKeyboardMarkup
-    {
-        [JsonProperty("inline_keyboard")]
-        public List<List<InlineKeyboardButton>> InlineKeyboard { get; set; }
+    [JsonProperty("inline_keyboard")]
+    public List<List<InlineKeyboardButton>> InlineKeyboard { get; set; }
 
-        public InlineKeyboardMarkup()
-        {
-            InlineKeyboard = new List<List<InlineKeyboardButton>>();
-        }
+    public InlineKeyboardMarkup()
+    {
+        InlineKeyboard = new List<List<InlineKeyboardButton>>();
     }
+}
 
-    public class InlineKeyboardButton
+public class InlineKeyboardButton
+{
+    [JsonProperty("text")]
+    public string Text { get; set; }
+
+    [JsonProperty("callback_data", NullValueHandling = NullValueHandling.Ignore)]
+    public string? CallbackData { get; set; }
+
+    [JsonProperty("url", NullValueHandling = NullValueHandling.Ignore)]
+    public string? Url { get; set; }
+
+    public InlineKeyboardButton(string text, string? callbackData = null, string? url = null)
     {
-        [JsonProperty("text")]
-        public string Text { get; set; }
-
-        [JsonProperty("callback_data", NullValueHandling = NullValueHandling.Ignore)]
-        public string? CallbackData { get; set; }
-
-        [JsonProperty("url", NullValueHandling = NullValueHandling.Ignore)]
-        public string? Url { get; set; }
-
-        public InlineKeyboardButton(string text, string? callbackData = null, string? url = null)
-        {
-            Text = text;
-            CallbackData = callbackData;
-            Url = url;
-        }
+        Text = text;
+        CallbackData = callbackData;
+        Url = url;
     }
 }

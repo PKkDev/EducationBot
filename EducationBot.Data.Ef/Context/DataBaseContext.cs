@@ -1,5 +1,5 @@
 ﻿using EducationBot.Data.Ef.Entities.Telegram;
-using EducationBot.Data.Ef.Entities.Education; 
+using EducationBot.Data.Ef.Entities.Education;
 using Microsoft.EntityFrameworkCore;
 
 namespace EducationBot.EfData.Context
@@ -27,6 +27,8 @@ namespace EducationBot.EfData.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.HasDefaultSchema("ssau");
+
             modelBuilder
                 .Entity<TelegramChat>()
                 .HasMany(c => c.Users)

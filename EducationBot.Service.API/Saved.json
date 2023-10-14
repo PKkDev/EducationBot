@@ -1,124 +1,124 @@
 [
   {
-    "Discipline": "Сетевое планирование на графах",
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
     "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
     },
     "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
+      "Start": "17:00:00",
+      "End": "18:35:00"
     },
     "LessonType": {
       "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
+      "TypeColor": "rgba(43, 149, 67, 1)",
       "TypeInDoc": "1"
     },
     "LessonWeekDay": {
-      "Day": "2023-02-07T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "1 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-02-10T00:00:00",
+      "Day": "2023-09-08T00:00:00",
       "DayOfWeek": "пятница",
-      "WeekNunmber": "1 неделя"
+      "WeekNunmber": "2 неделя"
     },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
   },
   {
-    "Discipline": "Распределенные БД",
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
     "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
     },
     "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
+      "Start": "18:45:00",
+      "End": "20:15:00"
     },
     "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
     },
     "LessonWeekDay": {
-      "Day": "2023-02-07T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "1 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6133-020402D\r\n6132-020402D\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-02-10T00:00:00",
+      "Day": "2023-09-15T00:00:00",
       "DayOfWeek": "пятница",
-      "WeekNunmber": "1 неделя"
+      "WeekNunmber": "3 неделя"
     },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
+    "Place": "online",
+    "Groups": ""
   },
   {
-    "Discipline": "История и философия науки",
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
     "LessonTeacher": {
-      "Name": "Нестеров А.Ю.",
-      "Link": "https://ssau.ru/rasp?staffId=67671001"
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
+    },
+    "LessonTime": {
+      "Start": "20:25:00",
+      "End": "21:55:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-09-15T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "3 неделя"
+    },
+    "Place": "online",
+    "Groups": ""
+  },
+  {
+    "Discipline": "разработка микросервисных приложений",
+    "LessonTeacher": {
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
     },
     "LessonTime": {
       "Start": "15:15:00",
       "End": "16:50:00"
     },
     "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-09-20T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "4 неделя"
+    },
+    "Place": "505 - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
       "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
+      "TypeColor": "rgba(43, 149, 67, 1)",
       "TypeInDoc": "1"
     },
     "LessonWeekDay": {
-      "Day": "2023-02-10T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "1 неделя"
+      "Day": "2023-09-18T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "4 неделя"
     },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
   },
   {
-    "Discipline": "История и философия науки",
+    "Discipline": "Автоматизация тестирования программного обеспечения",
     "LessonTeacher": {
-      "Name": "Огнев А.Н.",
-      "Link": "https://ssau.ru/rasp?staffId=443996999"
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
     },
     "LessonTime": {
       "Start": "17:00:00",
@@ -126,137 +126,68 @@
     },
     "LessonType": {
       "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
+      "TypeColor": "rgba(73, 168, 255, 1)",
       "TypeInDoc": "3"
     },
     "LessonWeekDay": {
-      "Day": "2023-02-09T00:00:00",
-      "DayOfWeek": "четверг",
-      "WeekNunmber": "1 неделя"
+      "Day": "2023-09-20T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "4 неделя"
     },
-    "Place": "219 - 14",
+    "Place": "502 - 14",
     "Groups": ""
   },
   {
-    "Discipline": "Сетевое планирование на графах",
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
     "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
     },
     "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
+      "Start": "17:00:00",
+      "End": "18:35:00"
     },
     "LessonType": {
       "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
+      "TypeColor": "rgba(43, 149, 67, 1)",
       "TypeInDoc": "1"
     },
     "LessonWeekDay": {
-      "Day": "2023-02-14T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "2 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-02-17T00:00:00",
+      "Day": "2023-09-22T00:00:00",
       "DayOfWeek": "пятница",
-      "WeekNunmber": "2 неделя"
+      "WeekNunmber": "4 неделя"
     },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
   },
   {
-    "Discipline": "управление ИТ проектами",
+    "Discipline": "Автоматизация тестирования программного обеспечения",
     "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
     },
     "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
+      "Start": "18:45:00",
+      "End": "20:15:00"
     },
     "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
     },
     "LessonWeekDay": {
-      "Day": "2023-02-13T00:00:00",
+      "Day": "2023-09-18T00:00:00",
       "DayOfWeek": "понедельник",
-      "WeekNunmber": "2 неделя"
+      "WeekNunmber": "4 неделя"
     },
-    "Place": "514 - 14",
-    "Groups": ""
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
   },
   {
-    "Discipline": "управление ИТ проектами",
+    "Discipline": "Технологии промышленного программирования",
     "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-02-14T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "2 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Психология командообразования и творческой коммуникации",
-    "LessonTeacher": {
-      "Name": "Оводенко Д.В.",
-      "Link": "https://ssau.ru/rasp?staffId=197088538"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-02-17T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "2 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "управление ИТ проектами",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
     },
     "LessonTime": {
       "Start": "18:45:00",
@@ -264,321 +195,137 @@
     },
     "LessonType": {
       "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
+      "TypeColor": "rgba(73, 168, 255, 1)",
       "TypeInDoc": "3"
     },
     "LessonWeekDay": {
-      "Day": "2023-02-15T00:00:00",
+      "Day": "2023-09-20T00:00:00",
       "DayOfWeek": "среда",
-      "WeekNunmber": "2 неделя"
+      "WeekNunmber": "4 неделя"
     },
-    "Place": "513 - 14",
+    "Place": "505а - 14",
     "Groups": ""
   },
   {
-    "Discipline": "Сетевое планирование на графах",
+    "Discipline": "разработка микросервисных приложений",
     "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "09:45:00",
-      "End": "11:20:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-02-25T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "3 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Сетевое планирование на графах",
-    "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-02-21T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "3 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-02-25T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "3 неделя"
-    },
-    "Place": "513 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Распределенные БД",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-02-20T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "3 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Распределенные БД",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-02-21T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "3 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6133-020402D\r\n6132-020402D\r\n"
-  },
-  {
-    "Discipline": "Распределенные БД",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
     },
     "LessonTime": {
       "Start": "18:45:00",
       "End": "20:15:00"
     },
     "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-02-22T00:00:00",
-      "DayOfWeek": "среда",
-      "WeekNunmber": "3 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Сетевое планирование на графах",
-    "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "09:45:00",
-      "End": "11:20:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-04T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "4 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Сетевое планирование на графах",
-    "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
       "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
+      "TypeColor": "rgba(43, 149, 67, 1)",
       "TypeInDoc": "1"
     },
     "LessonWeekDay": {
-      "Day": "2023-02-28T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "4 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-03T00:00:00",
+      "Day": "2023-09-22T00:00:00",
       "DayOfWeek": "пятница",
       "WeekNunmber": "4 неделя"
     },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
   },
   {
-    "Discipline": "Облачные технологии",
+    "Discipline": "Автоматизация тестирования программного обеспечения",
     "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
     },
     "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
+      "Start": "15:15:00",
+      "End": "16:50:00"
     },
     "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
     },
     "LessonWeekDay": {
-      "Day": "2023-03-04T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "4 неделя"
+      "Day": "2023-09-25T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "5 неделя"
     },
     "Place": "513 - 14",
-    "Groups": ""
+    "Groups": "Подгруппы: 1\r\n"
   },
   {
-    "Discipline": "управление ИТ проектами",
+    "Discipline": "разработка микросервисных приложений",
     "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
     },
     "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
+      "Start": "15:15:00",
+      "End": "16:50:00"
     },
     "LessonType": {
       "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
+      "TypeColor": "rgba(73, 168, 255, 1)",
       "TypeInDoc": "3"
     },
     "LessonWeekDay": {
-      "Day": "2023-02-27T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "4 неделя"
+      "Day": "2023-09-27T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "5 неделя"
     },
-    "Place": "514 - 14",
+    "Place": "505 - 14",
     "Groups": ""
   },
   {
-    "Discipline": "управление ИТ проектами",
+    "Discipline": "Автоматизация тестирования программного обеспечения",
     "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
     },
     "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
+      "Start": "17:00:00",
+      "End": "18:35:00"
     },
     "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
     },
     "LessonWeekDay": {
-      "Day": "2023-02-28T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "4 неделя"
+      "Day": "2023-09-25T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "5 неделя"
     },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
+    "Place": "513 - 14",
+    "Groups": "Подгруппы: 1\r\n"
   },
   {
-    "Discipline": "Психология командообразования и творческой коммуникации",
+    "Discipline": "Автоматизация тестирования программного обеспечения",
     "LessonTeacher": {
-      "Name": "Оводенко Д.В.",
-      "Link": "https://ssau.ru/rasp?staffId=197088538"
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
     },
     "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
+      "Start": "17:00:00",
+      "End": "18:35:00"
     },
     "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
     },
     "LessonWeekDay": {
-      "Day": "2023-03-03T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "4 неделя"
+      "Day": "2023-09-27T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "5 неделя"
     },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
+    "Place": "502 - 14",
+    "Groups": ""
   },
   {
-    "Discipline": "управление ИТ проектами",
+    "Discipline": "Технологии промышленного программирования",
     "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
     },
     "LessonTime": {
       "Start": "18:45:00",
@@ -586,22 +333,68 @@
     },
     "LessonType": {
       "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
+      "TypeColor": "rgba(223, 95, 255, 1)",
       "TypeInDoc": "2"
     },
     "LessonWeekDay": {
-      "Day": "2023-03-01T00:00:00",
-      "DayOfWeek": "среда",
-      "WeekNunmber": "4 неделя"
+      "Day": "2023-09-25T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "5 неделя"
     },
-    "Place": "517 - 14",
+    "Place": "516 - 14",
     "Groups": "Подгруппы: 1\r\n"
   },
   {
-    "Discipline": "управление ИТ проектами",
+    "Discipline": "Технологии промышленного программирования",
     "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-09-27T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "5 неделя"
+    },
+    "Place": "505а - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
+    "LessonTeacher": {
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-09-29T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "5 неделя"
+    },
+    "Place": "online",
+    "Groups": ""
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
     },
     "LessonTime": {
       "Start": "20:25:00",
@@ -609,1793 +402,22 @@
     },
     "LessonType": {
       "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
+      "TypeColor": "rgba(223, 95, 255, 1)",
       "TypeInDoc": "2"
     },
     "LessonWeekDay": {
-      "Day": "2023-03-01T00:00:00",
-      "DayOfWeek": "среда",
-      "WeekNunmber": "4 неделя"
-    },
-    "Place": "517 - 14",
-    "Groups": "Подгруппы: 1\r\n"
-  },
-  {
-    "Discipline": "Сетевое планирование на графах",
-    "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "09:45:00",
-      "End": "11:20:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-11T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "5 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-06T00:00:00",
+      "Day": "2023-09-25T00:00:00",
       "DayOfWeek": "понедельник",
       "WeekNunmber": "5 неделя"
-    },
-    "Place": "513 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Сетевое планирование на графах",
-    "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-07T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "5 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-10T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "5 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-11T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "5 неделя"
-    },
-    "Place": "513 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Распределенные БД",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-06T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "5 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Распределенные БД",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-07T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "5 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6133-020402D\r\n6132-020402D\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-10T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "5 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "История и философия науки",
-    "LessonTeacher": {
-      "Name": "Нестеров А.Ю.",
-      "Link": "https://ssau.ru/rasp?staffId=67671001"
-    },
-    "LessonTime": {
-      "Start": "15:15:00",
-      "End": "16:50:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-10T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "5 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "История и философия науки",
-    "LessonTeacher": {
-      "Name": "Огнев А.Н.",
-      "Link": "https://ssau.ru/rasp?staffId=443996999"
-    },
-    "LessonTime": {
-      "Start": "17:00:00",
-      "End": "18:35:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-09T00:00:00",
-      "DayOfWeek": "четверг",
-      "WeekNunmber": "5 неделя"
-    },
-    "Place": "219 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Психология командообразования и творческой коммуникации",
-    "LessonTeacher": {
-      "Name": "Оводенко Д.В.",
-      "Link": "https://ssau.ru/rasp?staffId=197088538"
-    },
-    "LessonTime": {
-      "Start": "18:45:00",
-      "End": "20:15:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-09T00:00:00",
-      "DayOfWeek": "четверг",
-      "WeekNunmber": "5 неделя"
-    },
-    "Place": "425 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Сетевое планирование на графах",
-    "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "09:45:00",
-      "End": "11:20:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-18T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "6 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-13T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "6 неделя"
-    },
-    "Place": "513 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Сетевое планирование на графах",
-    "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-14T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "6 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-17T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "6 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-18T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "6 неделя"
-    },
-    "Place": "513 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "управление ИТ проектами",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-13T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "6 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "управление ИТ проектами",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-14T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "6 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Психология командообразования и творческой коммуникации",
-    "LessonTeacher": {
-      "Name": "Оводенко Д.В.",
-      "Link": "https://ssau.ru/rasp?staffId=197088538"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-17T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "6 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "управление ИТ проектами",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "18:45:00",
-      "End": "20:15:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-15T00:00:00",
-      "DayOfWeek": "среда",
-      "WeekNunmber": "6 неделя"
-    },
-    "Place": "513 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Сетевое планирование на графах",
-    "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "09:45:00",
-      "End": "11:20:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-25T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "7 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-20T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "7 неделя"
-    },
-    "Place": "513 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Сетевое планирование на графах",
-    "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-21T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "7 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-24T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "7 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-25T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "7 неделя"
-    },
-    "Place": "513 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Распределенные БД",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-20T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "7 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Распределенные БД",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-21T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "7 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6133-020402D\r\n6132-020402D\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-24T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "7 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "История и философия науки",
-    "LessonTeacher": {
-      "Name": "Нестеров А.Ю.",
-      "Link": "https://ssau.ru/rasp?staffId=67671001"
-    },
-    "LessonTime": {
-      "Start": "15:15:00",
-      "End": "16:50:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-24T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "7 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "История и философия науки",
-    "LessonTeacher": {
-      "Name": "Огнев А.Н.",
-      "Link": "https://ssau.ru/rasp?staffId=443996999"
-    },
-    "LessonTime": {
-      "Start": "17:00:00",
-      "End": "18:35:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-23T00:00:00",
-      "DayOfWeek": "четверг",
-      "WeekNunmber": "7 неделя"
-    },
-    "Place": "219 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Психология командообразования и творческой коммуникации",
-    "LessonTeacher": {
-      "Name": "Оводенко Д.В.",
-      "Link": "https://ssau.ru/rasp?staffId=197088538"
-    },
-    "LessonTime": {
-      "Start": "18:45:00",
-      "End": "20:15:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-23T00:00:00",
-      "DayOfWeek": "четверг",
-      "WeekNunmber": "7 неделя"
-    },
-    "Place": "425 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Сетевое планирование на графах",
-    "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "09:45:00",
-      "End": "11:20:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-01T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "8 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-27T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "8 неделя"
-    },
-    "Place": "513 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Сетевое планирование на графах",
-    "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-28T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "8 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-31T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "8 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-01T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "8 неделя"
-    },
-    "Place": "513 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "управление ИТ проектами",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-27T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "8 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "управление ИТ проектами",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-03-28T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "8 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Сетевое планирование на графах",
-    "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "09:45:00",
-      "End": "11:20:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-08T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "9 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-03T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "9 неделя"
-    },
-    "Place": "513 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Сетевое планирование на графах",
-    "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-04T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "9 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-08T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "9 неделя"
-    },
-    "Place": "513 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Распределенные БД",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-03T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "9 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Распределенные БД",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-04T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "9 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6133-020402D\r\n6132-020402D\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-07T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "9 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "История и философия науки",
-    "LessonTeacher": {
-      "Name": "Нестеров А.Ю.",
-      "Link": "https://ssau.ru/rasp?staffId=67671001"
-    },
-    "LessonTime": {
-      "Start": "15:15:00",
-      "End": "16:50:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-07T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "9 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "История и философия науки",
-    "LessonTeacher": {
-      "Name": "Огнев А.Н.",
-      "Link": "https://ssau.ru/rasp?staffId=443996999"
-    },
-    "LessonTime": {
-      "Start": "17:00:00",
-      "End": "18:35:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-06T00:00:00",
-      "DayOfWeek": "четверг",
-      "WeekNunmber": "9 неделя"
-    },
-    "Place": "219 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Распределенные БД",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "18:45:00",
-      "End": "20:15:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-05T00:00:00",
-      "DayOfWeek": "среда",
-      "WeekNunmber": "9 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Психология командообразования и творческой коммуникации",
-    "LessonTeacher": {
-      "Name": "Оводенко Д.В.",
-      "Link": "https://ssau.ru/rasp?staffId=197088538"
-    },
-    "LessonTime": {
-      "Start": "18:45:00",
-      "End": "20:15:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-06T00:00:00",
-      "DayOfWeek": "четверг",
-      "WeekNunmber": "9 неделя"
-    },
-    "Place": "425 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Сетевое планирование на графах",
-    "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "09:45:00",
-      "End": "11:20:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-15T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "10 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-10T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "10 неделя"
-    },
-    "Place": "513 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Сетевое планирование на графах",
-    "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-11T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "10 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
-      "TypeInDoc": "2"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-14T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "10 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": "Подгруппы: 1\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-15T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "10 неделя"
-    },
-    "Place": "513 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "управление ИТ проектами",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-10T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "10 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "управление ИТ проектами",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-11T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "10 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
-      "TypeInDoc": "2"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-14T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "10 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": "Подгруппы: 1\r\n"
-  },
-  {
-    "Discipline": "Сетевое планирование на графах",
-    "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "09:45:00",
-      "End": "11:20:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-22T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "11 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-17T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "11 неделя"
-    },
-    "Place": "513 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Сетевое планирование на графах",
-    "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-18T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "11 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-22T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "11 неделя"
-    },
-    "Place": "513 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Распределенные БД",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-17T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "11 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Распределенные БД",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-18T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "11 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6133-020402D\r\n6132-020402D\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-21T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "11 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "История и философия науки",
-    "LessonTeacher": {
-      "Name": "Нестеров А.Ю.",
-      "Link": "https://ssau.ru/rasp?staffId=67671001"
-    },
-    "LessonTime": {
-      "Start": "15:15:00",
-      "End": "16:50:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-21T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "11 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "История и философия науки",
-    "LessonTeacher": {
-      "Name": "Огнев А.Н.",
-      "Link": "https://ssau.ru/rasp?staffId=443996999"
-    },
-    "LessonTime": {
-      "Start": "17:00:00",
-      "End": "18:35:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-20T00:00:00",
-      "DayOfWeek": "четверг",
-      "WeekNunmber": "11 неделя"
-    },
-    "Place": "219 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Психология командообразования и творческой коммуникации",
-    "LessonTeacher": {
-      "Name": "Оводенко Д.В.",
-      "Link": "https://ssau.ru/rasp?staffId=197088538"
-    },
-    "LessonTime": {
-      "Start": "18:45:00",
-      "End": "20:15:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-20T00:00:00",
-      "DayOfWeek": "четверг",
-      "WeekNunmber": "11 неделя"
-    },
-    "Place": "425 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Сетевое планирование на графах",
-    "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "09:45:00",
-      "End": "11:20:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-29T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "12 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-24T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "12 неделя"
-    },
-    "Place": "513 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Сетевое планирование на графах",
-    "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-25T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "12 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
-      "TypeInDoc": "2"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-28T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "12 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": "Подгруппы: 2\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-29T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "12 неделя"
-    },
-    "Place": "513 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "управление ИТ проектами",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-24T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "12 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "управление ИТ проектами",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-25T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "12 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
-      "TypeInDoc": "2"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-28T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "12 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": "Подгруппы: 2\r\n"
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "18:45:00",
-      "End": "20:15:00"
-    },
-    "LessonType": {
-      "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
-      "TypeInDoc": "2"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-26T00:00:00",
-      "DayOfWeek": "среда",
-      "WeekNunmber": "12 неделя"
     },
     "Place": "516 - 14",
-    "Groups": "Подгруппы: 2\r\n"
-  },
-  {
-    "Discipline": "управление ИТ проектами",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "18:45:00",
-      "End": "20:15:00"
-    },
-    "LessonType": {
-      "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
-      "TypeInDoc": "2"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-04-26T00:00:00",
-      "DayOfWeek": "среда",
-      "WeekNunmber": "12 неделя"
-    },
-    "Place": "517 - 14",
     "Groups": "Подгруппы: 1\r\n"
   },
   {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
     "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
     },
     "LessonTime": {
       "Start": "20:25:00",
@@ -2403,22 +425,344 @@
     },
     "LessonType": {
       "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
+      "TypeColor": "rgba(223, 95, 255, 1)",
       "TypeInDoc": "2"
     },
     "LessonWeekDay": {
-      "Day": "2023-04-26T00:00:00",
+      "Day": "2023-09-29T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "5 неделя"
+    },
+    "Place": "online",
+    "Groups": ""
+  },
+  {
+    "Discipline": "разработка микросервисных приложений",
+    "LessonTeacher": {
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
+    },
+    "LessonTime": {
+      "Start": "15:15:00",
+      "End": "16:50:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-04T00:00:00",
       "DayOfWeek": "среда",
-      "WeekNunmber": "12 неделя"
+      "WeekNunmber": "6 неделя"
+    },
+    "Place": "505 - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-02T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "6 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "Автоматизация тестирования программного обеспечения",
+    "LessonTeacher": {
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-04T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "6 неделя"
+    },
+    "Place": "502 - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
+    "LessonTeacher": {
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-06T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "6 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "Автоматизация тестирования программного обеспечения",
+    "LessonTeacher": {
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-02T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "6 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-04T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "6 неделя"
+    },
+    "Place": "505а - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "разработка микросервисных приложений",
+    "LessonTeacher": {
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-06T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "6 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "Автоматизация тестирования программного обеспечения",
+    "LessonTeacher": {
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
+    },
+    "LessonTime": {
+      "Start": "15:15:00",
+      "End": "16:50:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-09T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "7 неделя"
+    },
+    "Place": "513 - 14",
+    "Groups": "Подгруппы: 2\r\n"
+  },
+  {
+    "Discipline": "разработка микросервисных приложений",
+    "LessonTeacher": {
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
+    },
+    "LessonTime": {
+      "Start": "15:15:00",
+      "End": "16:50:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-11T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "7 неделя"
+    },
+    "Place": "505 - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "Автоматизация тестирования программного обеспечения",
+    "LessonTeacher": {
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-09T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "7 неделя"
+    },
+    "Place": "513 - 14",
+    "Groups": "Подгруппы: 2\r\n"
+  },
+  {
+    "Discipline": "Автоматизация тестирования программного обеспечения",
+    "LessonTeacher": {
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-11T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "7 неделя"
+    },
+    "Place": "502 - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-09T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "7 неделя"
     },
     "Place": "516 - 14",
     "Groups": "Подгруппы: 2\r\n"
   },
   {
-    "Discipline": "управление ИТ проектами",
+    "Discipline": "Технологии промышленного программирования",
     "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-11T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "7 неделя"
+    },
+    "Place": "505а - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
+    "LessonTeacher": {
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-13T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "7 неделя"
+    },
+    "Place": "online",
+    "Groups": ""
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
     },
     "LessonTime": {
       "Start": "20:25:00",
@@ -2426,298 +770,367 @@
     },
     "LessonType": {
       "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
+      "TypeColor": "rgba(223, 95, 255, 1)",
       "TypeInDoc": "2"
     },
     "LessonWeekDay": {
-      "Day": "2023-04-26T00:00:00",
-      "DayOfWeek": "среда",
-      "WeekNunmber": "12 неделя"
-    },
-    "Place": "517 - 14",
-    "Groups": "Подгруппы: 1\r\n"
-  },
-  {
-    "Discipline": "Сетевое планирование на графах",
-    "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "09:45:00",
-      "End": "11:20:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-06T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "13 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Распределенные БД",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-02T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "13 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6133-020402D\r\n6132-020402D\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-05T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "13 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "17:00:00",
-      "End": "18:35:00"
-    },
-    "LessonType": {
-      "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
-      "TypeInDoc": "2"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-03T00:00:00",
-      "DayOfWeek": "среда",
-      "WeekNunmber": "13 неделя"
-    },
-    "Place": "516 - 14",
-    "Groups": "Подгруппы: 1\r\n"
-  },
-  {
-    "Discipline": "История и философия науки",
-    "LessonTeacher": {
-      "Name": "Огнев А.Н.",
-      "Link": "https://ssau.ru/rasp?staffId=443996999"
-    },
-    "LessonTime": {
-      "Start": "17:00:00",
-      "End": "18:35:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-04T00:00:00",
-      "DayOfWeek": "четверг",
-      "WeekNunmber": "13 неделя"
-    },
-    "Place": "219 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Распределенные БД",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "18:45:00",
-      "End": "20:15:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-03T00:00:00",
-      "DayOfWeek": "среда",
-      "WeekNunmber": "13 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "18:45:00",
-      "End": "20:15:00"
-    },
-    "LessonType": {
-      "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
-      "TypeInDoc": "2"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-03T00:00:00",
-      "DayOfWeek": "среда",
-      "WeekNunmber": "13 неделя"
-    },
-    "Place": "516 - 14",
-    "Groups": "Подгруппы: 1\r\n"
-  },
-  {
-    "Discipline": "Психология командообразования и творческой коммуникации",
-    "LessonTeacher": {
-      "Name": "Оводенко Д.В.",
-      "Link": "https://ssau.ru/rasp?staffId=197088538"
-    },
-    "LessonTime": {
-      "Start": "18:45:00",
-      "End": "20:15:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-04T00:00:00",
-      "DayOfWeek": "четверг",
-      "WeekNunmber": "13 неделя"
-    },
-    "Place": "425 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Сетевое планирование на графах",
-    "LessonTeacher": {
-      "Name": "Додонова Н.Л.",
-      "Link": "https://ssau.ru/rasp?staffId=139580458"
-    },
-    "LessonTime": {
-      "Start": "09:45:00",
-      "End": "11:20:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-13T00:00:00",
-      "DayOfWeek": "суббота",
-      "WeekNunmber": "14 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
-      "TypeInDoc": "2"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-12T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "14 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": "Подгруппы: 1\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
-      "TypeInDoc": "2"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-12T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "14 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": "Подгруппы: 1\r\n"
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "18:45:00",
-      "End": "20:15:00"
-    },
-    "LessonType": {
-      "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
-      "TypeInDoc": "2"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-10T00:00:00",
-      "DayOfWeek": "среда",
-      "WeekNunmber": "14 неделя"
+      "Day": "2023-10-09T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "7 неделя"
     },
     "Place": "516 - 14",
     "Groups": "Подгруппы: 2\r\n"
   },
   {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
     "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
+    },
+    "LessonTime": {
+      "Start": "20:25:00",
+      "End": "21:55:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-13T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "7 неделя"
+    },
+    "Place": "online",
+    "Groups": ""
+  },
+  {
+    "Discipline": "разработка микросервисных приложений",
+    "LessonTeacher": {
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
+    },
+    "LessonTime": {
+      "Start": "15:15:00",
+      "End": "16:50:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-18T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "8 неделя"
+    },
+    "Place": "505 - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-16T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "8 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "Автоматизация тестирования программного обеспечения",
+    "LessonTeacher": {
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-18T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "8 неделя"
+    },
+    "Place": "502 - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
+    "LessonTeacher": {
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-20T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "8 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "Автоматизация тестирования программного обеспечения",
+    "LessonTeacher": {
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-16T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "8 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-18T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "8 неделя"
+    },
+    "Place": "505а - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "разработка микросервисных приложений",
+    "LessonTeacher": {
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-20T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "8 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "Автоматизация тестирования программного обеспечения",
+    "LessonTeacher": {
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
+    },
+    "LessonTime": {
+      "Start": "15:15:00",
+      "End": "16:50:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-23T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "9 неделя"
+    },
+    "Place": "513 - 14",
+    "Groups": "Подгруппы: 1\r\n"
+  },
+  {
+    "Discipline": "разработка микросервисных приложений",
+    "LessonTeacher": {
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
+    },
+    "LessonTime": {
+      "Start": "15:15:00",
+      "End": "16:50:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-25T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "9 неделя"
+    },
+    "Place": "505 - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "Автоматизация тестирования программного обеспечения",
+    "LessonTeacher": {
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-23T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "9 неделя"
+    },
+    "Place": "513 - 14",
+    "Groups": "Подгруппы: 1\r\n"
+  },
+  {
+    "Discipline": "Автоматизация тестирования программного обеспечения",
+    "LessonTeacher": {
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-25T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "9 неделя"
+    },
+    "Place": "502 - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-23T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "9 неделя"
+    },
+    "Place": "516 - 14",
+    "Groups": "Подгруппы: 1\r\n"
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-25T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "9 неделя"
+    },
+    "Place": "505а - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
+    "LessonTeacher": {
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-27T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "9 неделя"
+    },
+    "Place": "online",
+    "Groups": ""
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
     },
     "LessonTime": {
       "Start": "20:25:00",
@@ -2725,459 +1138,1149 @@
     },
     "LessonType": {
       "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
+      "TypeColor": "rgba(223, 95, 255, 1)",
       "TypeInDoc": "2"
     },
     "LessonWeekDay": {
-      "Day": "2023-05-10T00:00:00",
+      "Day": "2023-10-23T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "9 неделя"
+    },
+    "Place": "516 - 14",
+    "Groups": "Подгруппы: 1\r\n"
+  },
+  {
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
+    "LessonTeacher": {
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
+    },
+    "LessonTime": {
+      "Start": "20:25:00",
+      "End": "21:55:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-27T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "9 неделя"
+    },
+    "Place": "online",
+    "Groups": ""
+  },
+  {
+    "Discipline": "разработка микросервисных приложений",
+    "LessonTeacher": {
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
+    },
+    "LessonTime": {
+      "Start": "15:15:00",
+      "End": "16:50:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-01T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "10 неделя"
+    },
+    "Place": "505 - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-30T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "10 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "Автоматизация тестирования программного обеспечения",
+    "LessonTeacher": {
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-01T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "10 неделя"
+    },
+    "Place": "502 - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
+    "LessonTeacher": {
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-03T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "10 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "Автоматизация тестирования программного обеспечения",
+    "LessonTeacher": {
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-10-30T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "10 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-01T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "10 неделя"
+    },
+    "Place": "505а - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "разработка микросервисных приложений",
+    "LessonTeacher": {
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-03T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "10 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "Автоматизация тестирования программного обеспечения",
+    "LessonTeacher": {
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
+    },
+    "LessonTime": {
+      "Start": "15:15:00",
+      "End": "16:50:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-06T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "11 неделя"
+    },
+    "Place": "513 - 14",
+    "Groups": "Подгруппы: 2\r\n"
+  },
+  {
+    "Discipline": "разработка микросервисных приложений",
+    "LessonTeacher": {
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
+    },
+    "LessonTime": {
+      "Start": "15:15:00",
+      "End": "16:50:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-08T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "11 неделя"
+    },
+    "Place": "505 - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "Автоматизация тестирования программного обеспечения",
+    "LessonTeacher": {
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-06T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "11 неделя"
+    },
+    "Place": "513 - 14",
+    "Groups": "Подгруппы: 2\r\n"
+  },
+  {
+    "Discipline": "Автоматизация тестирования программного обеспечения",
+    "LessonTeacher": {
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-08T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "11 неделя"
+    },
+    "Place": "502 - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-06T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "11 неделя"
+    },
+    "Place": "516 - 14",
+    "Groups": "Подгруппы: 2\r\n"
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-08T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "11 неделя"
+    },
+    "Place": "505а - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
+    "LessonTeacher": {
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-10T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "11 неделя"
+    },
+    "Place": "online",
+    "Groups": ""
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "20:25:00",
+      "End": "21:55:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-06T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "11 неделя"
+    },
+    "Place": "516 - 14",
+    "Groups": "Подгруппы: 2\r\n"
+  },
+  {
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
+    "LessonTeacher": {
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
+    },
+    "LessonTime": {
+      "Start": "20:25:00",
+      "End": "21:55:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-10T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "11 неделя"
+    },
+    "Place": "online",
+    "Groups": ""
+  },
+  {
+    "Discipline": "разработка микросервисных приложений",
+    "LessonTeacher": {
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
+    },
+    "LessonTime": {
+      "Start": "15:15:00",
+      "End": "16:50:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-15T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "12 неделя"
+    },
+    "Place": "505 - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-13T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "12 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "Автоматизация тестирования программного обеспечения",
+    "LessonTeacher": {
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-15T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "12 неделя"
+    },
+    "Place": "502 - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
+    "LessonTeacher": {
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-17T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "12 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "Автоматизация тестирования программного обеспечения",
+    "LessonTeacher": {
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-13T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "12 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-15T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "12 неделя"
+    },
+    "Place": "505а - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "разработка микросервисных приложений",
+    "LessonTeacher": {
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-17T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "12 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "разработка микросервисных приложений",
+    "LessonTeacher": {
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
+    },
+    "LessonTime": {
+      "Start": "15:15:00",
+      "End": "16:50:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-20T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "13 неделя"
+    },
+    "Place": "513 - 14",
+    "Groups": "Подгруппы: 1\r\n"
+  },
+  {
+    "Discipline": "разработка микросервисных приложений",
+    "LessonTeacher": {
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-20T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "13 неделя"
+    },
+    "Place": "513 - 14",
+    "Groups": "Подгруппы: 1\r\n"
+  },
+  {
+    "Discipline": "Автоматизация тестирования программного обеспечения",
+    "LessonTeacher": {
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-22T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "13 неделя"
+    },
+    "Place": "502 - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-20T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "13 неделя"
+    },
+    "Place": "516 - 14",
+    "Groups": "Подгруппы: 1\r\n"
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-22T00:00:00",
+      "DayOfWeek": "среда",
+      "WeekNunmber": "13 неделя"
+    },
+    "Place": "505а - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
+    "LessonTeacher": {
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-24T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "13 неделя"
+    },
+    "Place": "online",
+    "Groups": ""
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "20:25:00",
+      "End": "21:55:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-20T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "13 неделя"
+    },
+    "Place": "516 - 14",
+    "Groups": "Подгруппы: 1\r\n"
+  },
+  {
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
+    "LessonTeacher": {
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
+    },
+    "LessonTime": {
+      "Start": "20:25:00",
+      "End": "21:55:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-24T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "13 неделя"
+    },
+    "Place": "online",
+    "Groups": ""
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-27T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "14 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
+    "LessonTeacher": {
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-12-01T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "14 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "Автоматизация тестирования программного обеспечения",
+    "LessonTeacher": {
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-27T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "14 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Практика",
+      "TypeColor": "rgba(73, 168, 255, 1)",
+      "TypeInDoc": "3"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-11-29T00:00:00",
       "DayOfWeek": "среда",
       "WeekNunmber": "14 неделя"
     },
+    "Place": "505а - 14",
+    "Groups": ""
+  },
+  {
+    "Discipline": "разработка микросервисных приложений",
+    "LessonTeacher": {
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-12-01T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "14 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "разработка микросервисных приложений",
+    "LessonTeacher": {
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
+    },
+    "LessonTime": {
+      "Start": "15:15:00",
+      "End": "16:50:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-12-04T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "15 неделя"
+    },
+    "Place": "513 - 14",
+    "Groups": "Подгруппы: 2\r\n"
+  },
+  {
+    "Discipline": "разработка микросервисных приложений",
+    "LessonTeacher": {
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-12-04T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "15 неделя"
+    },
+    "Place": "513 - 14",
+    "Groups": "Подгруппы: 2\r\n"
+  },
+  {
+    "Discipline": "Технологии промышленного программирования",
+    "LessonTeacher": {
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-12-04T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "15 неделя"
+    },
     "Place": "516 - 14",
     "Groups": "Подгруппы: 2\r\n"
   },
   {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
+    "Discipline": "Технологии промышленного программирования",
     "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
     },
     "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
+      "Start": "18:45:00",
+      "End": "20:15:00"
     },
     "LessonType": {
       "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
+      "TypeColor": "rgba(73, 168, 255, 1)",
       "TypeInDoc": "3"
     },
     "LessonWeekDay": {
-      "Day": "2023-05-15T00:00:00",
-      "DayOfWeek": "понедельник",
+      "Day": "2023-12-06T00:00:00",
+      "DayOfWeek": "среда",
       "WeekNunmber": "15 неделя"
     },
-    "Place": "513 - 14",
+    "Place": "505а - 14",
     "Groups": ""
   },
   {
-    "Discipline": "Распределенные БД",
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
     "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
     },
     "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
+      "Start": "18:45:00",
+      "End": "20:15:00"
     },
     "LessonType": {
       "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
+      "TypeColor": "rgba(73, 168, 255, 1)",
       "TypeInDoc": "3"
     },
     "LessonWeekDay": {
-      "Day": "2023-05-15T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "15 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Распределенные БД",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-16T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "15 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6133-020402D\r\n6132-020402D\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-19T00:00:00",
+      "Day": "2023-12-08T00:00:00",
       "DayOfWeek": "пятница",
       "WeekNunmber": "15 неделя"
     },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
+    "Place": "online",
+    "Groups": ""
   },
   {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
+    "Discipline": "Технологии промышленного программирования",
     "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
     },
     "LessonTime": {
-      "Start": "17:00:00",
-      "End": "18:35:00"
+      "Start": "20:25:00",
+      "End": "21:55:00"
     },
     "LessonType": {
       "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
+      "TypeColor": "rgba(223, 95, 255, 1)",
       "TypeInDoc": "2"
     },
     "LessonWeekDay": {
-      "Day": "2023-05-17T00:00:00",
-      "DayOfWeek": "среда",
+      "Day": "2023-12-04T00:00:00",
+      "DayOfWeek": "понедельник",
       "WeekNunmber": "15 неделя"
     },
     "Place": "516 - 14",
-    "Groups": "Подгруппы: 1\r\n"
-  },
-  {
-    "Discipline": "Распределенные БД",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "17:00:00",
-      "End": "18:35:00"
-    },
-    "LessonType": {
-      "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
-      "TypeInDoc": "2"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-17T00:00:00",
-      "DayOfWeek": "среда",
-      "WeekNunmber": "15 неделя"
-    },
-    "Place": "517 - 14",
     "Groups": "Подгруппы: 2\r\n"
   },
   {
-    "Discipline": "История и философия науки",
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
     "LessonTeacher": {
-      "Name": "Огнев А.Н.",
-      "Link": "https://ssau.ru/rasp?staffId=443996999"
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
     },
     "LessonTime": {
-      "Start": "17:00:00",
-      "End": "18:35:00"
+      "Start": "20:25:00",
+      "End": "21:55:00"
     },
     "LessonType": {
       "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
+      "TypeColor": "rgba(73, 168, 255, 1)",
       "TypeInDoc": "3"
     },
     "LessonWeekDay": {
-      "Day": "2023-05-18T00:00:00",
-      "DayOfWeek": "четверг",
-      "WeekNunmber": "15 неделя"
-    },
-    "Place": "219 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "18:45:00",
-      "End": "20:15:00"
-    },
-    "LessonType": {
-      "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
-      "TypeInDoc": "2"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-17T00:00:00",
-      "DayOfWeek": "среда",
-      "WeekNunmber": "15 неделя"
-    },
-    "Place": "516 - 14",
-    "Groups": "Подгруппы: 1\r\n"
-  },
-  {
-    "Discipline": "Распределенные БД",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "18:45:00",
-      "End": "20:15:00"
-    },
-    "LessonType": {
-      "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
-      "TypeInDoc": "2"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-17T00:00:00",
-      "DayOfWeek": "среда",
-      "WeekNunmber": "15 неделя"
-    },
-    "Place": "517 - 14",
-    "Groups": "Подгруппы: 2\r\n"
-  },
-  {
-    "Discipline": "Психология командообразования и творческой коммуникации",
-    "LessonTeacher": {
-      "Name": "Оводенко Д.В.",
-      "Link": "https://ssau.ru/rasp?staffId=197088538"
-    },
-    "LessonTime": {
-      "Start": "18:45:00",
-      "End": "20:15:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-18T00:00:00",
-      "DayOfWeek": "четверг",
-      "WeekNunmber": "15 неделя"
-    },
-    "Place": "425 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-22T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "16 неделя"
-    },
-    "Place": "513 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
-      "TypeInDoc": "2"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-26T00:00:00",
+      "Day": "2023-12-08T00:00:00",
       "DayOfWeek": "пятница",
-      "WeekNunmber": "16 неделя"
+      "WeekNunmber": "15 неделя"
     },
-    "Place": "514 - 14",
-    "Groups": "Подгруппы: 2\r\n"
-  },
-  {
-    "Discipline": "управление ИТ проектами",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-22T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "16 неделя"
-    },
-    "Place": "514 - 14",
+    "Place": "online",
     "Groups": ""
   },
   {
-    "Discipline": "управление ИТ проектами",
+    "Discipline": "Технологии промышленного программирования",
     "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
+      "Name": "Баландин А.В.",
+      "Link": "https://ssau.ru/rasp?staffId=62039001"
     },
     "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
+      "Start": "17:00:00",
+      "End": "18:35:00"
     },
     "LessonType": {
       "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
+      "TypeColor": "rgba(43, 149, 67, 1)",
       "TypeInDoc": "1"
     },
     "LessonWeekDay": {
-      "Day": "2023-05-23T00:00:00",
-      "DayOfWeek": "вторник",
+      "Day": "2023-12-11T00:00:00",
+      "DayOfWeek": "понедельник",
       "WeekNunmber": "16 неделя"
     },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
   },
   {
-    "Discipline": "Облачные технологии",
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
     "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
     },
     "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
+      "Start": "17:00:00",
+      "End": "18:35:00"
     },
     "LessonType": {
-      "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
-      "TypeInDoc": "2"
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
     },
     "LessonWeekDay": {
-      "Day": "2023-05-26T00:00:00",
+      "Day": "2023-12-15T00:00:00",
       "DayOfWeek": "пятница",
       "WeekNunmber": "16 неделя"
     },
-    "Place": "514 - 14",
-    "Groups": "Подгруппы: 2\r\n"
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
   },
   {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
+    "Discipline": "Автоматизация тестирования программного обеспечения",
     "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
+      "Name": "Лобанков А.А.",
+      "Link": "https://ssau.ru/rasp?staffId=133173094"
     },
     "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
+      "Start": "18:45:00",
+      "End": "20:15:00"
     },
     "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
     },
     "LessonWeekDay": {
-      "Day": "2023-05-29T00:00:00",
+      "Day": "2023-12-11T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "16 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "разработка микросервисных приложений",
+    "LessonTeacher": {
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
+    },
+    "LessonTime": {
+      "Start": "18:45:00",
+      "End": "20:15:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-12-15T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "16 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "разработка микросервисных приложений",
+    "LessonTeacher": {
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
+    },
+    "LessonTime": {
+      "Start": "15:15:00",
+      "End": "16:50:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-12-18T00:00:00",
       "DayOfWeek": "понедельник",
       "WeekNunmber": "17 неделя"
     },
     "Place": "513 - 14",
-    "Groups": ""
+    "Groups": "Подгруппы: 1\r\n"
   },
   {
-    "Discipline": "Распределенные БД",
+    "Discipline": "разработка микросервисных приложений",
     "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-29T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "17 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "управление ИТ проектами",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-30T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "17 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
-      "TypeInDoc": "1"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-06-02T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "17 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Распределенные БД",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
     },
     "LessonTime": {
       "Start": "17:00:00",
@@ -3185,176 +2288,107 @@
     },
     "LessonType": {
       "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
+      "TypeColor": "rgba(223, 95, 255, 1)",
       "TypeInDoc": "2"
     },
     "LessonWeekDay": {
-      "Day": "2023-05-31T00:00:00",
-      "DayOfWeek": "среда",
+      "Day": "2023-12-18T00:00:00",
+      "DayOfWeek": "понедельник",
       "WeekNunmber": "17 неделя"
     },
-    "Place": "517 - 14",
+    "Place": "513 - 14",
+    "Groups": "Подгруппы: 1\r\n"
+  },
+  {
+    "Discipline": "разработка микросервисных приложений",
+    "LessonTeacher": {
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
+    },
+    "LessonTime": {
+      "Start": "15:15:00",
+      "End": "16:50:00"
+    },
+    "LessonType": {
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-12-25T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "18 неделя"
+    },
+    "Place": "513 - 14",
     "Groups": "Подгруппы: 2\r\n"
   },
   {
-    "Discipline": "История и философия науки",
+    "Discipline": "разработка микросервисных приложений",
     "LessonTeacher": {
-      "Name": "Огнев А.Н.",
-      "Link": "https://ssau.ru/rasp?staffId=443996999"
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
     },
     "LessonTime": {
       "Start": "17:00:00",
       "End": "18:35:00"
     },
     "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
+      "TypeName": "Лабораторная",
+      "TypeColor": "rgba(223, 95, 255, 1)",
+      "TypeInDoc": "2"
     },
     "LessonWeekDay": {
-      "Day": "2023-06-01T00:00:00",
-      "DayOfWeek": "четверг",
-      "WeekNunmber": "17 неделя"
+      "Day": "2023-12-25T00:00:00",
+      "DayOfWeek": "понедельник",
+      "WeekNunmber": "18 неделя"
     },
-    "Place": "219 - 14",
-    "Groups": ""
+    "Place": "513 - 14",
+    "Groups": "Подгруппы: 2\r\n"
   },
   {
-    "Discipline": "Распределенные БД",
+    "Discipline": "технологии разработки пользовательского интерфейса Web-приложений",
     "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
+      "Name": "Гордеева О.А.",
+      "Link": "https://ssau.ru/rasp?staffId=65599001"
+    },
+    "LessonTime": {
+      "Start": "17:00:00",
+      "End": "18:35:00"
+    },
+    "LessonType": {
+      "TypeName": "Лекция",
+      "TypeColor": "rgba(43, 149, 67, 1)",
+      "TypeInDoc": "1"
+    },
+    "LessonWeekDay": {
+      "Day": "2023-12-29T00:00:00",
+      "DayOfWeek": "пятница",
+      "WeekNunmber": "18 неделя"
+    },
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
+  },
+  {
+    "Discipline": "разработка микросервисных приложений",
+    "LessonTeacher": {
+      "Name": "Кудрин К.А.",
+      "Link": "https://ssau.ru/rasp?staffId=62047001"
     },
     "LessonTime": {
       "Start": "18:45:00",
       "End": "20:15:00"
     },
     "LessonType": {
-      "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
-      "TypeInDoc": "2"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-05-31T00:00:00",
-      "DayOfWeek": "среда",
-      "WeekNunmber": "17 неделя"
-    },
-    "Place": "517 - 14",
-    "Groups": "Подгруппы: 2\r\n"
-  },
-  {
-    "Discipline": "Разработка человеко-машинного интерфейса в системах реального времени",
-    "LessonTeacher": {
-      "Name": "Зеленко Л.С.",
-      "Link": "https://ssau.ru/rasp?staffId=60372001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-06-05T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "18 неделя"
-    },
-    "Place": "513 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "11:30:00",
-      "End": "13:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
-      "TypeInDoc": "2"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-06-09T00:00:00",
-      "DayOfWeek": "пятница",
-      "WeekNunmber": "18 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": "Подгруппы: 1\r\n"
-  },
-  {
-    "Discipline": "управление ИТ проектами",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Практика",
-      "TypeColor": "rgba(255, 61, 0, 1)",
-      "TypeInDoc": "3"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-06-05T00:00:00",
-      "DayOfWeek": "понедельник",
-      "WeekNunmber": "18 неделя"
-    },
-    "Place": "514 - 14",
-    "Groups": ""
-  },
-  {
-    "Discipline": "управление ИТ проектами",
-    "LessonTeacher": {
-      "Name": "Додонов М.В.",
-      "Link": "https://ssau.ru/rasp?staffId=200007570"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
       "TypeName": "Лекция",
-      "TypeColor": "rgba(67, 160, 71, 1)",
+      "TypeColor": "rgba(43, 149, 67, 1)",
       "TypeInDoc": "1"
     },
     "LessonWeekDay": {
-      "Day": "2023-06-06T00:00:00",
-      "DayOfWeek": "вторник",
-      "WeekNunmber": "18 неделя"
-    },
-    "Place": "ON-LINE - 14",
-    "Groups": "6131-020402D\r\n6132-020402D\r\n6133-020402D\r\n"
-  },
-  {
-    "Discipline": "Облачные технологии",
-    "LessonTeacher": {
-      "Name": "Востокин С.В.",
-      "Link": "https://ssau.ru/rasp?staffId=60085001"
-    },
-    "LessonTime": {
-      "Start": "13:30:00",
-      "End": "15:05:00"
-    },
-    "LessonType": {
-      "TypeName": "Лабораторная",
-      "TypeColor": "rgba(68, 63, 162, 1)",
-      "TypeInDoc": "2"
-    },
-    "LessonWeekDay": {
-      "Day": "2023-06-09T00:00:00",
+      "Day": "2023-12-29T00:00:00",
       "DayOfWeek": "пятница",
       "WeekNunmber": "18 неделя"
     },
-    "Place": "514 - 14",
-    "Groups": "Подгруппы: 2\r\n"
+    "Place": "online",
+    "Groups": "6231-020402D\r\n6232-020402D\r\n"
   }
 ]

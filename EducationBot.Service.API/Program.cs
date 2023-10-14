@@ -1,6 +1,6 @@
 using EducationBot.EfData.Context;
 using EducationBot.Service.API.Middleware;
-using EducationBot.Telegram.Services;
+using EducationBot.Service.API.Services; 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.OpenApi.Models;
@@ -8,26 +8,36 @@ using NLog.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Configuration.AddJsonFile("appsettings.Private.json", false, true);
+
 builder.Logging.ClearProviders();
 builder.Logging.SetMinimumLevel(LogLevel.Trace);
 builder.Host.UseNLog();
 
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
+//builder.Services.AddRazorPages();
+//builder.Services.AddServerSideBlazor();
 
-builder.Configuration.AddJsonFile("privatesettings.json", optional: false, reloadOnChange: true);
+//builder.Configuration.AddJsonFile("privatesettings.json", optional: false, reloadOnChange: true);
 
 builder.Services.AddTransient<TelegramService>();
 builder.Services.AddTransient<LessonHelperService>();
 builder.Services.AddTransient<UserChatService>();
 
-//var path = Path.Combine(AppContext.BaseDirectory, builder.Configuration["Connections:SqLiteDbName"]);
-//builder.Services.AddDbContext<DataBaseContext>(option => option.UseSqlite($"Filename={path}"));
+#region Sqlite
 
-//builder.Services.AddDbContext<DataBaseContext>(option => option.UseSqlServer(builder.Configuration["Connections:MsSqlConnect"]));
+//var source = Path.Combine(AppContext.BaseDirectory, "educationBot.db");
+//var connection = $"Data Source={source}";
 
-builder.Services.AddDbContext<DataBaseContext>(option
-    => option.UseMySql(builder.Configuration["Connections:MySqlConnect"], new MySqlServerVersion(new Version(7, 4, 28))));
+//builder.Services.AddDbContext<DataBaseContext>(option => option.UseSqlite(connection));
+
+#endregion Sqlite
+
+#region Postgre
+
+var connection = builder.Configuration.GetConnectionString("postgreSql");
+builder.Services.AddDbContext<DataBaseContext>(option => option.UseNpgsql(connection));
+
+#endregion Postgre
 
 //using ServiceProvider serviceProvider = builder.Services.BuildServiceProvider();
 //var context = serviceProvider.GetRequiredService<DataBaseContext>();
@@ -48,7 +58,7 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddHttpClient();
 
 var app = builder.Build();
- 
+
 app.UseMiddleware<ErrorHandler>();
 
 app.UseSwagger();
@@ -73,7 +83,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapBlazorHub();
-app.MapFallbackToPage("/_Host");
+//app.MapBlazorHub();
+//app.MapFallbackToPage("/_Host");
 
 app.Run();

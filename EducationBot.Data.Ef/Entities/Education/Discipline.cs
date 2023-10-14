@@ -22,4 +22,10 @@ public class Discipline
     {
         StudyLesson = new();
     }
+
+    public Discipline(string name)
+        : this()
+    {
+        Name = name;
+    }
 }

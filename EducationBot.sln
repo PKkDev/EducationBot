@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Education.Parser.Client", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{21908C62-0402-45E5-BE10-416DD7E08D19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationBot.Data.Model", "EducationBot.Data.Model\EducationBot.Data.Model.csproj", "{4F5C35FF-FFAC-45DD-B957-69ABC5F59274}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EducationBot.Data.Model", "EducationBot.Data.Model\EducationBot.Data.Model.csproj", "{4F5C35FF-FFAC-45DD-B957-69ABC5F59274}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{EB36C681-3424-4061-A24D-CA4849D0C7B6}"
 EndProject

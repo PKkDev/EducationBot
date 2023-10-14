@@ -21,7 +21,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.12" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.12" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.12" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.12">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -29,14 +29,15 @@
 		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.10" />
 		<PackageReference Include="NLog" Version="5.2.4" />
 		<PackageReference Include="NLog.Web.AspNetCore" Version="5.3.4" />
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.11" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Content Update="nlog.config">
+		<Content Update="appsettings.Private.json">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
-		<Content Update="privatesettings.json">
+		<Content Update="nlog.config">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 	</ItemGroup>

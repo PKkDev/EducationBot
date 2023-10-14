@@ -1,11 +1,11 @@
 ﻿using EducationBot.Data.Ef.Entities.Education;
 using EducationBot.Data.Ef.Entities.Telegram;
-using EducationBot.Telegram.Helpers;
-using EducationBot.Telegram.Model.Telegram;
+using EducationBot.Service.API.Helpers;
+using EducationBot.Service.API.Model.Telegram; 
 using Newtonsoft.Json;
 using System.Text;
 
-namespace EducationBot.Telegram.Services;
+namespace EducationBot.Service.API.Services;
 
 public class TelegramService
 {

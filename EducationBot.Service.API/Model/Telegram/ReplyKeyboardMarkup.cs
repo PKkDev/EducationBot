@@ -1,30 +1,29 @@
 ﻿using Newtonsoft.Json;
 
-namespace EducationBot.Telegram.Model.Telegram
+namespace EducationBot.Service.API.Model.Telegram;
+
+public class ReplyKeyboardMarkup
 {
-    public class ReplyKeyboardMarkup
+    [JsonProperty("keyboard")]
+    public List<List<KeyboardButton>> Keyboard { get; set; }
+
+    [JsonProperty("one_time_keyboard")]
+    public bool OneTimeKeyboard { get; set; }
+
+    public ReplyKeyboardMarkup()
     {
-        [JsonProperty("keyboard")]
-        public List<List<KeyboardButton>> Keyboard { get; set; }
-
-        [JsonProperty("one_time_keyboard")]
-        public bool OneTimeKeyboard { get; set; }
-
-        public ReplyKeyboardMarkup()
-        {
-            Keyboard = new List<List<KeyboardButton>>();
-            OneTimeKeyboard = true;
-        }
+        Keyboard = new List<List<KeyboardButton>>();
+        OneTimeKeyboard = true;
     }
+}
 
-    public class KeyboardButton
+public class KeyboardButton
+{
+    [JsonProperty("text")]
+    public string Text { get; set; }
+
+    public KeyboardButton(string text)
     {
-        [JsonProperty("text")]
-        public string Text { get; set; }
-
-        public KeyboardButton(string text)
-        {
-            Text = text;
-        }
+        Text = text;
     }
 }

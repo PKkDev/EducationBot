@@ -1,9 +1,9 @@
 ﻿using EducationBot.Data.Ef.Entities.Telegram;
 using EducationBot.EfData.Context;
-using EducationBot.Telegram.Model.Telegram;
+using EducationBot.Service.API.Model.Telegram;
 using Microsoft.EntityFrameworkCore;
 
-namespace EducationBot.Telegram.Services;
+namespace EducationBot.Service.API.Services;
 
 public class UserChatService
 {

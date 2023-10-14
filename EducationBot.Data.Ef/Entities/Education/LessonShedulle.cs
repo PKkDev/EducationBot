@@ -12,21 +12,21 @@ public class LessonShedulle
     public int Id { get; set; }
 
     [Column("date")]
-    public DateTime Date { get; set; }
+    public DateOnly Date { get; set; }
 
     [Column("start")]
-    public TimeSpan Start { get; set; }
+    public TimeOnly Start { get; set; }
     [Column("start_utc")]
     public DateTime StartDateTimeUTC { get; set; }
 
     [Column("end")]
-    public TimeSpan End { get; set; }
+    public TimeOnly End { get; set; }
     [Column("starend_utc")]
     public DateTime EndDateTimeUTC { get; set; }
 
-    public string GetStartStr() => $"{Start.Hours}:{Start.Minutes}";
+    public string GetStartStr() => $"{Start.Hour}:{Start.Minute}";
 
-    public string GetEndStr() => $"{End.Hours}:{End.Minutes}";
+    public string GetEndStr() => $"{End.Hour}:{End.Minute}";
 
     public int LessonId { get; set; }
     public Lesson Lesson { get; set; }

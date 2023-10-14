@@ -9,13 +9,13 @@
     }
   },
   "profiles": {
-    "EducationBot.Telegram": {
+    "EducationBot.Service.API": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      //"applicationUrl": "https://localhost:7141;http://localhost:5141",
-      "applicationUrl": "http://localhost:5141",
+      "applicationUrl": "https://localhost:7141;http://localhost:5141",
+      //"applicationUrl": "http://localhost:5141",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
