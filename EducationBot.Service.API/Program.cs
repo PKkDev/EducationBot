@@ -1,6 +1,7 @@
 using EducationBot.EfData.Context;
 using EducationBot.Service.API.BackJobs;
 using EducationBot.Service.API.Middleware;
+using EducationBot.Service.API.Model;
 using EducationBot.Service.API.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -11,6 +12,8 @@ try
     var builder = WebApplication.CreateBuilder(args);
 
     builder.Configuration.AddJsonFile("appsettings.Private.json", false, true);
+
+    builder.Services.Configure<TelegramSettings>(builder.Configuration.GetSection("TelegramSettings"));
 
     builder.Logging.ClearProviders();
     builder.Logging.SetMinimumLevel(LogLevel.Trace);
@@ -83,8 +86,7 @@ try
             {
                 //var serverUrl = $"{httpReq.Scheme}://{httpReq.Host}/education-bot/";
                 var serverUrl = $"https://{httpReq.Host}/education-bot/";
-                swagger.Servers = new List<OpenApiServer> {
-            new() { Url = serverUrl } };
+                swagger.Servers = new List<OpenApiServer> { new() { Url = serverUrl } };
             });
         }
     });

@@ -1,8 +1,11 @@
 ﻿using EducationBot.Data.Ef.Entities.Education;
 using EducationBot.Data.Ef.Entities.Telegram;
 using EducationBot.Service.API.Helpers;
-using EducationBot.Service.API.Model.Telegram; 
+using EducationBot.Service.API.Model;
+using EducationBot.Service.API.Model.Telegram;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
+using System.Linq;
 using System.Text;
 
 namespace EducationBot.Service.API.Services;
@@ -10,7 +13,7 @@ namespace EducationBot.Service.API.Services;
 public class TelegramService
 {
     private readonly IHttpClientFactory _httpCLientFacory;
-    private readonly IConfiguration _configuration;
+    //private readonly IConfiguration _configuration;
 
     private readonly IHttpContextAccessor _httpContextAccessor;
 
@@ -19,18 +22,23 @@ public class TelegramService
 
     private readonly string source = "https://ssau.ru/rasp?groupId=799360768";
 
+    private readonly TelegramSettings _telegramSettings;
+
     public TelegramService(
         IHttpClientFactory httpCLientFacory, IConfiguration configuration,
         LessonHelperService lessonHelperService, UserChatService userChatService,
-        IHttpContextAccessor httpContextAccessor)
+        IHttpContextAccessor httpContextAccessor,
+        IOptions<TelegramSettings> telegramSettings)
     {
         _httpCLientFacory = httpCLientFacory;
-        _configuration = configuration;
+        //_configuration = configuration;
 
         _httpContextAccessor = httpContextAccessor;
 
         _lessonHelperService = lessonHelperService;
         _userChatService = userChatService;
+
+        _telegramSettings = telegramSettings.Value ?? throw new ArgumentNullException($"{nameof(TelegramSettings)}");
     }
 
     public async Task ParseTelegramMessageAsync(TelegramUpdateMessage message, CancellationToken ct)
@@ -229,7 +237,8 @@ public class TelegramService
             // добавление в чат
             if (message.Message.NewChatMember != null)
             {
-                if (message.Message.NewChatMember.Username == _configuration["TelegramSettings:BotUserName"])
+                //if (message.Message.NewChatMember.Username == _configuration["TelegramSettings:BotUserName"])
+                if (message.Message.NewChatMember.Username == _telegramSettings.BotUserName)
                 {
                     // бота добавили в чат
                 }
@@ -244,7 +253,8 @@ public class TelegramService
             // исключение из чата
             if (message.Message.LeftChatMember != null)
             {
-                if (message.Message.LeftChatMember.Username == _configuration["TelegramSettings:BotUserName"])
+                //if (message.Message.LeftChatMember.Username == _configuration["TelegramSettings:BotUserName"])
+                if (message.Message.LeftChatMember.Username == _telegramSettings.BotUserName)
                 {
                     // бота исключли из чата
                 }
@@ -267,7 +277,8 @@ public class TelegramService
 
                 dialog = await _userChatService.GetUserDialog(chat, from, ct);
 
-                if (messageText.StartsWith('/') && messageText.Contains("@") && messageText.Contains(_configuration["TelegramSettings:BotUserName"]))
+                //if (messageText.StartsWith('/') && messageText.Contains("@") && messageText.Contains(_configuration["TelegramSettings:BotUserName"]))
+                if (messageText.StartsWith('/') && messageText.Contains("@") && messageText.Contains(_telegramSettings.BotUserName))
                     messageText = messageText.Split('@').First();
 
                 if (dialog.LastAction == ChatAction.AddReminderDate)
@@ -313,7 +324,8 @@ public class TelegramService
                             {
                                 #region dub start
                                 StringBuilder sb = new();
-                                sb.Append($"Вас приветствует {_configuration["TelegramSettings:BotFirstName"]} {Environment.NewLine}");
+                                //sb.Append($"Вас приветствует {_configuration["TelegramSettings:BotFirstName"]} {Environment.NewLine}");
+                                sb.Append($"Вас приветствует {_telegramSettings.BotFirstName} {Environment.NewLine}");
                                 sb.Append($"бот создан для помощи с расписанием в институте для группы 6132-020402D {Environment.NewLine}"); ;
                                 sb.Append($"<a href='{source}'>источник расписания</a> {Environment.NewLine}");
                                 await SendMessageToUser(chat.Id, sb.ToString(), ct, "HTML");
@@ -335,7 +347,8 @@ public class TelegramService
                             {
                                 #region dub start
                                 StringBuilder sb = new();
-                                sb.Append($"Вас приветствует {_configuration["TelegramSettings:BotFirstName"]} {Environment.NewLine}");
+                                //sb.Append($"Вас приветствует {_configuration["TelegramSettings:BotFirstName"]} {Environment.NewLine}");
+                                sb.Append($"Вас приветствует {_telegramSettings.BotFirstName} {Environment.NewLine}");
                                 sb.Append($"бот создан для помощи с расписанием в институте для группы 6132-020402D {Environment.NewLine}"); ;
                                 sb.Append($"<a href='{source}'>источник расписания</a> {Environment.NewLine}");
                                 await SendMessageToUser(chat.Id, sb.ToString(), ct, "HTML");
@@ -517,7 +530,8 @@ public class TelegramService
         queryParam["photo"] = $"{filePath}";
         queryParam["reply_markup"] = JsonConvert.SerializeObject(buttons);
 
-        var urlBase = $"{_configuration["TelegramSettings:BaseUrl"]}/sendPhoto";
+        //var urlBase = $"{_configuration["TelegramSettings:BaseUrl"]}/sendPhoto";
+        var urlBase = $"{_telegramSettings.BaseUrl}/sendPhoto";
         var url = UrlHelper.GetUriWithQueryString(urlBase, queryParam);
 
         var response = await client.GetAsync(url);
@@ -547,7 +561,8 @@ public class TelegramService
             ["reply_markup"] = JsonConvert.SerializeObject(buttons)
         };
 
-        var urlBase = $"{_configuration["TelegramSettings:BaseUrl"]}/sendMessage";
+        //var urlBase = $"{_configuration["TelegramSettings:BaseUrl"]}/sendMessage";
+        var urlBase = $"{_telegramSettings.BaseUrl}/sendMessage";
         var url = UrlHelper.GetUriWithQueryString(urlBase, queryParam);
 
         var response = await client.GetAsync(url);
@@ -567,7 +582,8 @@ public class TelegramService
         queryParam["caption"] = $"{caption}";
         queryParam["photo"] = $"{imageUrl}";
 
-        var urlBase = $"{_configuration["TelegramSettings:BaseUrl"]}/sendPhoto";
+        //var urlBase = $"{_configuration["TelegramSettings:BaseUrl"]}/sendPhoto";
+        var urlBase = $"{_telegramSettings.BaseUrl}/sendPhoto";
         var url = UrlHelper.GetUriWithQueryString(urlBase, queryParam);
 
         var response = await client.GetAsync(url);
@@ -592,7 +608,8 @@ public class TelegramService
         if (parseMode != null)
             queryParam["parse_mode"] = $"{parseMode}";
 
-        var urlBase = $"{_configuration["TelegramSettings:BaseUrl"]}/sendMessage";
+        //var urlBase = $"{_configuration["TelegramSettings:BaseUrl"]}/sendMessage";
+        var urlBase = $"{_telegramSettings.BaseUrl}/sendMessage";
         var url = UrlHelper.GetUriWithQueryString(urlBase, queryParam);
 
         var response = await client.GetAsync(url, ct);
@@ -616,7 +633,8 @@ public class TelegramService
         queryParam["options"] = JsonConvert.SerializeObject(options);
         queryParam["is_anonymous"] = $"{false}";
 
-        var urlBase = $"{_configuration["TelegramSettings:BaseUrl"]}/sendPoll";
+        //var urlBase = $"{_configuration["TelegramSettings:BaseUrl"]}/sendPoll";
+        var urlBase = $"{_telegramSettings.BaseUrl}/sendPoll";
         var url = UrlHelper.GetUriWithQueryString(urlBase, queryParam);
 
         var response = await client.GetAsync(url);
@@ -641,7 +659,8 @@ public class TelegramService
             queryParam["scope"] = JsonConvert.SerializeObject(scope);
         queryParam["commands"] = JsonConvert.SerializeObject(commands);
 
-        var urlBase = $"{_configuration["TelegramSettings:BaseUrl"]}/setMyCommands";
+        //var urlBase = $"{_configuration["TelegramSettings:BaseUrl"]}/setMyCommands";
+        var urlBase = $"{_telegramSettings.BaseUrl}/setMyCommands";
         var url = UrlHelper.GetUriWithQueryString(urlBase, queryParam);
 
         var response = await client.GetAsync(url);
@@ -663,7 +682,8 @@ public class TelegramService
             ["url"] = $"{webhook}"
         };
 
-        var urlBase = $"{_configuration["TelegramSettings:BaseUrl"]}/setWebhook";
+        //var urlBase = $"{_configuration["TelegramSettings:BaseUrl"]}/setWebhook";
+        var urlBase = $"{_telegramSettings.BaseUrl}/setWebhook";
         var url = UrlHelper.GetUriWithQueryString(urlBase, queryParam);
 
         var response = await client.GetAsync(url, ct);
