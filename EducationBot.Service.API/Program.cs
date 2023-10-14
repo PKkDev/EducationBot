@@ -1,6 +1,6 @@
 using EducationBot.EfData.Context;
 using EducationBot.Service.API.Middleware;
-using EducationBot.Service.API.Services; 
+using EducationBot.Service.API.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.OpenApi.Models;
@@ -62,19 +62,19 @@ app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     if (builder.Environment.IsDevelopment())
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "EducationBot.Telegram v1");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
     else
-        c.SwaggerEndpoint("/EducationBot/swagger/v1/swagger.json", "EducationBot.Telegram v1");
+        c.SwaggerEndpoint("/education-bot/swagger/v1/swagger.json", "v1");
 });
 
 app.UseHttpsRedirection();
 
-app.UseStaticFiles();
-app.UseStaticFiles(new StaticFileOptions()
-{
-    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"Resources\Images")),
-    RequestPath = new PathString("/Resources/Images")
-});
+//app.UseStaticFiles();
+//app.UseStaticFiles(new StaticFileOptions()
+//{
+//    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"Resources\Images")),
+//    RequestPath = new PathString("/Resources/Images")
+//});
 
 app.UseAuthorization();
 
