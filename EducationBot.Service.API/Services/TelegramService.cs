@@ -17,6 +17,8 @@ public class TelegramService
     private readonly LessonHelperService _lessonHelperService;
     private readonly UserChatService _userChatService;
 
+    private readonly string source = "https://ssau.ru/rasp?groupId=799360768";
+
     public TelegramService(
         IHttpClientFactory httpCLientFacory, IConfiguration configuration,
         LessonHelperService lessonHelperService, UserChatService userChatService,
@@ -313,7 +315,7 @@ public class TelegramService
                                 StringBuilder sb = new();
                                 sb.Append($"Вас приветствует {_configuration["TelegramSettings:BotFirstName"]} {Environment.NewLine}");
                                 sb.Append($"бот создан для помощи с расписанием в институте для группы 6132-020402D {Environment.NewLine}"); ;
-                                sb.Append($"<a href='https://ssau.ru/rasp?groupId=755932538'>источник расписания</a> {Environment.NewLine}");
+                                sb.Append($"<a href='{source}'>источник расписания</a> {Environment.NewLine}");
                                 await SendMessageToUser(chat.Id, sb.ToString(), ct, "HTML");
                                 #endregion dub start
 
@@ -335,7 +337,7 @@ public class TelegramService
                                 StringBuilder sb = new();
                                 sb.Append($"Вас приветствует {_configuration["TelegramSettings:BotFirstName"]} {Environment.NewLine}");
                                 sb.Append($"бот создан для помощи с расписанием в институте для группы 6132-020402D {Environment.NewLine}"); ;
-                                sb.Append($"<a href='https://ssau.ru/rasp?groupId=755932538'>источник расписания</a> {Environment.NewLine}");
+                                sb.Append($"<a href='{source}'>источник расписания</a> {Environment.NewLine}");
                                 await SendMessageToUser(chat.Id, sb.ToString(), ct, "HTML");
                                 #endregion dub start
 

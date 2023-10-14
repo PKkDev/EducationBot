@@ -1,3 +1,4 @@
+using Azure.Core;
 using EducationBot.EfData.Context;
 using EducationBot.Service.API.Middleware;
 using EducationBot.Service.API.Services;
@@ -54,18 +55,45 @@ builder.Services.AddSwaggerGen(c =>
 
 builder.Services.AddHttpClient();
 
+#region Register CORS
+
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowAnyOrigin();
+    });
+});
+
+#endregion Register CORS
+
 var app = builder.Build();
 
 app.UseMiddleware<ErrorHandler>();
 
-app.UseSwagger();
-app.UseSwaggerUI(c =>
+app.UseSwagger(opt =>
+{
+    if (builder.Environment.IsProduction())
+    {
+        opt.PreSerializeFilters.Add((swagger, httpReq) =>
+        {
+            //var serverUrl = $"{httpReq.Scheme}://{httpReq.Host}/education-bot/";
+            var serverUrl = $"https://{httpReq.Host}/education-bot/";
+            swagger.Servers = new List<OpenApiServer> {
+            new() { Url = serverUrl } };
+        });
+    }
+});
+app.UseSwaggerUI(opt =>
 {
     if (builder.Environment.IsDevelopment())
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+        opt.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
     else
-        c.SwaggerEndpoint("/education-bot/swagger/v1/swagger.json", "v1");
+        opt.SwaggerEndpoint("/education-bot/swagger/v1/swagger.json", "v1");
 });
+
 
 app.UseHttpsRedirection();
 
@@ -75,6 +103,12 @@ app.UseHttpsRedirection();
 //    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"Resources\Images")),
 //    RequestPath = new PathString("/Resources/Images")
 //});
+
+#region Use CORS
+
+app.UseCors();
+
+#endregion Use CORS
 
 app.UseAuthorization();
 
