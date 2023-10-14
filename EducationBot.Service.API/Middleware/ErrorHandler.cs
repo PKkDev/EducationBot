@@ -6,10 +6,12 @@ namespace EducationBot.Service.API.Middleware;
 public class ErrorHandler
 {
     private readonly RequestDelegate _next;
+    private readonly ILogger<ErrorHandler> _logger;
 
-    public ErrorHandler(RequestDelegate next)
+    public ErrorHandler(RequestDelegate next, ILogger<ErrorHandler> logger)
     {
         _next = next;
+        _logger = logger;
     }
 
     public async Task Invoke(HttpContext context)
@@ -31,11 +33,13 @@ public class ErrorHandler
         }
         catch (Exception ex)
         {
+            _logger.LogError(ex, "Api error");
+
             context.Response.StatusCode = StatusCodes.Status400BadRequest;
 
             var message = ex.Message;
 
-            await context.Response.WriteAsJsonAsync(new ApiErrorResponse("Api Error", message));
+            await context.Response.WriteAsJsonAsync(new ApiErrorResponse("Api error", message));
         }
     }
 }
