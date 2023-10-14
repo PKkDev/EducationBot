@@ -31,9 +31,19 @@ public class CheckLessonHostedService : IHostedService, IDisposable
 
     private async Task DoWork(object? state)
     {
-        using var scope = _services.CreateScope();
-        var service = scope.ServiceProvider.GetRequiredService<CheckLessonWorker>();
-        await service.DoWork(default);
+        try
+        {
+            _logger.LogInformation($"{nameof(CheckLessonHostedService)} processing");
+
+            using var scope = _services.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<CheckLessonWorker>();
+
+            await service.DoWork(default);
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, $"{nameof(CheckLessonHostedService)} error");
+        }
     }
 
     public void Dispose()
