@@ -14,9 +14,6 @@ builder.Logging.ClearProviders();
 builder.Logging.SetMinimumLevel(LogLevel.Trace);
 builder.Host.UseNLog();
 
-//builder.Services.AddRazorPages();
-//builder.Services.AddServerSideBlazor();
-
 //builder.Configuration.AddJsonFile("privatesettings.json", optional: false, reloadOnChange: true);
 
 builder.Services.AddTransient<TelegramService>();
@@ -82,8 +79,5 @@ app.UseStaticFiles(new StaticFileOptions()
 app.UseAuthorization();
 
 app.MapControllers();
-
-//app.MapBlazorHub();
-//app.MapFallbackToPage("/_Host");
 
 app.Run();
