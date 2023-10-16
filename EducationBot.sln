@@ -19,6 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EducationBot.Data.Ef", "Edu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Education.Parser", "Education.Parser\Education.Parser.csproj", "{3C17650F-DA32-4DD6-8821-E071F43F728D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FCFFCB3B-5E9C-4D93-8FF0-F6A54E93D050}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\api-build.yml = .github\workflows\api-build.yml
+		.github\workflows\api-deploy.yml = .github\workflows\api-deploy.yml
+		.github\CODEOWNERS = .github\CODEOWNERS
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

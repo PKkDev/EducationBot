@@ -1,0 +1,74 @@
+name: API Build + Test + Deploy
+
+on:
+  #push:
+    #branches: ["main", "dev/*"]
+    #branches: ["release"]
+  #pull_request:
+    #branches: ["main", "dev/*"]
+    #branches: ["release"]
+  pull_request_target:
+    types: ["closed"]
+    branches: ["release"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./
+
+    strategy:
+      matrix:
+        net-version: [7.0.x]
+
+    steps:
+
+#      - name: api-build action
+#        uses: IndustrialHolding/api-build@v1
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup .NET ${{ matrix.net-version }}
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ matrix.net-version }}
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore
+
+      - name: Test
+        run: dotnet test --no-build --verbosity normal
+
+      - name: Publish
+        run: dotnet publish EducationBot.Service.API/EducationBot.Service.API.csproj -c Release -o Release --sc true -r linux-x64
+
+      - name: Create File
+        uses: finnp/create-file-action@1.0.0
+        env:
+          FILE_NAME: "./Release/appsettings.Private.json"
+          FILE_DATA: ${{ secrets.APIPRIVATE }}
+
+      - name: SFTP deploy
+        if: success()
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          server: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASSWORD }}
+          local_path: "./Release/*"
+          remote_path: "/api-services/education-bot-service-api"
+          delete_remote_files: true
+
+      - name: Restart api service
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASSWORD }}
+          script: sudo systemctl restart education-bot.service
