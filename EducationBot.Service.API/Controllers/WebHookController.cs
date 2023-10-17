@@ -1,7 +1,6 @@
 ﻿using EducationBot.Service.API.Model.Telegram;
 using EducationBot.Service.API.Services;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 
 namespace EducationBot.Service.API.Controllers;
 
@@ -20,8 +19,7 @@ public class WebHookController : ControllerBase
     public async Task ParsTelegram(
         [FromBody] dynamic update, CancellationToken ct = default)
     {
-        var updateStr = update.ToString();
-        var message = JsonConvert.DeserializeObject<TelegramUpdateMessage>(updateStr);
+        var message = System.Text.Json.JsonSerializer.Deserialize<TelegramUpdateMessage>(update); 
         await _telegramService.ParseTelegramMessageAsync(message, ct);
         GC.Collect(GC.MaxGeneration);
     }

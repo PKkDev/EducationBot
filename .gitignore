@@ -478,3 +478,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+/EducationBot.Service.API/message.json

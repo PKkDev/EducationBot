@@ -23,13 +23,12 @@ public class TelegramService
     private readonly TelegramSettings _telegramSettings;
 
     public TelegramService(
-        IHttpClientFactory httpCLientFacory, IConfiguration configuration,
+        IHttpClientFactory httpCLientFacory,
         LessonHelperService lessonHelperService, UserChatService userChatService,
         IHttpContextAccessor httpContextAccessor,
         IOptions<TelegramSettings> telegramSettings)
     {
         _httpCLientFacory = httpCLientFacory;
-        //_configuration = configuration;
 
         _httpContextAccessor = httpContextAccessor;
 

@@ -1,18 +1,18 @@
 ﻿endpoint with ngrok
-https://4285-94-231-135-18.eu.ngrok.io/telegram/messages
+https://d72d-94-231-136-2.ngrok-free.app/telegram/hookendpoint 
+with ngrok
+https://custplace.ru/education-bot/telegram/hook
 
 --- ngrok ---
 
 url help
 https://dashboard.ngrok.com/get-started/setup
 
-cd D:\programm\ngrok-v3
+cd D:\Programms\ngrok-v3
 
 start ngrok
 ngrok http 5141 --host-header="localhost:5141"
 
 kill ngrok
 taskkill /f /im ngrok.exe
-
-
-// https://ce9d-94-231-135-2.eu.ngrok.io/telegram/messages
+ 
