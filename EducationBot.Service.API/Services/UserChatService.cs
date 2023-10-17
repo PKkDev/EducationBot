@@ -188,7 +188,7 @@ public class UserChatService
             TelegramUser = dialog.TelegramUser
         };
 
-        await _context.TelegramUserShedullers.AddAsync(newItem);
+        await _context.TelegramUserShedullers.AddAsync(newItem, ct);
         await _context.SaveChangesAsync(ct);
     }
 
