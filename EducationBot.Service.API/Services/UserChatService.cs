@@ -2,6 +2,7 @@
 using EducationBot.EfData.Context;
 using EducationBot.Service.API.Model.Telegram;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace EducationBot.Service.API.Services;
 
@@ -18,7 +19,8 @@ public class UserChatService
     {
         var user = await _context.TelegramUser
             .Where(x => x.UserIdent == chatId)
-            .FirstOrDefaultAsync(ct);
+            .FirstOrDefaultAsync(ct)
+            ?? throw new Exception($"User '{chatId}' not found");
 
         user.IsGetLessonShedulle = newState;
 
@@ -30,7 +32,9 @@ public class UserChatService
     {
         var user = await _context.TelegramUser
             .Where(x => x.UserIdent == FromId)
-            .FirstOrDefaultAsync(ct);
+            .FirstOrDefaultAsync(ct)
+            ?? throw new Exception($"User '{FromId}' not found");
+
         return user;
     }
 
@@ -67,7 +71,9 @@ public class UserChatService
     {
         var dialogEnt = await _context.TelegramChatUser
             .Where(x => x.TelegramChat.ChatIdent == chat.Id && x.TelegramUser.UserIdent == from.Id)
-            .FirstOrDefaultAsync(ct);
+            .FirstOrDefaultAsync(ct)
+            ?? throw new Exception($"User - chat '{from.Id}' - '{chat.Id}' not found");
+
         return dialogEnt;
     }
 
@@ -75,7 +81,8 @@ public class UserChatService
     {
         var dialogEnt = await _context.TelegramChatUser
             .Where(x => x.Id == dialog.Id)
-            .FirstOrDefaultAsync(ct);
+            .FirstOrDefaultAsync(ct)
+            ?? throw new Exception($"User - chat by dialog '{dialog.Id}' not found");
 
         dialogEnt.LastAction = dialog.LastAction;
 
@@ -92,7 +99,7 @@ public class UserChatService
         if (chatCheck == null)
         {
             var userCheck = await _context.TelegramUser
-                .FirstOrDefaultAsync(x => x.UserIdent == from.Id);
+                .FirstOrDefaultAsync(x => x.UserIdent == from.Id, ct);
 
             if (userCheck != null)
             {
@@ -123,6 +130,7 @@ public class UserChatService
                         }
                     }
                 };
+
                 await _context.TelegramChat.AddAsync(newChat, ct);
                 await _context.SaveChangesAsync(ct);
             }
@@ -135,6 +143,7 @@ public class UserChatService
             .Where(x => x.IsGetLessonShedulle)
             .Select(x => x.UserIdent)
             .ToListAsync(ct);
+
         return result;
     }
 
@@ -143,7 +152,9 @@ public class UserChatService
         var user = await _context.TelegramUser
             .Include(x => x.Shedullers)
             .Where(x => x.UserIdent == chatId)
-            .FirstOrDefaultAsync(ct);
+            .FirstOrDefaultAsync(ct)
+            ?? throw new Exception($"User '{chatId}' not found");
+
         return user.Shedullers;
     }
 
@@ -152,7 +163,8 @@ public class UserChatService
         var user = await _context.TelegramUser
             .Include(x => x.Shedullers)
             .Where(x => x.UserIdent == chatId)
-            .FirstOrDefaultAsync(ct);
+            .FirstOrDefaultAsync(ct)
+            ?? throw new Exception($"User '{chatId}' not found");
 
         var sh = user.Shedullers;
 
@@ -175,6 +187,7 @@ public class UserChatService
             Title = "без опсания",
             TelegramUser = dialog.TelegramUser
         };
+
         await _context.TelegramUserShedullers.AddAsync(newItem);
         await _context.SaveChangesAsync(ct);
     }
@@ -182,7 +195,8 @@ public class UserChatService
     public async Task FeetUserSheduller(TelegramChatUser dialog, string description, CancellationToken ct)
     {
         var sh = await _context.TelegramUserShedullers
-            .FirstOrDefaultAsync(x => x.TelegramUser.Id == dialog.TelegramUserId && x.Title == "без опсания", ct);
+            .FirstOrDefaultAsync(x => x.TelegramUser.Id == dialog.TelegramUserId && x.Title == "без опсания", ct)
+            ?? throw new Exception($"User sheduller '{dialog.TelegramUserId}' not found");
 
         sh.Title = description;
 
