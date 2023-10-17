@@ -19,7 +19,6 @@ public class WebHookController : ControllerBase
     public async Task ParsTelegram(
         [FromBody] dynamic update, CancellationToken ct = default)
     {
-        var updateStr = update.ToString();
         var message = System.Text.Json.JsonSerializer.Deserialize<TelegramUpdateMessage>(update); 
         await _telegramService.ParseTelegramMessageAsync(message, ct);
         GC.Collect(GC.MaxGeneration);
