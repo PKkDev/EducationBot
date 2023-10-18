@@ -5,13 +5,14 @@ using EducationBot.Service.API.Model;
 using EducationBot.Service.API.Model.Telegram;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
+using System.Globalization;
 using System.Text;
 
 namespace EducationBot.Service.API.Services;
 
 public class TelegramService
 {
-    private readonly IHttpClientFactory _httpCLientFacory; 
+    private readonly IHttpClientFactory _httpCLientFacory;
 
     private readonly IHttpContextAccessor _httpContextAccessor;
 
@@ -282,8 +283,14 @@ public class TelegramService
                 {
                     try
                     {
+                        //string[] formats = new string[] { "dd.MM.yy HH:mm", "dd.MM.yyyy HH:mm" };
+                        //CultureInfo provider = new CultureInfo("ru-RU");
+                        //var date = DateTime.ParseExact(messageText, formats, provider);
+
                         var date = Convert.ToDateTime(messageText.Trim());
-                        await _userChatService.AddUserSheduller(dialog, date, ct);
+
+                        var dateUtc = DateTime.SpecifyKind(date, DateTimeKind.Utc);
+                        await _userChatService.AddUserSheduller(dialog, dateUtc, ct);
                     }
                     catch (Exception e)
                     {
