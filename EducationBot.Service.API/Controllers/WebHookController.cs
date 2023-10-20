@@ -1,5 +1,6 @@
 ﻿using EducationBot.Service.API.Model.Telegram;
 using EducationBot.Service.API.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EducationBot.Service.API.Controllers;
@@ -25,6 +26,7 @@ public class WebHookController : ControllerBase
     }
 
     [HttpGet("set-commands")]
+    [Authorize(Policy = "ApiKeyPolicy")]
     public async Task SetBotCommands(CancellationToken ct = default)
     {
         List<TelegramBotCommand> privateCommands = new()
@@ -56,6 +58,7 @@ public class WebHookController : ControllerBase
     /// <param name="ct"></param>
     /// <returns></returns>
     [HttpGet("send-message")]
+    [Authorize(Policy = "ApiKeyPolicy")]
     public async Task SendMessage(
         [FromQuery] string chanel, [FromQuery] string message, CancellationToken ct = default)
         => await _telegramService.SendMessageToUser(Convert.ToInt32(chanel), message, ct);
