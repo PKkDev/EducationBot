@@ -3,13 +3,16 @@ using EducationBot.Data.Model;
 using EducationBot.EfData.Context;
 using EducationBot.Service.API.BackJobs;
 using EducationBot.Service.API.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using System.Runtime;
 
 namespace EducationBot.Service.API.Controllers;
 
 [Route("helper")]
+[Authorize(Policy = "ApiKeyPolicy")]
 [ApiController]
 public class HelperController : ControllerBase
 {
