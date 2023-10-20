@@ -1,8 +1,11 @@
 using EducationBot.EfData.Context;
+using EducationBot.Service.API.AuthRules;
 using EducationBot.Service.API.BackJobs;
 using EducationBot.Service.API.Middleware;
 using EducationBot.Service.API.Model;
 using EducationBot.Service.API.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using NLog.Web;
@@ -25,6 +28,28 @@ try
 
     builder.Services.AddScoped<CheckLessonWorker>();
     builder.Services.AddHostedService<CheckLessonHostedService>();
+
+    #region Auth
+
+    builder.Services
+        .AddAuthentication(options =>
+        {
+            options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        })
+        .AddJwtBearer();
+
+    builder.Services.AddAuthorization(options =>
+    {
+        options.AddPolicy("ApiKeyPolicy", policy =>
+        {
+            policy.AddAuthenticationSchemes(new[] { JwtBearerDefaults.AuthenticationScheme });
+            policy.Requirements.Add(new ApiKeyRequirement());
+        });
+    });
+
+    builder.Services.AddScoped<IAuthorizationHandler, ApiKeyHandler>();
+
+    #endregion Auth
 
     #region Sqlite
 
@@ -56,6 +81,8 @@ try
             Title = "EducationBot.Telegram",
             Version = "v1"
         });
+
+        c.OperationFilter<AddRequiredHeaderParameter>();
     });
 
     builder.Services.AddHttpClient();
@@ -114,6 +141,7 @@ try
 
     #endregion Use CORS
 
+    app.UseAuthentication();
     app.UseAuthorization();
 
     app.MapControllers();

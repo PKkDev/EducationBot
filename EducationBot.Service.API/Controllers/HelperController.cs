@@ -2,14 +2,18 @@
 using EducationBot.Data.Model;
 using EducationBot.EfData.Context;
 using EducationBot.Service.API.BackJobs;
+using EducationBot.Service.API.Middleware;
 using EducationBot.Service.API.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using System.Runtime;
 
 namespace EducationBot.Service.API.Controllers;
 
 [Route("helper")]
+[Authorize(Policy = "ApiKeyPolicy")]
 [ApiController]
 public class HelperController : ControllerBase
 {
@@ -41,6 +45,8 @@ public class HelperController : ControllerBase
     }
 
     [HttpGet("feet")]
+    [ProducesResponseType(200)]
+    [ProducesResponseType(typeof(ApiErrorResponse), StatusCodes.Status400BadRequest)]
     public async Task FeetSavedEducationData(CancellationToken ct = default)
     {
         TimeZoneInfo samaraTZI = TimeZoneInfo.CreateCustomTimeZone("Samara Time", new(4, 0, 0), "(GMT+04:00) Samara Time", "Samara Time");
@@ -191,7 +197,9 @@ public class HelperController : ControllerBase
     }
 
     [HttpGet("feet-link")]
-    public async Task SetLinkToLesson([FromQuery] string discipline, [FromQuery] string typeLesson, [FromQuery] string link, CancellationToken ct = default)
+    [ProducesResponseType(200)]
+    [ProducesResponseType(typeof(ApiErrorResponse), StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> SetLinkToLesson([FromQuery] string discipline, [FromQuery] string typeLesson, [FromQuery] string link, CancellationToken ct = default)
     {
         var lessons = await _context.Lesson
             .Where(x => x.Discipline.Name.Trim().ToLower().Equals(discipline.Trim().ToLower())
@@ -203,19 +211,24 @@ public class HelperController : ControllerBase
 
         _context.Lesson.UpdateRange(lessons);
         await _context.SaveChangesAsync(ct);
+
+        return Ok();
     }
 
     [HttpGet("chats")]
     public async Task<IActionResult> GetAllChats(CancellationToken ct = default)
         => Ok(await _userChatService.GetAllChatsAsync(ct));
 
-    [HttpGet("users")]
+    [HttpGet("users")] 
     public async Task<IActionResult> GetAllUsers(CancellationToken ct = default)
         => Ok(await _userChatService.GetAllUserAsync(ct));
 
     [HttpGet("check-lesson")]
-    public async Task CheckLesson(CancellationToken ct = default)
+    [ProducesResponseType(200)]
+    [ProducesResponseType(typeof(ApiErrorResponse), StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> CheckLesson(CancellationToken ct = default)
     {
         await _checkLessonWorker.DoWork(ct);
+        return Ok();
     }
 }

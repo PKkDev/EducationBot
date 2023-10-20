@@ -1,5 +1,6 @@
 ﻿using EducationBot.Service.API.Model.Telegram;
 using EducationBot.Service.API.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EducationBot.Service.API.Controllers;
@@ -19,13 +20,15 @@ public class WebHookController : ControllerBase
     public async Task ParsTelegram(
         [FromBody] dynamic update, CancellationToken ct = default)
     {
-        var message = System.Text.Json.JsonSerializer.Deserialize<TelegramUpdateMessage>(update); 
+        var message = System.Text.Json.JsonSerializer.Deserialize<TelegramUpdateMessage>(update);
         await _telegramService.ParseTelegramMessageAsync(message, ct);
         GC.Collect(GC.MaxGeneration);
     }
 
     [HttpGet("set-commands")]
-    public async Task SetBotCommands(CancellationToken ct = default)
+    [Authorize(Policy = "ApiKeyPolicy")]
+    [ProducesResponseType(200)]
+    public async Task<IActionResult> SetBotCommands(CancellationToken ct = default)
     {
         List<TelegramBotCommand> privateCommands = new()
         {
@@ -46,6 +49,8 @@ public class WebHookController : ControllerBase
         };
         var groupScope = new TelegramBotCommandScope("all_group_chats");
         await _telegramService.SetBotCommandsAsync(groupCommands, groupScope, ct);
+
+        return Ok();
     }
 
     /// <summary>
@@ -56,7 +61,13 @@ public class WebHookController : ControllerBase
     /// <param name="ct"></param>
     /// <returns></returns>
     [HttpGet("send-message")]
-    public async Task SendMessage(
+    [Authorize(Policy = "ApiKeyPolicy")]
+    [ProducesResponseType(200)]
+    public async Task<IActionResult> SendMessage(
         [FromQuery] string chanel, [FromQuery] string message, CancellationToken ct = default)
-        => await _telegramService.SendMessageToUser(Convert.ToInt32(chanel), message, ct);
+    {
+        await _telegramService.SendMessageToUser(Convert.ToInt32(chanel), message, ct);
+
+        return Ok();
+    }
 }
